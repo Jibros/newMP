@@ -2,70 +2,70 @@
     { 
         "pop": false,
         "name": "홈",
-        "link": "./newmp-HTML/index.html",
+        "link": "/newmp-HTML/index.html",
         "note": ""
     },
     { 
         "pop": false,
         "name": "홈 통합검색",
-        "link": "./newmp-HTML/index_srch.html",
+        "link": "/newmp-HTML/index_srch.html",
         "note": ""
     },
     { 
         "pop": false,
         "name": "연관상품(소모품) 관리",
-        "link": "./newmp-HTML/related_products.html",
+        "link": "/newmp-HTML/related_products.html",
         "note": ""
     },
     { 
         "pop": false,
         "name": "속성 관리",
-        "link": "./newmp-HTML/attr_admin.html",
+        "link": "/newmp-HTML/attr_admin.html",
         "note": ""
     },
     { 
         "pop": false,
         "name": "상세검색(스마트파인더)",
-        "link": "./newmp-HTML/spec_admin.html",
+        "link": "/newmp-HTML/spec_admin.html",
         "note": ""
     },
     { 
         "pop": false,
         "name": "전성분 관리",
-        "link": "./newmp-HTML/all_ingredient_admin.html",
+        "link": "/newmp-HTML/all_ingredient_admin.html",
         "note": ""
     },
     { 
         "pop": false,
         "name": "그룹조건 관리",
-        "link": "./newmp-HTML/group_condition_admin.html",
+        "link": "/newmp-HTML/group_condition_admin.html",
         "note": ""
     },
     { 
         "pop": true,
         "name": "제조사/브랜드",
-        "link": "./newmp-HTML/popup_brand.html",
+        "link": "/newmp-HTML/popup_brand.html",
         "pname": "brandPop",
         "note": "팝업"
     },
     { 
         "pop": true,
         "name": "카테고리 정보",
-        "link": "./newmp-HTML/popup_cateinfo.html?cate_cd=0101",
+        "link": "/newmp-HTML/popup_cateinfo.html?cate_cd=0101",
         "pname": "categoryPop",
         "note": "카테고리 번호 있을 때 저장 버튼 노출"
     },
     { 
         "pop": true,
         "name": "원부 테이블",
-        "link": "./newmp-HTML/popup_origin.html",
+        "link": "/newmp-HTML/popup_origin.html",
         "pname": "prdcAttributeAdmin",
         "note": "팝업"
     },
     { 
         "pop": true,
         "name": "속성 입력 관리",
-        "link": "./newmp-HTML/popup_productAttrAdmin.html",
+        "link": "/newmp-HTML/popup_productAttrAdmin.html",
         "pname": "prdcAttributeAdmin",
         "pwidth": "1180",
         "pheight": "980",
