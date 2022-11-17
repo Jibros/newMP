@@ -617,6 +617,9 @@ div[aria-label="tab-content-orgEctKwd-bottom"] .control-comm .dhx_input {padding
 .control-comm.ep-chkbox .dhx_layout-cell {justify-content:flex-start;}
 .control-comm.ep-chkbox .dhx_checkbox {height:20px;margin:0 10px 0 0;vertical-align:top}
 .control-comm.ep-chkbox .dhx_checkbox .dhx_text {margin-right:6px;font-size:12px;color:#000;align-self: auto;}
+
+/* 체크박스그룹 - 모델리스트만 적용 */
+.control-comm.ep-chkbox.mdpage {padding:10px 8px!important}
 /* 라디오그룹 */
 .control-comm.ep-radio {padding:5px 10px !important;}
 .control-comm.ep-radio .dhx_layout-cell {justify-content:flex-end;}

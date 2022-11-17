@@ -17,115 +17,15 @@
  *********************************/
 
 // 제조사 가짜 데이터
-var modellist_data = [
-    {"gcol1": "[불명]","gcol2": "157","gcol3": "634"}, 
-    {"gcol1": "아모레퍼시픽","gcol2": "121","gcol3": "301"}, 
-    {"gcol1": "애경","gcol2": "100","gcol3": "257"}, 
-    {"gcol1": "LG생활건강","gcol2": "81","gcol3": "304"}, 
-    {"gcol1": "한국P&G","gcol2": "55","gcol3": "69"}, 
-    {"gcol1": "쿤달","gcol2": "1","gcol3": "67"}, 
-    {"gcol1": "닥터포헤어","gcol2": "3","gcol3": "137"}, 
-    {"gcol1": "유니레버","gcol2": "234","gcol3": "51"}, 
-    {"gcol1": "아모스프로페셔널","gcol2": "157","gcol3": "59"}, 
-    {"gcol1": "명진인터내셔널","gcol2": "121","gcol3": "3"}, 
-    {"gcol1": "헤어플러스","gcol2": "100","gcol3": "32"}, 
-    {"gcol1": "닥터볼프","gcol2": "81","gcol3": "34"}, 
-    {"gcol1": "아로마티카","gcol2": "55","gcol3": "43"}, 
-    {"gcol1": "러쉬","gcol2": "1","gcol3": "70"}, 
-    {"gcol1": "로레알","gcol2": "3","gcol3": "151"}, 
-    {"gcol1": "두리화장품","gcol2": "234","gcol3": "219"}, 
-    {"gcol1": "피에르파브르","gcol2": "157","gcol3": "136"}, 
-    {"gcol1": "부케가르니","gcol2": "121","gcol3": "24"}, 
-    {"gcol1": "웰코스","gcol2": "100","gcol3": "52"}, 
-    {"gcol1": "솔레오코스메틱","gcol2": "81","gcol3": "3"}, 
-    {"gcol1": "아베다","gcol2": "55","gcol3": "60"}, 
-    {"gcol1": "코스모코스","gcol2": "1","gcol3": "5"}, 
-    {"gcol1": "코리아나화장품","gcol2": "3","gcol3": "33"}, 
-    {"gcol1": "노린스","gcol2": "234","gcol3": "11"}, 
-    {"gcol1": "아모스","gcol2": "121","gcol3": "634"}, 
-    {"gcol1": "세화피앤씨","gcol2": "100","gcol3": "301"}, 
-    {"gcol1": "토종식품","gcol2": "81","gcol3": "257"}, 
-    {"gcol1": "헨켈","gcol2": "55","gcol3": "304"}, 
-    {"gcol1": "다비네스","gcol2": "1","gcol3": "69"}, 
-    {"gcol1": "폴미첼","gcol2": "3","gcol3": "67"}, 
-    {"gcol1": "피토","gcol2": "234","gcol3": "137"}, 
-    {"gcol1": "시세이도","gcol2": "157","gcol3": "51"}, 
-    {"gcol1": "수안향장","gcol2": "121","gcol3": "59"}, 
-    {"gcol1": "니옥신","gcol2": "100","gcol3": "3"}, 
-    {"gcol1": "제이코리아","gcol2": "81","gcol3": "32"}, 
-    {"gcol1": "아이덴","gcol2": "55","gcol3": "34"}, 
-    {"gcol1": "더바디샵","gcol2": "1","gcol3": "43"}, 
-    {"gcol1": "세바메드","gcol2": "3","gcol3": "70"}, 
-    {"gcol1": "엠코스메틱","gcol2": "234","gcol3": "151"}, 
-    {"gcol1": "네이처리퍼블릭","gcol2": "157","gcol3": "219"}, 
-    {"gcol1": "라우쉬","gcol2": "121","gcol3": "136"}, 
-    {"gcol1": "밀본","gcol2": "100","gcol3": "24"}, 
-    {"gcol1": "파머스","gcol2": "81","gcol3": "52"}, 
-    {"gcol1": "아발론오가닉스","gcol2": "55","gcol3": "3"}, 
-    {"gcol1": "존슨앤존슨","gcol2": "1","gcol3": "60"}, 
-    {"gcol1": "다바찌","gcol2": "3","gcol3": "5"}, 
-    {"gcol1": "바론","gcol2": "234","gcol3": "33"}, 
-    {"gcol1": "다슈","gcol2": "100","gcol3": "11"}, 
-    {"gcol1": "일진화장품","gcol2": "81","gcol3": "634"}, 
-    {"gcol1": "웰라","gcol2": "55","gcol3": "301"}, 
-    {"gcol1": "데저트에센스","gcol2": "1","gcol3": "257"}, 
-    {"gcol1": "라벨영","gcol2": "3","gcol3": "304"}, 
-    {"gcol1": "록시땅","gcol2": "234","gcol3": "69"}, 
-    {"gcol1": "피엘코스메틱","gcol2": "121","gcol3": "67"}, 
-    {"gcol1": "하나마이","gcol2": "100","gcol3": "137"}, 
-    {"gcol1": "모로칸오일","gcol2": "81","gcol3": "51"}, 
-    {"gcol1": "알터에고","gcol2": "55","gcol3": "59"}, 
-    {"gcol1": "비더살롱","gcol2": "1","gcol3": "3"}, 
-    {"gcol1": "무코타","gcol2": "3","gcol3": "32"}, 
-    {"gcol1": "제이숲","gcol2": "234","gcol3": "34"}, 
-    {"gcol1": "르퀼라야","gcol2": "157","gcol3": "43"}, 
-    {"gcol1": "앙방","gcol2": "121","gcol3": "70"}, 
-    {"gcol1": "순수연구소","gcol2": "100","gcol3": "151"}, 
-    {"gcol1": "피토페시아","gcol2": "81","gcol3": "219"}, 
-    {"gcol1": "서울화장품","gcol2": "55","gcol3": "136"}, 
-    {"gcol1": "더허브스토리","gcol2": "1","gcol3": "24"}, 
-    {"gcol1": "수앤","gcol2": "3","gcol3": "52"}, 
-    {"gcol1": "위드보스","gcol2": "234","gcol3": "3"}, 
-    {"gcol1": "스킨젠","gcol2": "157","gcol3": "60"}, 
-    {"gcol1": "존프리다","gcol2": "121","gcol3": "5"}, 
-    {"gcol1": "빅그린","gcol2": "100","gcol3": "33"}, 
-    {"gcol1": "아하바","gcol2": "81","gcol3": "11"}, 
-    {"gcol1": "코랩","gcol2": "55","gcol3": "634"}, 
-    {"gcol1": "암웨이","gcol2": "1","gcol3": "301"}, 
-    {"gcol1": "미라화장품","gcol2": "3","gcol3": "257"}, 
-    {"gcol1": "지오바니","gcol2": "234","gcol3": "304"}, 
-    {"gcol1": "리즈케이","gcol2": "234","gcol3": "69"}, 
-    {"gcol1": "모나리자화장품","gcol2": "157","gcol3": "67"}, 
-    {"gcol1": "에바스","gcol2": "121","gcol3": "137"}, 
-    {"gcol1": "아름다운화장품","gcol2": "100","gcol3": "51"}, 
-    {"gcol1": "에버미라클","gcol2": "81","gcol3": "59"}, 
-    {"gcol1": "어헤즈","gcol2": "55","gcol3": "3"}, 
-    {"gcol1": "말콤","gcol2": "1","gcol3": "32"}, 
-    {"gcol1": "동국제약","gcol2": "3","gcol3": "34"}, 
-    {"gcol1": "닥터큐","gcol2": "234","gcol3": "43"}, 
-    {"gcol1": "포고니아","gcol2": "100","gcol3": "70"}, 
-    {"gcol1": "로고니아","gcol2": "81","gcol3": "151"}, 
-    {"gcol1": "아쥬반","gcol2": "55","gcol3": "219"}, 
-    {"gcol1": "클레보스","gcol2": "1","gcol3": "136"}, 
-    {"gcol1": "비어랩","gcol2": "3","gcol3": "24"}, 
-    {"gcol1": "우테크람","gcol2": "234","gcol3": "52"}, 
-    {"gcol1": "가인화장품","gcol2": "121","gcol3": "3"}, 
-    {"gcol1": "뉴스킨","gcol2": "100","gcol3": "60"}, 
-    {"gcol1": "KBH한국생활건강","gcol2": "81","gcol3": "5"}, 
-    {"gcol1": "트리트룸","gcol2": "55","gcol3": "33"}, 
-    {"gcol1": "더마클라센","gcol2": "1","gcol3": "11"}, 
-    {"gcol1": "아미니","gcol2": "3","gcol3": "70"}, 
-    {"gcol1": "에이블C&C","gcol2": "234","gcol3": "136"}, 
-    {"gcol1": "수앤코리아","gcol2": "157","gcol3": "60"}, 
-    {"gcol1": "큐어실드","gcol2": "121","gcol3": "136"}, 
-    {"gcol1": "라르슈포제","gcol2": "100","gcol3": "24"}, 
-    {"gcol1": "CHI","gcol2": "81","gcol3": "52"}, 
-    {"gcol1": "인셀덤","gcol2": "55","gcol3": "3"}, 
-    {"gcol1": "닥터페시아","gcol2": "1","gcol3": "60"}, 
-    {"gcol1": "제이슨","gcol2": "3","gcol3": "5"}, 
-    {"gcol1": "클레롤","gcol2": "234","gcol3": "33"}, 
-    {"gcol1": "딥퍼랑스","gcol2": "157","gcol3": "11"}, 
+var mdList_data = [
+    {"gcol2": "12,345,678","gcol3": "15010101","gcol3": "이미지","gcol4":"솔가","gcol5":"솔가","gcol6":"비타민 D3 5000IU 240정","gcol7":"1개","gcol8":"대표","gcol9":"5","gcol10":"2022-01-24","gcol11":"1","gcol12":"1","gcol13":"1","gcol14":"1","gcol15":"","gcol6":"0","gcol17":"","gcol18":"","gcol19":"","gcol20":"","gcol21":"",},
 ]
+// 그리드3 넘버링
+var mdListNum = mdList_data.length;
+for(var i = 0; i < mdListNum; i++) {
+    var row = mdList_data[i];
+    row.idx = i+1;
+}
 // 브랜드 가짜 데이터
 var grid2_data = [
     {"gcol1": "미쟝센","gcol2": "157","gcol3": "76","gcol4": "미쟝센","gcol5": "157","gcol6": "76","gcol7": "미쟝센","gcol8": "157","gcol9": "76"}, 
@@ -387,23 +287,6 @@ for (var i = 0; i < eslen; i++) {
     row.idx = i+1;
 }
 
-// 제조사 컴퍼넌트
-var makeComponent = "";
-
-    makeComponent += "<div class=\"control__box\">";
-    makeComponent += "  <div class=\"container\">";
-    makeComponent += "      <div class=\"row row-foot\">";
-    makeComponent += "          <div class=\"col-12\">";
-    makeComponent += "              <div class=\"input-group\">";
-    makeComponent += "                  <input type=\"text\" class=\"form-control ipt-txt--srch\" placeholder=\"검색어를 입력하세요.\" aria-label=\"\" aria-describedby=\"basic-addon2\">";
-    makeComponent += "                  <div class=\"input-group-append\">";
-    makeComponent += "                      <button class=\"btn btn-submit\" type=\"button\"><i class=\"bi bi-search\"></i></button>";
-    makeComponent += "                  </div>";
-    makeComponent += "              </div>";
-    makeComponent += "          </div>";
-    makeComponent += "      </div>";    
-    makeComponent += "  </div>";    
-    makeComponent += "</div>";
 
 // 브랜드 컴퍼넌트
 var brandComponent = "";
@@ -602,31 +485,43 @@ var viewTypeChange = "";
 /*********************************
  * 각 COL 그리드/리스트 생성하여 attach 합니다.
 *********************************/
-var modellist, grid2, grid3, grid4, grid5, grid6; // 각 COL 그리드
+var mdList, prdcList; // 그리드 변수 생성
 var epViewContainer; // EP상품 뷰타입 컨테이너
 var imageTypeList; // EP상품 이미지뷰 위젯 생성
 
-// 제조사 그리드 생성
-modellist = new dhx.Grid(null, {
+// 모델리스트 그리드 생성
+mdList = new dhx.Grid(null, {
     columns: [
-        {id: "gcol1", width:120, header: [{ text: "제조사", align: "center" }], htmlEnable: true, gravity: 1.5, 
+        {id: "idx", width: 40, header: [{text: "flag", align:"center"}], align:"center",},
+        {id: "gcol2", minWidth:60, header: [{ text: "번호", align: "center" }], align: "right" },
+        {id: "gcol3", minWidth:60, header: [{ text: "카테코드", align: "center" }], align: "right" },
+        {id: "gcol4", minWidth:60, header: [{ text: "이미지", align: "center" }], htmlEnable: true, align: "center",
             template: function (text, row, col) { 
-                return "<p class=\"tx_tit_one\">"+text+"</p>"; 
-            }, 
+                return "<img src=\""+text+"\" alt=\"\" class=\"thumb thumb-40\">"; 
+            } 
         },
-        {id: "gcol2", width:60, header: [{ text: "미매칭수", align: "center" }], align: "right" },
-        {id: "gcol3", width:60, header: [{ text: "원부수", align: "center" }], align: "right" },
-        {id: "gcol4", width:60, header: [{ text: "미매칭수", align: "center" }], align: "right" },
-        {id: "gcol5", width:60, header: [{ text: "원부수", align: "center" }], align: "right" },
-        {id: "gcol6", width:60, header: [{ text: "미매칭수", align: "center" }], align: "right" },
-        {id: "gcol7", width:60, header: [{ text: "원부수", align: "center" }], align: "right" },
-        {id: "gcol8", width:60, header: [{ text: "미매칭수", align: "center" }], align: "right" },
-        {id: "gcol9", width:60, header: [{ text: "원부수", align: "center" }], align: "right" },
+        {id: "gcol5", minWidth:60, header: [{ text: "제조사", align: "center" }], align: "right" },
+        {id: "gcol6", minWidth:60, header: [{ text: "브랜드", align: "center" }], align: "right" },
+        {id: "gcol7", minWidth:60, header: [{ text: "모델명", align: "center" }], align: "right" },
+        {id: "gcol8", minWidth:60, header: [{ text: "그룹조건명", align: "center" }], align: "right" },
+        {id: "gcol9", minWidth:60, header: [{ text: "그룹여부", align: "center" }], align: "right" },
+        {id: "gcol10", minWidth:60, header: [{ text: "매칭수", align: "center" }], align: "right" },
+        {id: "gcol11", minWidth:60, header: [{ text: "등록일", align: "center" }], align: "right" },
+        {id: "gcol12", minWidth:60, header: [{ text: "IMG", align: "center" }], align: "right" },
+        {id: "gcol13", minWidth:60, header: [{ text: "단종", align: "center" }], align: "right" },
+        {id: "gcol14", minWidth:60, header: [{ text: "작", align: "center" }], align: "right" },
+        {id: "gcol15", minWidth:60, header: [{ text: "속성", align: "center" }], align: "right" },
+        {id: "gcol16", minWidth:60, header: [{ text: "담", align: "center" }], align: "right" },
+        {id: "gcol17", minWidth:60, header: [{ text: "예정", align: "center" }], align: "right" },
+        {id: "gcol18", minWidth:60, header: [{ text: "용량", align: "center" }], align: "right" },
+        {id: "gcol19", minWidth:60, header: [{ text: "수량", align: "center" }], align: "right" },
+        {id: "gcol20", minWidth:60, header: [{ text: "환산", align: "center" }], align: "right" },
+        {id: "gcol21", minWidth:60, header: [{ text: "단위", align: "center" }], align: "right" },
     ],
     headerRowHeight: 32,
     rowHeight: 32,
     autoWidth:true,
-    data: modellist_data,
+    data: mdList_data,
     selection: "row",
     multiselection:false,
     keyNavigation: true,
@@ -634,106 +529,9 @@ modellist = new dhx.Grid(null, {
     adjust: false,
     tooltip: false,
 });
-// 브랜드 그리드 생성
-grid2 = new dhx.Grid(null, {
-    columns: [
-        { id: "gcol1", width:120, header: [{ text: "브랜드", align: "center"}], htmlEnable: true, gravity: 1.5,
-            template: function (text, row, col) { 
-                return "<p class=\"tx_tit_one\">"+text+"</p>"; 
-            }, 
-        },
-        { id: "gcol2", width:60, header: [{ text: "미매칭수", align: "center"}], align: "right" },
-        { id: "gcol3", width:60, header: [{ text: "원부수", align: "center"}], align: "right" },
-    ],
-    headerRowHeight: 32,
-    rowHeight: 32,
-    autoWidth:true,
-    data: grid2_data,
-    selection: "row",
-    multiselection:false,
-    keyNavigation: true,
-    resizable:true,
-    adjust: false,
-    tooltip: false
-});
-// 원부 그리드 생성 
-grid3 = new dhx.Grid(null, {
-    columns: [
-        { id: "idx", width: 40, header: [{text: "#", align:"center"}], align:"center",},
-        { id: "gco3_img", width: 40, header: [{ text: "", align: "center" }], htmlEnable: true, tooltip: true, align: "center",
-            template: function (text, row, col) { 
-                return "<img src=\""+text+"\" alt=\"\" class=\"thumb thumb-40\">"; 
-            } 
-        },
-        { id: "gco3_name", width: 120, header: [{ text: "원부명", align: "center" }], align: "left", htmlEnable: true, 
-            template: function (text, row, col) { 
-                return "<p class=\"tx_tit\">"+text+"</p>"; 
-            }  
-        },
-        { id: "gco3_cnt", width: 60, header: [{ text: "미매칭수", align: "center" }], align: "right" },
-    ],
-    rowCss: function(row){        
-        if(row.nmaking) return "nmaking_row"; // 미생성 원부 행 클래스 추가
-        else if(row.similarMd) return "similar_row"; // 유사모델 클래스 추가
-        else return "";
-    },
-    headerRowHeight: 32,
-    rowHeight: 32,
-    autoWidth:true,
-    //data: grid3_data,
-    selection: "row",
-    multiselection:false,
-    keyNavigation: true, 
-    resizable:true, 
-    adjust: false,
-    tooltip: false
-});
-// 조건 그리드 생성
-grid4 = new dhx.Grid(null, {
-    columns: [
-        { id: "gcol1", header: [{ text: "용량", align: "center" }], align: "center", htmlEnable: true, gravity: 1.5,
-            template: function (text, row, col) { 
-                return "<p class=\"tx_tit_one\">"+text+"</p>"; 
-            }, 
-        },
-        { id: "gcol2", width: 60, header: [{ text: "개", align: "center" }], align:"right" },
-        { id: "gcol3", width: 60, header: [{ text: "미매칭수", align: "center" }], align:"right" },
-    ],
-    headerRowHeight: 32,
-    rowHeight: 32,
-    autoWidth:true,
-    data: grid4_data,
-    selection: "row",
-    multiselection:false,
-    keyNavigation: true,
-    resizable:true,
-    //adjust: true, 
-    tooltip: false
-});
-// 신규조건 그리드 생성
-grid5 = new dhx.Grid(null, {
-    columns: [
-        { id: "gcol1", header: [{ text: "용량", align: "center" }], align: "center", htmlEnable: true, gravity: 1.5,
-            template: function (text, row, col) { 
-                return "<p class=\"tx_tit_one\">"+text+"</p>"; 
-            }, 
-        },
-        { id: "gcol2", width: 60, header: [{ text: "개", align: "center" }], align:"right" },
-        { id: "gcol3", width: 60, header: [{ text: "미매칭수", align: "center" }], align:"right" },
-    ],
-    headerRowHeight: 32,
-    rowHeight: 32,
-    autoWidth:true,
-    data: grid4_data,
-    selection: "row",
-    multiselection:false,
-    keyNavigation: true,
-    resizable:true,
-    //adjust: true,
-    tooltip: false
-});
-// EP상품 그리드 생성
-grid6 = new dhx.Grid(null, {
+
+// 상품리스트 그리드 생성
+prdcList = new dhx.Grid(null, {
     columns: [
         { width: 40, id: "idx", header: [{text: "#", align:"center"}], resizable:false, align:"center",},
         { width: 50, id: "chkBox", header: [{ text: "선택", align: "center" }], sortable: false, resizable: false, htmlEnable: true, align: "center",
@@ -832,20 +630,12 @@ function imgViewTemplate(item) {
  * FORM 위젯 내 > options value 는 수정해서 사용해주세요.
  * FORM 위젯 내 > id 변경 시, 공유해 주세요.
 *********************************/
-// 원부 페이징 연동
-grid3.data.parse(grid3_data);
-var originPaging = new dhx.Pagination(null, {
-    css: "",
-    data: grid3.data,
-    pageSize: 30 // 100단위로 바꿔주세요
-});
-
 // EP 상품 페이징 연동
 // 그리드 타입일 때
-grid6.data.parse(eslist)
+prdcList.data.parse(eslist)
 var matchGridPaging = new dhx.Pagination(null, {
     css: "",
-    data: grid6.data,
+    data: prdcList.data,
     pageSize: 30 // 100단위로 바꿔주세요
 });
 // 이미지 타입일때
@@ -855,6 +645,335 @@ var matchImgPaging = new dhx.Pagination(null, {
     data: imageTypeList.data,
     pageSize: 30 // 100단위로 바꿔주세요
 });
+
+
+// 일정+담당자+업무구분 선택 영역
+var userFinder = new dhx.Form(null, {    
+    css: "form-radio--cond",
+    padding: "5px 10px",
+    width: "100%",
+    cols: [
+        {
+            id: "date_first",
+            mode: "calendar",
+            type: "datepicker",
+            placeholder: "2022-10-19",
+            label: "",
+            labelWidth: 0,
+            labelPosition: "left",
+            weekNumbers: false,
+            timePicker: false,
+            disabled: false,
+            required: false,
+            editable: false,
+            thisMonthOnly: false,
+            helpMessage: "",
+            preMessage: "",
+            successMessage: "",
+            errorMessage: "",
+            weekStart: "sunday",
+            dateFormat: "%Y-%m-%d",
+            css: "control-comm sel-sort"
+        },
+        {
+            id: "date_last",
+            mode: "calendar",
+            type: "datepicker",
+            placeholder: "2022-10-19",
+            label: "",
+            labelWidth: 0,
+            labelPosition: "left",
+            weekNumbers: false,
+            timePicker: false,
+            disabled: false,
+            required: false,
+            editable: false,
+            thisMonthOnly: false,
+            helpMessage: "",
+            preMessage: "",
+            successMessage: "",
+            errorMessage: "",
+            weekStart: "sunday",
+            dateFormat: "%Y-%m-%d",
+            css: "control-comm sel-sort"
+        },
+        {
+            id: "prdcSelect",
+            name: "prdcSelect",
+            type: "select",
+            label: "",
+            labelPosition: "left",
+            labelWidth: 0,
+            value: "김정민(jmkim86)",
+            required: true,
+            options: [
+                { value: "0", content: "김정민(jmkim86)" },
+                { value: "1", content: "김민정(mjkim8713)" },
+                { value: "2", content: "공현우 (ksa1132)" },
+                { value: "3", content: "플랫폼기획팀" }
+            ],
+            css: "control-comm sel-sort"
+        }, 
+        {
+            id: "keywordSelect",
+            name: "select",
+            type: "select",
+            label: "",
+            labelPosition: "left",
+            labelWidth: 0,
+            value: "업무현황구분",
+            required: true,
+            options: [
+                { value: "0", content: "모델추가(전체)" },
+                { value: "1", content: "유사>일반" },
+                { value: "2", content: "모델삭제" },
+                { value: "3", content: "모델번호(전체)" },
+                { value: "4", content: "최저가매칭"}
+            ],
+            css: "control-comm sel-sort"
+        },
+        {
+            id: "keywordSubmit",
+            type: "button",
+            text:"열기",
+            css: "control-comm btn-srch"
+        }
+    ]
+})
+
+var mdOptionFilter = new dhx.Form(null, {
+    css: "form-radio--cond",
+    padding: "5px 10px",
+    width: "100%",
+    rows: [
+        {
+            // 모델 검색 옵션 첫번째 행
+            id: "mdFilterRow_1",
+            cols: [
+                {
+                    type: "radioGroup",
+                    name: "radioGroup",
+                    disabled: false,
+                    required: false,
+                    label: "",
+                    labelWidth: 0,
+                    labelPosition: "left",
+                    options: {
+                        cols: [
+                            { type: "radioButton", text: "전체", value: "0" },
+                            { type: "radioButton", text: "서비스", value: "1" },
+                            { type: "radioButton", text: "제외", value: "2" }
+                        ]
+                    },
+                    css: "control-comm ipt-radio"
+                },
+                {
+                    id: "selOpt_1",
+                    name: "selOpt_1",
+                    type: "select",
+                    label: "",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    value: "선택",
+                    required: true,
+                    options: [
+                        { value: "0", content: "인기순" },
+                        { value: "1", content: "신상품" }
+                    ],
+                    css: "control-comm sel-sort"
+                }, 
+                {
+                    id: "selOpt_2",
+                    name: "selOpt_2",
+                    type: "select",
+                    label: "",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    value: "선택",
+                    required: true,
+                    options: [
+                        { value: "0", content: "출시예정" },
+                        { value: "1", content: "미서비스확인" },
+                        { value: "2", content: "핵심속성점검" },
+                        { value: "3", content: "추가분류" },
+                        { value: "4", content: "그룹등록" },
+                        { value: "5", content: "그룹미등록" },
+                        { value: "6", content: "환산가미등록" },
+                        { value: "7", content: "유사상품" },
+                        { value: "8", content: "유사 ★관리용" },
+                        { value: "9", content: "속성" },
+                        { value: "9", content: "사양선택" }
+                    ],
+                    css: "control-comm sel-sort"
+                },
+                {
+                    id: "selOpt_3",
+                    name: "selOpt_3",
+                    type: "select",
+                    label: "",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    value: "선택",
+                    required: true,
+                    options: [
+                        { value: "0", content: "속성1단계" },
+                        { value: "1", content: "스펙그룹" },
+                    ],
+                    css: "control-comm sel-sort"
+                },
+                {
+                    id: "selOpt_4",
+                    name: "selOpt_4",
+                    type: "select",
+                    label: "",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    value: "선택",
+                    required: true,
+                    options: [
+                        { value: "0", content: "속성2단계" },
+                        { value: "1", content: "상세스펙" },
+                    ],
+                    css: "control-comm sel-sort"
+                },
+                {
+                    id: "mdFilterRow_1_Submit",
+                    type: "button",
+                    text: "조회",
+                    css: "control-comm btn-srch"
+                }
+            ]
+        },
+        {
+            // 모델 검색 옵션 두번째 행
+            id: "mdFilterRow_2",
+            cols: [
+                {
+                    id: "prdcSelect",
+                    name: "prdcSelect",
+                    type: "select",
+                    label: "",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    value: "선택",
+                    required: true,
+                    options: [
+                        { value: "0", content: "전체" },
+                        { value: "1", content: "카테고리내" },
+                        { value: "2", content: "담당" },
+                    ],
+                    css: "control-comm sel-sort"
+                }, 
+                {
+                    id: "keywordSelect1",
+                    name: "select",
+                    type: "select",
+                    label: "",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    value: "선택",
+                    required: true,
+                    options: [
+                        { value: "0", content: "통합" },
+                        { value: "1", content: "모델번호" },
+                        { value: "2", content: "모델번호(G)" },
+                        { value: "3", content: "모델명" },
+                        { value: "3", content: "조건명" },
+                        { value: "3", content: "속성" },
+                        { value: "3", content: "제조사" },
+                        { value: "3", content: "브랜드" }
+                    ],
+                    css: "control-comm sel-sort"
+                },
+                {
+                    id: "keywordSelect2",
+                    name: "select",
+                    type: "select",
+                    label: "",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    value: "선택",
+                    required: true,
+                    options: [
+                        { value: "0", content: "결과내포함" },
+                    ],
+                    css: "control-comm sel-sort"
+                },
+                {
+                    id: "keywordInput",
+                    name: "input",
+                    type: "input",
+                    label: "",
+                    labelPosition: "left",
+                    icon: "dxi dxi-magnify",
+                    labelWidth: 0,
+                    required: true,
+                    placeholder: "검색어를 입력하세요.",
+                    css: "control-comm ipt-srch"
+                },
+                {
+                    id: "keywordSubmit",
+                    type: "button",
+                    text:"검색",
+                    css: "control-comm btn-srch"
+                }
+            ]
+        },
+        {
+            // 모델 검색 옵션 세번째 행
+            id: "mdFilterRow_3",
+            cols: [
+                {
+                    id: "btnOriginMatching",
+                    type: "button",
+                    text:"기매칭",
+                    css: "control-comm btn-srch"
+                },
+                {
+                    id: "btnAdd",
+                    type: "button",
+                    text:"추가",
+                    css: "control-comm btn-srch"
+                },
+                {
+                    id: "btnMod",
+                    type: "button",
+                    text:"변경",
+                    css: "control-comm btn-srch"
+                },
+                {
+                    id: "btnDel",
+                    type: "button",
+                    text:"삭제",
+                    css: "control-comm btn-srch"
+                }
+            ]
+        }
+    ]
+})
+// EP상품 통합 검색 키워드 추가 TABBAR
+var keywordAdd = new dhx.Tabbar(null, {
+    css: "dhx_widget--bordered",
+    mode: "top",
+    tabAutoWidth: false,
+    closable: true,
+    noContent: true,
+    /* views: [
+        { tab: "-제외키워드", id:"keyword-1" },
+        { tab: "-제외키워드", id:"keyword-2" },
+        { tab: "+포함키워드", id:"keyword-3" },
+        { tab: "-키워드", id:"keyword-4" },
+        { tab: "+포함키워드", id:"keyword-5" },
+        { tab: "-키워드", id:"keyword-6" },
+        { tab: "-키워드", id:"keyword-7" },
+        { tab: "-키워드", id:"keyword-8" },
+        { tab: "-키워드", id:"keyword-9" },
+        { tab: "-키워드", id:"keyword-10" },
+        { tab: "-키워드", id:"keyword-11" },
+    ], */
+    css: "keyword_list"
+});
+
 
 // 검색제외조건 찾기 FORM
 var form_orgEctKwd_top = new dhx.Form(null, {
@@ -909,146 +1028,6 @@ var form_orgEctKwd_top = new dhx.Form(null, {
     ]    
 });
 
-// 검색제외조건 추가된 FORM, 찾기 폼(form_orgEctKwd_top)에서 추가 시, form_orgEctKwd_bottom.rows{} 추가
-var form_orgEctKwd_bottom = new dhx.Form(null, {
-    css: "form-radio--cond",
-    padding: "5px 10px",
-    width: "100%",
-    rows:[
-        {
-            id: "optionList-1",
-            cols:[
-                {
-                    type: "radioGroup",
-                    name: "addRadio-1",
-                    disabled: false,
-                    required: false,
-                    label: "",
-                    labelWidth: 0,
-                    labelPosition: "left",
-                    options: {
-                        cols: [
-                            {
-                                type: "radioButton",
-                                text: "포함",
-                                value: "",
-                            },
-                            {
-                                type: "radioButton",
-                                text: "제외",
-                                value: "",
-                            }
-                        ]
-                    },
-                    css: "control-comm ipt-radio"
-                },
-                {
-                    type: "input",
-                    name: "addIpt-1",
-                    labelPosition: "left",
-                    labelWidth: 0,
-                    required: true,
-                    placeholder: "",
-                    css:"control-comm ipt-srch"
-                },
-                {
-                    type: "button",
-                    text: "삭제",
-                    id: "btn-del-1",
-                    css: "control-comm btn-find"
-                }
-            ]
-        },
-        {
-            id: "optionList-2",
-            cols:[
-                {
-                    type: "radioGroup",
-                    name: "addRadio-2",
-                    disabled: false,
-                    required: false,
-                    label: "",
-                    labelWidth: 0,
-                    labelPosition: "left",
-                    options: {
-                        cols: [
-                            {
-                                type: "radioButton",
-                                text: "포함",
-                                value: "",
-                            },
-                            {
-                                type: "radioButton",
-                                text: "제외",
-                                value: "",
-                            }
-                        ]
-                    },
-                    css: "control-comm ipt-radio"
-                },
-                {
-                    type: "input",
-                    name: "addIpt-2",
-                    labelPosition: "left",
-                    labelWidth: 0,
-                    required: true,
-                    placeholder: "",
-                    css:"control-comm ipt-srch"
-                },
-                {
-                    type: "button",
-                    text: "삭제",
-                    id: "btn-del-2",
-                    css: "control-comm btn-find"
-                }
-            ]
-        },
-        {
-            id: "optionList-3",
-            cols:[
-                {
-                    type: "radioGroup",
-                    name: "addRadio-3",
-                    disabled: false,
-                    required: false,
-                    label: "",
-                    labelWidth: 0,
-                    labelPosition: "left",
-                    options: {
-                        cols: [
-                            {
-                                type: "radioButton",
-                                text: "포함",
-                                value: "",
-                            },
-                            {
-                                type: "radioButton",
-                                text: "제외",
-                                value: "",
-                            }
-                        ]
-                    },
-                    css: "control-comm ipt-radio"
-                },
-                {
-                    type: "input",
-                    name: "addIpt-3",
-                    labelPosition: "left",
-                    labelWidth: 0,
-                    required: true,
-                    placeholder: "",
-                    css:"control-comm ipt-srch"
-                },
-                {
-                    type: "button",
-                    text: "삭제",
-                    id: "btn-del-3",
-                    css: "control-comm btn-find"
-                }
-            ]
-        },
-    ]    
-});
 
 // EP 통합검색 FORM : 검색 영역
 var matchSrchControll = new dhx.Form(null, {
@@ -1171,7 +1150,7 @@ var epGridControll = new dhx.Form(null, {
 
 // EP 버튼 우측 FORM : 가매칭, 그룹매칭, 매칭
 var epGridSorting = new dhx.Form(null, {
-    css: "control-comm ep-chkbox",
+    css: "control-comm ep-chkbox mdpage",
     width:"100%",
     height:"42px",
     align: "end",
@@ -1180,26 +1159,6 @@ var epGridSorting = new dhx.Form(null, {
             id: "epSorting",
             cols:[
                 {
-                    //클릭시 그리드 정렬
-                    type: "button",
-                    id: "btnSortExecute",
-                    text: "조회",
-                    css:"btn-sort_execute"
-                },
-                {
-                    type: "checkbox",
-                    disabled: false,
-                    required: false,
-                    hidden: false,
-                    text: "가매칭"
-                },
-                {
-                    //클릭시 팝업
-                    type: "button",
-                    id: "layPop1",
-                    css:"btn-gmopen"
-                },
-                {                    
                     type: "checkbox",
                     disabled: false,
                     required: false,
@@ -1209,7 +1168,7 @@ var epGridSorting = new dhx.Form(null, {
                 {
                     //클릭시 팝업
                     type: "button",
-                    id: "layPop2",
+                    id: "layPop1",
                     css:"btn-gmopen"
                 },
                 {
@@ -1217,7 +1176,7 @@ var epGridSorting = new dhx.Form(null, {
                     disabled: false,
                     required: false,
                     hidden: false,
-                    text: "미매칭(구현예정)"
+                    text: "미매칭"
                 },
                 {
                     type: "checkbox",
@@ -1225,29 +1184,48 @@ var epGridSorting = new dhx.Form(null, {
                     required: false,
                     hidden: false,
                     text: "품절포함",
-                    css: "ep-mathing_soldout"
                 },
+                {
+                    type: "checkbox",
+                    disabled: false,
+                    required: false,
+                    hidden: false,
+                    text: "-2/-5 포함",
+                },
+                {
+                    type: "checkbox",
+                    disabled: false,
+                    required: false,
+                    hidden: false
+                },
+                {
+                    id: "keywordInput",
+                    name: "input",
+                    type: "input",
+                    label: "",
+                    labelPosition: "left",
+                    icon: "dxi dxi-magnify",
+                    labelWidth: 0,
+                    required: false,
+                    placeholder: "최소금액",
+                    css: "control-comm"
+                }
             ]
         }
     ]
 })
 
-/* 가매칭 팝업 */
+/* 매칭 팝업 */
 var popMatching1 = new dhx.Popup({
     css: "pop_groupMatching"
 });
 var popMatchingHtml = "";
 
 popMatchingHtml += "<div class=\"lay_gm\">";
-popMatchingHtml += "   <p class=\"tx_tit\">가매칭 항목 설정</p>";
+popMatchingHtml += "   <p class=\"tx_tit\">매칭 항목 설정</p>";
 popMatchingHtml += "   <ul>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_1\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_1\">대량정제 색인데이터</label> <em class=\"tx_cnt\">(12,000)</em></li>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_2\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_2\">제조사품번(그룹매칭)</label> <em class=\"tx_cnt\">(99,999)</em></li>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_3\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_3\">에누리모델명(그룹매칭)</label> <em class=\"tx_cnt\">(1,000)</em></li>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_4\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_4\">N크롤링</label> <em class=\"tx_cnt\">(5670)</em></li>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_5\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_5\">D크롤링</label> <em class=\"tx_cnt\">(12,000)</em></li>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_6\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_6\">DCAMS-5</label> <em class=\"tx_cnt\">(12,000)</em></li>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_7\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_7\">FAMS</label> <em class=\"tx_cnt\">(12,000)</em></li>";
+popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_1\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_1\">일반매칭</label> <em class=\"tx_cnt\">(12,000)</em></li>";
+popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_2\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_2\">그룹(자동)매칭</label> <em class=\"tx_cnt\">(99,999)</em></li>";
 popMatchingHtml += "   <ul>";
 popMatchingHtml += "</div>";
 popMatching1.attachHTML(popMatchingHtml);
@@ -1255,23 +1233,6 @@ epGridSorting.getItem("layPop1").events.on("click", function(e){
     popMatching1.show(e.srcElement);
 })
 
-/* 매칭 팝업 */
-var popMatching2 = new dhx.Popup({
-    css: "pop_groupMatching"
-});
-var popMatchingHtml2 = "";
-
-popMatchingHtml2 += "<div class=\"lay_gm\">";
-popMatchingHtml2 += "   <p class=\"tx_tit\">매칭 항목 설정</p>";
-popMatchingHtml2 += "   <ul>";
-popMatchingHtml2 += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching2_1\" class=\"input--checkbox-item\"><label for=\"matching2_1\">일반매칭</label> <em class=\"tx_cnt\">(99,000)</em></li>";
-popMatchingHtml2 += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching2_2\" class=\"input--checkbox-item\"><label for=\"matching2_2\">그룹(자동)매칭</label> <em class=\"tx_cnt\">(12,000)</em></li>";
-popMatchingHtml2 += "   <ul>";
-popMatchingHtml2 += "</div>";
-popMatching2.attachHTML(popMatchingHtml2);
-epGridSorting.getItem("layPop2").events.on("click", function(e){
-    popMatching2.show(e.srcElement);
-})
 
 
 // EP상품 통합 검색 키워드 추가 TABBAR
@@ -1324,15 +1285,15 @@ const pconfig = {
     mode: "bottom",
     indent: 0
 };
-grid6.events.on("headerCellRightClick", function(col, e){
+prdcList.events.on("headerCellRightClick", function(col, e){
     e.preventDefault();
     popup.show(e.srcElement, pconfig);
 })
 function customField(item) {
 	if(!$("#"+item).is(":checked")){
-		grid6.hideColumn(item);
+		prdcList.hideColumn(item);
 	}else{
-		grid6.showColumn(item);
+		prdcList.showColumn(item);
 	}
 }
 /* // */
@@ -1442,16 +1403,16 @@ var config = {
             rows: [
                 {
                     type: "line",
-                    id: "optFilter",
+                    id: "userFinder",
                     width:"100%",
-                    height: "60px"
+                    height: "38px"
                 },
                 {
                     cols: [
                         {
-                            // 모델 (좌측)
+                            // 모델목록 (좌측)
                             type: "line",
-                            id: "modelList",
+                            id: "mdList",
                             //width:"222px",
                             headerHeight:32,
                             header: "모델 (n건)",
@@ -1461,14 +1422,13 @@ var config = {
                             customScroll: true,
                             rows : [
                                 {
-                                    // 제조사 HEADER
-                                    id: "mkrheader",
-                                    html: makeComponent,
-                                    height: "48px"
+                                    // 모델목록 HEADER
+                                    id: "mdOptionFilter",
+                                    height: "116px"
                                 },
                                 {
-                                    // 제조사 GRID
-                                    id: "mkrgrid",
+                                    // 모델목록 GRID
+                                    id: "mdGrid",
                                     height:"calc(100% - 48px)"
                                 }
                             ]
@@ -1484,7 +1444,13 @@ var config = {
                             resizable: true,
                             customScroll: true,
                             rows:[
-                                {    
+                                {
+                                    // EP상품 ROW : 매칭 미매칭 품절 -2/-5 체크박스
+                                    id: "epGridSorting",
+                                    width:"100%",
+                                    height:"42px",
+                                },
+                                {
                                     // EP상품 ROW : 검색&키워드
                                     width:"100%",
                                     height:"42px",
@@ -1499,7 +1465,7 @@ var config = {
                                             id:"epSearchKeyword",
                                             width:"calc(100% - 440px)",
                                         }
-                                    ]      
+                                    ]
                                 },
                                 {
                                     // EP상품 ROW : 정보
@@ -1515,11 +1481,6 @@ var config = {
                                             // 버튼 좌측 : 전체선택,매칭,매칭해제
                                             id: "epGridControll",
                                             width:"205px",
-                                        },
-                                        {
-                                            // 버튼 우측 : 매칭/미매칭 정렬
-                                            id: "epGridSorting",
-                                            width:"calc(100% - 277px)",
                                         },
                                         {
                                             // 우측 뷰타입 버튼 넣기 위한 빈 공간 
@@ -1573,8 +1534,11 @@ var config = {
 
 export var contentLayout = new dhx.Layout("contents", config);
 
+    contentLayout.getCell("userFinder").attach(userFinder)
+
+    contentLayout.getCell("mdOptionFilter").attach(mdOptionFilter)
     // GRID 세팅
-    contentLayout.getCell("mkrgrid").attach(modellist); // 제조사 GRID    
+    contentLayout.getCell("mdGrid").attach(mdList); // 제조사 GRID    
     
     contentLayout.getCell("matchPaging").attach(matchGridPaging); // EP상품 페이징 (그리드)
 
@@ -1587,50 +1551,17 @@ export var contentLayout = new dhx.Layout("contents", config);
     contentLayout.getCell("epTabContainer").attach(epViewContainer); // EP 상품 그리드&리스트 목록 컨테이너
 
     // EP상품 뷰타입 attach 합니다.
-    epViewContainer.getCell("gridTypeList").attach(grid6); // EP상품 뷰타입 컨테이너 > 그리드뷰 노출
+    epViewContainer.getCell("gridTypeList").attach(prdcList); // EP상품 뷰타입 컨테이너 > 그리드뷰 노출
     epViewContainer.getCell("imageTypeList").attach(imageTypeList); // EP상품 뷰타입 컨테이너 > 이미지뷰 노출
 
-/********************************* 
- * 참고 : 선택한 내용에 따라 각 헤더 내용 변경입니다.
-*********************************/
-
-    // 제조사 선택 -> header 변경
-    modellist.selection.events.on("afterSelect", function(row, col){
-        contentLayout.getCell("col-1").config.header="제조사 (3,808) : " + row.gcol1;
-
-        contentLayout.paint();
-    });
-    // 브랜드 선택 -> header 변경
-    grid2.selection.events.on("afterSelect", function(row, col){
-        contentLayout.getCell("col-2").config.header="브랜드 (126) : " + row.gcol1;
-
-        contentLayout.paint();
-    });
-    // 원부 선택 -> header 변경
-    grid3.selection.events.on("afterSelect", function(row, col){
-        contentLayout.getCell("col-3").config.header="원부 (48) : " + row.gco3_name;
-
-        contentLayout.paint();
-    });
-    // 조건 선택 -> header 변경
-    grid4.selection.events.on("afterSelect", function(row, col){
-        contentLayout.getCell("col-4").config.header="조건 (287) : " + row.gcol1 + " , " + row.gcol2;
-
-        contentLayout.paint();
-    });
-    // 추천조건선택 -> header 변경
-    grid5.selection.events.on("afterSelect", function(row, col){
-        contentLayout.getCell("statgrid").config.header="추천 조건 (287) : " + row.gcol1 + " , " + row.gcol2;
-
-        contentLayout.paint();
-    });
+    
 
 /********************************* 
  * 참고 : EP상품 그리드/리스트(이미지뷰) 선택한 상품명 표시입니다.
 *********************************/
 
     // 매칭 그리드 선택한 마지막 값 넣어주기
-    grid6.selection.events.on("afterSelect", function(row, col){
+    prdcList.selection.events.on("afterSelect", function(row, col){
         $("#modelNameIn").val(row.goodsnm);
     });
     // 매칭 리스트(이미지뷰) 선택한 마지막 값 넣어주기
