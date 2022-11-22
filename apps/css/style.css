@@ -327,6 +327,28 @@ html,body{height: 100%;font-size:13px;font-family:/* "Noto Sans KR", */"맑은 �
 .keyword_list .dhx_tabbar-tab.is-disabled .dhx_tabbar-tab-button {color:#999}
 .keyword_list .dhx_tabbar-header-active {display:none !important}
 
+/* .mdSearchKeyword_list */
+.mdSearchKeyword_list .dhx_tabbar-header__wrapper {border-bottom:0}
+.mdSearchKeyword_list .dhx_tabbar-tab-button {padding:0;font-size:12px;line-height:20px;color:#1A70DD;}
+.mdSearchKeyword_list .dhx_tabbar-tab-button:active, 
+.mdSearchKeyword_list .dhx_tabbar-tab-button:hover, 
+.mdSearchKeyword_list .dhx_tabbar-tab-button:hover:active {background:none}
+.mdSearchKeyword_list .dhx_tabbar-tab-button--active {}
+.mdSearchKeyword_list .dhx_tabbar-tab-button .dhx_button__text {opacity:1}
+.mdSearchKeyword_list .dhx_tabbar-tab.is-disabled .dhx_tabbar-tab-button {color:#999}
+.mdSearchKeyword_list .dhx_tabbar-header-active {display:none !important}
+
+/* .prdcSearchKeyword_list */
+.prdcSearchKeyword_list .dhx_tabbar-header__wrapper {border-bottom:0}
+.prdcSearchKeyword_list .dhx_tabbar-tab-button {padding:0;font-size:12px;line-height:20px;color:#1A70DD;}
+.prdcSearchKeyword_list .dhx_tabbar-tab-button:active, 
+.prdcSearchKeyword_list .dhx_tabbar-tab-button:hover, 
+.prdcSearchKeyword_list .dhx_tabbar-tab-button:hover:active {background:none}
+.prdcSearchKeyword_list .dhx_tabbar-tab-button--active {}
+.prdcSearchKeyword_list .dhx_tabbar-tab-button .dhx_button__text {opacity:1}
+.prdcSearchKeyword_list .dhx_tabbar-tab.is-disabled .dhx_tabbar-tab-button {color:#999}
+.prdcSearchKeyword_list .dhx_tabbar-header-active {display:none !important}
+
 /* 원부 영역 */
 #grid_container3 .dhx_grid-row {min-height:60px;height:auto}
 #grid_container3 .thumb {float:left;position:relative;width:50px;height:50px;background-color:rgba(0, 0, 0, 0.03)}
@@ -370,7 +392,8 @@ html,body{height: 100%;font-size:13px;font-family:/* "Noto Sans KR", */"맑은 �
 
 /* EP그리드 별도 CSS */
 .pop_headecell-sort {}
-.pop_headecell-sort .dhx_popup__inner-html-content > div > input[type="checkbox"] {position:relative;top:2px;margin-right:4px}
+.pop_headecell-sort .dhx_popup__inner-html-content > div label {display:block;margin:0;cursor:pointer;}
+.pop_headecell-sort .dhx_popup__inner-html-content > div input[type="checkbox"] {position:relative;top:2px;margin-right:4px}
 
 .lay_gm {width:200px;}
 .lay_gm .tx_tit {display:block;font-size:13px;}
@@ -489,7 +512,7 @@ html,body{height: 100%;font-size:13px;font-family:/* "Noto Sans KR", */"맑은 �
 
 .control-comm.ipt-checkbox .dhx_checkbox {height:40px;margin:0;vertical-align:middle}
 .control-comm.ipt-checkbox .dhx_checkbox .dhx_text {font-size:12px;color:#000}
-.control-comm.ipt-radio .dhx_radiobutton {height:24px;margin:0;vertical-align:middle}
+.control-comm.ipt-radio .dhx_radiobutton {height:24px;margin:1px 0 0;vertical-align:middle}
 .control-comm.ipt-radio .dhx_radiobutton .dhx_text {padding-left:3px;margin-right:6px;font-size:11px;color:#000;align-self: auto;}
 .control-comm.sel-paging .dhx_label {overflow:visible;position:relative;width:auto !important;height:28px;margin-right:20px;align-self:center;font-size:12px;font-family:"Roboto", "맑은 고딕", "Malgun Gothic", sans-serif;color:#333;line-height:28px;vertical-align:middle;}
 .control-comm.sel-paging .dhx_label:before {content:"/";position:absolute;top:0;right:-12px;}
@@ -510,10 +533,6 @@ html,body{height: 100%;font-size:13px;font-family:/* "Noto Sans KR", */"맑은 �
 .control-comm .dhx_combobox-input-box:focus, 
 .control-comm .dhx_input, 
 .control-comm .dhx_input:focus {box-shadow:none}
-
-.control-comm .dhx_input:focus, .control-comm .dhx_input:hover, .control-comm .dhx_input:active,
-.control-comm .dhx_select:focus, .control-comm .dhx_select:hover, .control-comm .dhx_select:active,
-.control-comm .dhx_button:focus, .control-comm .dhx_button:hover, .control-comm .dhx_button:active {border:1px solid #515b6d;background-color:#fff;outline:0}
 
 .control-comm.btn-srch {display:inline-block;margin-left:2px;}
 .control-comm.btn-srch .dhx_button {top:1px;background-color:#fff}
@@ -578,7 +597,7 @@ div[aria-label="tab-content-orgEctKwd-bottom"] .control-comm .dhx_input {padding
 .control-comm.btn-cond .dhx_label {overflow:visible;position:relative;width:auto !important;height:28px;margin-right:20px;align-self:center;font-size:12px;font-family:"Roboto", "맑은 고딕", "Malgun Gothic", sans-serif;color:#333;line-height:28px;vertical-align:middle;}
 .control-comm.btn-cond .dhx_label:before {content:"/";position:absolute;top:0;right:-12px;}
 .control-comm.btn-cond .dhx_input {min-width:50px;min-height:28px;padding:0 26px 0 8px;border-radius:2px;}
-.control-comm.btn-cond .dhx_button {width:56px;padding:0;border-color:#ccc;background-color:#FAFAFA}
+.control-comm.btn-cond .dhx_button {min-width:56px;padding:0 5px;border-color:#ccc;background-color:#FAFAFA}
 .control-comm.btn-cond.btn-all .dhx_button {background-color:#fff}
 .control-comm.btn-cond.btn-matching .dhx_button {font-weight:bold;color:#fff;border-color:var(--color-enuriblue);background-color:var(--color-enuriblue)}
 .control-comm.btn-cond.btn-matching .dhx_button:hover {border-color:#1159b8;background-color:#1159b8}
@@ -611,6 +630,10 @@ div[aria-label="tab-content-orgEctKwd-bottom"] .control-comm .dhx_input {padding
 .btn_save_box .img_cross .dhx_input {font-size:0;}
 .btn_save_box .img_cross:before {content:"";display:block;width:100%;height:100%;background:transparent url(../imgs/img_cross.png) no-repeat;}
 
+.control-comm .dhx_input:focus, .control-comm .dhx_input:hover, .control-comm .dhx_input:active,
+.control-comm .dhx_select:focus, .control-comm .dhx_select:hover, .control-comm .dhx_select:active,
+.control-comm .dhx_button:focus, .control-comm .dhx_button:hover, .control-comm .dhx_button:active {border:1px solid #515b6d;background-color:#fff;outline:0}
+
 /* 전체보기/매칭/미매칭 보기 */
 /* 체크박스그룹 */
 .control-comm.ep-chkbox {overflow-y:hidden;padding:10px 0!important;}
@@ -619,7 +642,13 @@ div[aria-label="tab-content-orgEctKwd-bottom"] .control-comm .dhx_input {padding
 .control-comm.ep-chkbox .dhx_checkbox .dhx_text {margin-right:6px;font-size:12px;color:#000;align-self: auto;}
 
 /* 체크박스그룹 - 모델리스트만 적용 */
-.control-comm.ep-chkbox.mdpage {padding:10px 8px!important}
+.control-comm.ep-chkbox.mdpage {padding:12px 8px 8px!important}
+.control-comm.ep-chkbox.mdpage .dhx_label {display:none}
+.control-comm.ep-chkbox.mdpage .ipt_chk {width:16px;margin-right:4px;}
+.control-comm.ep-chkbox.mdpage .ipt_chk .dhx_checkbox__visual-input {margin-top:2px}
+.control-comm.ep-chkbox.mdpage .min_price {margin-top:-2px;height:24px;}
+.control-comm.ep-chkbox.mdpage .min_price .dhx_input {vertical-align:top;}
+
 /* 라디오그룹 */
 .control-comm.ep-radio {padding:5px 10px !important;}
 .control-comm.ep-radio .dhx_layout-cell {justify-content:flex-end;}
@@ -1084,3 +1113,21 @@ div[aria-label="tab-content-orgEctKwd-bottom"] .control-comm .dhx_input {padding
 .dhx_window-content .dhx_radio-group--container .dhx_layout-columns {justify-content:start}
 .dhx_window-content .dhx_radio-group--container .dhx_layout-cell {flex:0 1 auto;}
 .dhx_window-content .dhx_checkbox-group--container .dhx_layout-columns {flex-wrap:wrap;}
+
+/* DHTMLX > 윈도우 editModalBox */
+.dhx_window-content .editModalBox {}
+.dhx_window-content-without-header .dhx_layout-cell, 
+.dhx_window-content .dhx_layout-cell, 
+.dhx_window-content .dhx_layout-rows:first-of-type {overflow-y:hidden;}
+.dhx_window-content .editModalBox .dhx_layout-cell {position:relative;}
+.dhx_window-content .editModalBox .dhx_label {height:32px;line-height:32px;}
+.dhx_window-content .editModalBox .dhx_input__wrapper {height:0}
+.dhx_window-content .editModalBox .btn_srch .dhx_button {border:1px solid #ccc;border-radius:2px;margin:0 2px;padding:5px 15px;font-size:11px;color:#000;letter-spacing:-1px;background-color:#fff;transition:all .2s ease-out}
+.dhx_window-content .editModalBox .btn_srch .dhx_button:focus,
+.dhx_window-content .editModalBox .btn_srch .dhx_button:hover {border-color:#999;}
+.dhx_window-content .editModalBox .btn_info {position:absolute;top:0;right:0;}
+.dhx_window-content .editModalBox .btn_info .dhx_button {border-color:#666;font-size:11px;color:#fff;letter-spacing:-1px;background-color:#666;}
+.dhx_window-content .editModalBox .btn_info .dhx_button:focus,
+.dhx_window-content .editModalBox .btn_info .dhx_button:hover {background-color:#333;}
+.dhx_window-content .editModalBox .ipt_full {width:56.5%}
+.dhx_window-content .editModalBox .sel_pad .dhx_select {display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:140px;padding-right:24px;background-color:#fff;}

@@ -16,449 +16,191 @@
  * 메인 > 기본 컨텐츠(레이아웃1)
  *********************************/
 
-// 제조사 가짜 데이터
+// 모델리스트 가짜 데이터
 var mdList_data = [
-    {"gcol2": "12,345,678","gcol3": "15010101","gcol3": "이미지","gcol4":"솔가","gcol5":"솔가","gcol6":"비타민 D3 5000IU 240정","gcol7":"1개","gcol8":"대표","gcol9":"5","gcol10":"2022-01-24","gcol11":"1","gcol12":"1","gcol13":"1","gcol14":"1","gcol15":"","gcol6":"0","gcol17":"","gcol18":"","gcol19":"","gcol20":"","gcol21":"",},
+    {
+        "md_count": "12,345,678",
+        "md_catecode": "15010101",
+        "md_image": "http://image.enuri.info/webimage_300/9533000000/9533000000/9533002157.jpg",
+        "md_comp":"솔가", 
+        "md_brand":"솔가",
+        "md_name":"비타민 D3 5000IU 240정",
+        "md_group":"1개",
+        "md_group_st":"대표",
+        "md_matching":"5",
+        "md_resist":"2022-01-24",
+        "md_img":"1",
+        "md_sold":"1",
+        "md_front":"1",
+        "md_property":"",
+        "md_cmnum":"0",
+        "md_expected":"0",
+        "md_volume":"",
+        "md_quantity":"",
+        "md_exchange":"",
+        "md_unit":"",
+        "md_qna":"",
+        "md_review":"",
+        "md_ingredient":"",
+        "md_color":0
+    },
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"홍합분말 초록입","md_group":"1개","md_group_st":"그룹","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":1},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":1},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":1},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":1},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"115","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0},
+    {"md_count": "12,345,678","md_catecode": "15010101","md_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","md_comp":"솔가","md_brand":"솔가","md_name":"비타민 D3 5000IU 240정","md_group":"1개","md_group_st":"대표","md_matching":"5","md_resist":"2022-01-24","md_img":"1","md_sold":"1","md_front":"1","md_property":"","md_cmnum":"0","md_expected":"0","md_volume":"","md_quantity":"","md_exchange":"","md_unit":"",
+    "md_qna":"","md_review":"","md_ingredient":"","md_color":0}
 ]
-// 그리드3 넘버링
+// 모델리스트 가짜 데이터 넘버 입력
 var mdListNum = mdList_data.length;
 for(var i = 0; i < mdListNum; i++) {
     var row = mdList_data[i];
     row.idx = i+1;
 }
-// 브랜드 가짜 데이터
-var grid2_data = [
-    {"gcol1": "미쟝센","gcol2": "157","gcol3": "76","gcol4": "미쟝센","gcol5": "157","gcol6": "76","gcol7": "미쟝센","gcol8": "157","gcol9": "76"}, 
-    {"gcol1": "려","gcol2": "121","gcol3": "127"}, 
-    {"gcol1": "댄트롤","gcol2": "100","gcol3": "16"}, 
-    {"gcol1": "이니스프리","gcol2": "81","gcol3": "22"}, 
-    {"gcol1": "비타민","gcol2": "55","gcol3": "2"}, 
-    {"gcol1": "아모레퍼시픽","gcol2": "1","gcol3": "20"}, 
-    {"gcol1": "프레시팝","gcol2": "3","gcol3": "23"}, 
-    {"gcol1": "프리메라","gcol2": "234","gcol3": "5"}, 
-    {"gcol1": "아리따움","gcol2": "157","gcol3": "1"}, 
-    {"gcol1": "해피바스","gcol2": "121","gcol3": "4"}, 
-    {"gcol1": "에뛰드하우스","gcol2": "100","gcol3": "5"}, 
-]
-// 원부 가짜 데이터
-var grid3_data = [
-    {"gco3_img": "","gco3_name":"[미생성 원부]","gco3_cnt": "157", "nmaking": true},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9533000000/9533000000/9533002157.jpg","gco3_name":"스칼프 케어 샴푸","gco3_cnt": "157"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/3828500000/3828590000/3828594408.jpg","gco3_name":"데미지 케어 샴푸","gco3_cnt": "121"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","gco3_name":"스칼프 케어 그린티 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7621000000/7621070000/7621079541.jpg","gco3_name":"퍼펙트 세럼 샴푸 오리지널","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","gco3_name":"퍼펙트 세럼 스타일링 샴푸","gco3_cnt": "55", "similarMd": true},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5431700000/5431780000/5431780716.jpg","gco3_name":"퍼펙트 세럼 샴푸 슈퍼리치","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/6972900000/6972910000/6972913054.jpg","gco3_name":"에이징케어 파워베리 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9622000000/9622040000/9622045486.jpg","gco3_name":"데미지 케어 로즈프로틴 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10462800000/10462880000/10462886671.jpg","gco3_name":"헤어테라미 모이스처 샴푸","gco3_cnt": "157"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8201800000/8201840000/8201848704.jpg","gco3_name":"퍼펙트 세럼 미셀라 샴푸","gco3_cnt": "121"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8286700000/8286770000/8286776059.jpg","gco3_name":"체리블라썸 퍼퓸샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","gco3_name":"화이트머스크 퍼퓸샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8897300000/8897330000/8897330949.jpg","gco3_name":"살롱 플러스 클리닉 10 손상모발","gco3_cnt": "55", "similarMd": true},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9163500000/9163540000/9163540716.jpg","gco3_name":"페어앤프리지아 퍼퓸 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8985500000/8985570000/8985572647.jpg","gco3_name":"살롱 플러스 클리닉 10 극손상모발용 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10228500000/10228590000/10228593298","gco3_name":"슈퍼 보태니컬 리페어 릴렉싱 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9366900000/9366930000/9366936493.jpg","gco3_name":"에이징케어 콜라겐 샴푸","gco3_cnt": "157"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8355800000/8355870000/8355870293.jpg","gco3_name":"그린데이지 퍼퓸 샴푸","gco3_cnt": "121"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10631200000/10631210000/10631219526.jpg","gco3_name":"스무스&실키 모이스처 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4688700000/4688790000/4688791914","gco3_name":"헤어테라피 샤이닝 모이스처 샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8840900000/8840910000/8840910396.jpg","gco3_name":"살롱 플러스 클리닉 10 건조모발용 샴푸","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8473500000/8473500000/8473503520.jpg","gco3_name":"리본드 프로틴 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7163400000/7163480000/7163484250.jpg","gco3_name":"5.5 프로틴 약산성 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7631200000/7631230000/7631230907","gco3_name":"풀&글래머러스 볼륨 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/2229100000/2229130000/2229132621.jpg","gco3_name":"안티에이징 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8939500000/8939580000/8939583209.jpg","gco3_name":"5.5 콜라겐 약산성 샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5358600000/5358650000/5358653398.jpg","gco3_name":"아로마 에센셜 릴랙싱 샴푸 로터스&라벤더","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5455800000/5455800000/5455807674","gco3_name":"헬시&스트롱 리페어 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4572900000/4572930000/4572935120.jpg","gco3_name":"데미지 케어 케라틴 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10229500000/10229550000/10229555748.jpg","gco3_name":"펄 샤이닝 모이스처 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5038100000/5038120000/5038125404.jpg","gco3_name":"아로마 에센셜 리프레싱 샴푸 오렌지플라워&베르가못","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/2531200000/2531240000/2531245239.jpg","gco3_name":"퍼펙트 리페어 샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5037900000/5037950000/5037950877.jpg","gco3_name":"아로마 에센셜리바이탈라이징 샴푸 자스민&로즈마리","gco3_cnt": "55"},
-    {"gco3_img": "http://photo3.enuri.info/data/images/service/img_300/11357000/11357074.jpg","gco3_name":"쿨링 케어 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/6580800000/6580870000/6580871736.jpg","gco3_name":"데미지 케어 샴푸 일회용","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4371900000/4371910000/4371913345.jpg","gco3_name":"슈퍼 보태니컬 모이스처&리프레쉬 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7651600000/7651640000/7651646859.jpg","gco3_name":"슈퍼 보태니컬 볼륨 리바이탈라이징 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://photo3.enuri.info/data/images/service/img_300/11164000/11164870.jpg","gco3_name":"샤이닝 케어 샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/3864600000/3864610000/3864616559.jpg","gco3_name":"슈퍼 보태니컬 볼륨&리바이탈라이징 500ml 샴푸2+린스","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4420700000/4420700000/4420708294.jpg","gco3_name":"스칼프 케어 마일드 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5619200000/5619250000/5619250929.jpg","gco3_name":"스파클링 선샤인 퍼퓸샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/6610600000/6610640000/6610646969.jpg","gco3_name":"시어버터 5% 화이트머스크 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/3828500000/3828590000/3828594408.jpg","gco3_name":"데미지 케어 샴푸","gco3_cnt": "121"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","gco3_name":"스칼프 케어 그린티 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7621000000/7621070000/7621079541.jpg","gco3_name":"퍼펙트 세럼 샴푸 오리지널","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","gco3_name":"퍼펙트 세럼 스타일링 샴푸","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5431700000/5431780000/5431780716.jpg","gco3_name":"퍼펙트 세럼 샴푸 슈퍼리치","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/6972900000/6972910000/6972913054.jpg","gco3_name":"에이징케어 파워베리 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9622000000/9622040000/9622045486.jpg","gco3_name":"데미지 케어 로즈프로틴 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10462800000/10462880000/10462886671.jpg","gco3_name":"헤어테라미 모이스처 샴푸","gco3_cnt": "157"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8201800000/8201840000/8201848704.jpg","gco3_name":"퍼펙트 세럼 미셀라 샴푸","gco3_cnt": "121"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8286700000/8286770000/8286776059.jpg","gco3_name":"체리블라썸 퍼퓸샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","gco3_name":"화이트머스크 퍼퓸샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8897300000/8897330000/8897330949.jpg","gco3_name":"살롱 플러스 클리닉 10 손상모발","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9163500000/9163540000/9163540716.jpg","gco3_name":"페어앤프리지아 퍼퓸 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8985500000/8985570000/8985572647.jpg","gco3_name":"살롱 플러스 클리닉 10 극손상모발용 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10228500000/10228590000/10228593298","gco3_name":"슈퍼 보태니컬 리페어 릴렉싱 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9366900000/9366930000/9366936493.jpg","gco3_name":"에이징케어 콜라겐 샴푸","gco3_cnt": "157"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8355800000/8355870000/8355870293.jpg","gco3_name":"그린데이지 퍼퓸 샴푸","gco3_cnt": "121"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10631200000/10631210000/10631219526.jpg","gco3_name":"스무스&실키 모이스처 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4688700000/4688790000/4688791914","gco3_name":"헤어테라피 샤이닝 모이스처 샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8840900000/8840910000/8840910396.jpg","gco3_name":"살롱 플러스 클리닉 10 건조모발용 샴푸","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8473500000/8473500000/8473503520.jpg","gco3_name":"리본드 프로틴 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7163400000/7163480000/7163484250.jpg","gco3_name":"5.5 프로틴 약산성 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7631200000/7631230000/7631230907","gco3_name":"풀&글래머러스 볼륨 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/2229100000/2229130000/2229132621.jpg","gco3_name":"안티에이징 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8939500000/8939580000/8939583209.jpg","gco3_name":"5.5 콜라겐 약산성 샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5358600000/5358650000/5358653398.jpg","gco3_name":"아로마 에센셜 릴랙싱 샴푸 로터스&라벤더","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5455800000/5455800000/5455807674","gco3_name":"헬시&스트롱 리페어 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4572900000/4572930000/4572935120.jpg","gco3_name":"데미지 케어 케라틴 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10229500000/10229550000/10229555748.jpg","gco3_name":"펄 샤이닝 모이스처 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5038100000/5038120000/5038125404.jpg","gco3_name":"아로마 에센셜 리프레싱 샴푸 오렌지플라워&베르가못","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/2531200000/2531240000/2531245239.jpg","gco3_name":"퍼펙트 리페어 샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5037900000/5037950000/5037950877.jpg","gco3_name":"아로마 에센셜리바이탈라이징 샴푸 자스민&로즈마리","gco3_cnt": "55"},
-    {"gco3_img": "http://photo3.enuri.info/data/images/service/img_300/11357000/11357074.jpg","gco3_name":"쿨링 케어 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/6580800000/6580870000/6580871736.jpg","gco3_name":"데미지 케어 샴푸 일회용","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4371900000/4371910000/4371913345.jpg","gco3_name":"슈퍼 보태니컬 모이스처&리프레쉬 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7651600000/7651640000/7651646859.jpg","gco3_name":"슈퍼 보태니컬 볼륨 리바이탈라이징 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://photo3.enuri.info/data/images/service/img_300/11164000/11164870.jpg","gco3_name":"샤이닝 케어 샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/3864600000/3864610000/3864616559.jpg","gco3_name":"슈퍼 보태니컬 볼륨&리바이탈라이징 500ml 샴푸2+린스","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4420700000/4420700000/4420708294.jpg","gco3_name":"스칼프 케어 마일드 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5619200000/5619250000/5619250929.jpg","gco3_name":"스파클링 선샤인 퍼퓸샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/6610600000/6610640000/6610646969.jpg","gco3_name":"시어버터 5% 화이트머스크 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/3828500000/3828590000/3828594408.jpg","gco3_name":"데미지 케어 샴푸","gco3_cnt": "121"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg","gco3_name":"스칼프 케어 그린티 샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7621000000/7621070000/7621079541.jpg","gco3_name":"퍼펙트 세럼 샴푸 오리지널","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg","gco3_name":"퍼펙트 세럼 스타일링 샴푸","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/5431700000/5431780000/5431780716.jpg","gco3_name":"퍼펙트 세럼 샴푸 슈퍼리치","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/6972900000/6972910000/6972913054.jpg","gco3_name":"에이징케어 파워베리 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9622000000/9622040000/9622045486.jpg","gco3_name":"데미지 케어 로즈프로틴 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10462800000/10462880000/10462886671.jpg","gco3_name":"헤어테라미 모이스처 샴푸","gco3_cnt": "157"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8201800000/8201840000/8201848704.jpg","gco3_name":"퍼펙트 세럼 미셀라 샴푸","gco3_cnt": "121"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8286700000/8286770000/8286776059.jpg","gco3_name":"체리블라썸 퍼퓸샴푸","gco3_cnt": "100"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276","gco3_name":"화이트머스크 퍼퓸샴푸","gco3_cnt": "81"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8897300000/8897330000/8897330949.jpg","gco3_name":"살롱 플러스 클리닉 10 손상모발","gco3_cnt": "55"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9163500000/9163540000/9163540716.jpg","gco3_name":"페어앤프리지아 퍼퓸 샴푸","gco3_cnt": "1"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8985500000/8985570000/8985572647.jpg","gco3_name":"살롱 플러스 클리닉 10 극손상모발용 샴푸","gco3_cnt": "3"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/10228500000/10228590000/10228593298","gco3_name":"슈퍼 보태니컬 리페어 릴렉싱 샴푸","gco3_cnt": "234"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/9366900000/9366930000/9366936493.jpg","gco3_name":"에이징케어 콜라겐 샴푸","gco3_cnt": "157"},
-    {"gco3_img": "http://image.enuri.info/webimage_300/8355800000/8355870000/8355870293.jpg","gco3_name":"그린데이지 퍼퓸 샴푸","gco3_cnt": "121"},
-];
-// 그리드3 넘버링
-var grid3len = grid3_data.length;
-for(var i = 0; i < grid3len; i++) {
-    var row = grid3_data[i];
-    row.idx = i+1;
-}
-// 조건 가짜 데이터
-var grid4_data = [
-    {"gcol1": "1L","gcol2": "1개","gcol3": "0"}, 
-    {"gcol1": "1L","gcol2": "2개","gcol3": "0"}, 
-    {"gcol1": "1L","gcol2": "3개","gcol3": "0"}, 
-    {"gcol1": "1L","gcol2": "4개","gcol3": "0"}, 
-    {"gcol1": "1L","gcol2": "5개","gcol3": "0"}, 
-    {"gcol1": "1L","gcol2": "6개","gcol3": "0"}, 
-    {"gcol1": "1L","gcol2": "7개","gcol3": "0"}, 
-    {"gcol1": "1L","gcol2": "481개","gcol3": "0"}, 
-    {"gcol1": "530ml","gcol2": "1개","gcol3": "0"}, 
-    {"gcol1": "530ml","gcol2": "2개","gcol3": "0"}, 
-    {"gcol1": "530ml","gcol2": "3개","gcol3": "0"}, 
-    {"gcol1": "530ml","gcol2": "12개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "1개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "2개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "3개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "4개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "5개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "6개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "7개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "8개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "9개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "10개","gcol3": "0"}, 
-    {"gcol1": "680ml","gcol2": "12개","gcol3": "0"}, 
 
-]
 // 가격리스트(EP) 가짜 데이터
-var eslist = [
-    {"pl_no": 9125260161, "imgurl": "http://image.enuri.info/webimage_300/9533000000/9533000000/9533002157.jpg", "shopname": "쇼핑몰명 노출", "goodsnm": "[삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "1,238,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=4828080850&coupon_srl=2728990", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 9125370004, "imgurl": "http://image.enuri.info/webimage_300/3828500000/3828590000/3828594408.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "234,238,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=5025867878&coupon_srl=2728990", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8506035857, "imgurl": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "239,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=2046241393&GoodsSale=Y&jaehuid=200002673", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7716796560, "imgurl": "http://image.enuri.info/webimage_300/7621000000/7621070000/7621079541.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=1957914737&GoodsSale=Y&jaehuid=200002673", "matchYn": false, "groupMatchYn": true},
-    {"pl_no": 7972212437, "imgurl": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg", "shopname": "쇼핑몰명", "goodsnm": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,210", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.g9.co.kr/Display/VIP/Index/1957914737?jaehuid=200006435", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7719433575, "imgurl": "http://image.enuri.info/webimage_300/5431700000/5431780000/5431780716.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4505627456&lptag=P4505627456&itemId=5414295739&vendorItemId=72736989083", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/6972900000/6972910000/6972913054.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/9622000000/9622040000/9622045486.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/10462800000/10462880000/10462886671.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/8201800000/8201840000/8201848704.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/8286700000/8286770000/8286776059.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/8897300000/8897330000/8897330949.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/9163500000/9163540000/9163540716.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/8985500000/8985570000/8985572647.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/10228500000/10228590000/10228593298", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/9366900000/9366930000/9366936493.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/8355800000/8355870000/8355870293.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/10631200000/10631210000/10631219526.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/4688700000/4688790000/4688791914", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 9125260161, "imgurl": "http://image.enuri.info/webimage_300/8840900000/8840910000/8840910396.jpg", "shopname": "쇼핑몰명", "goodsnm": "[삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "8,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=4828080850&coupon_srl=2728990", "matchYn": false, "groupMatchYn": true},
-    {"pl_no": 9125370004, "imgurl": "http://image.enuri.info/webimage_300/8473500000/8473500000/8473503520.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "8,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=5025867878&coupon_srl=2728990", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 8506035857, "imgurl": "http://image.enuri.info/webimage_300/7163400000/7163480000/7163484250.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=2046241393&GoodsSale=Y&jaehuid=200002673", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7716796560, "imgurl": "http://image.enuri.info/webimage_300/7631200000/7631230000/7631230907", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=1957914737&GoodsSale=Y&jaehuid=200002673", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7972212437, "imgurl": "http://image.enuri.info/webimage_300/2229100000/2229130000/2229132621.jpg", "shopname": "쇼핑몰명", "goodsnm": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,210", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.g9.co.kr/Display/VIP/Index/1957914737?jaehuid=200006435", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7719433575, "imgurl": "http://image.enuri.info/webimage_300/8939500000/8939580000/8939583209.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4505627456&lptag=P4505627456&itemId=5414295739&vendorItemId=72736989083", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/5358600000/5358650000/5358653398.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/5455800000/5455800000/5455807674", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/4572900000/4572930000/4572935120.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/10229500000/10229550000/10229555748.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/5038100000/5038120000/5038125404.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/2531200000/2531240000/2531245239.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/5037900000/5037950000/5037950877.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://photo3.enuri.info/data/images/service/img_300/11357000/11357074.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/6580800000/6580870000/6580871736.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/4371900000/4371910000/4371913345.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": true},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/7651600000/7651640000/7651646859.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://photo3.enuri.info/data/images/service/img_300/11164000/11164870.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/3864600000/3864610000/3864616559.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/4420700000/4420700000/4420708294.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 9125260161, "imgurl": "http://image.enuri.info/webimage_300/5619200000/5619250000/5619250929.jpg", "shopname": "쇼핑몰명", "goodsnm": "[삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "8,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=4828080850&coupon_srl=2728990", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 9125370004, "imgurl": "http://image.enuri.info/webimage_300/6610600000/6610640000/6610646969.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "8,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=5025867878&coupon_srl=2728990", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8506035857, "imgurl": "http://image.enuri.info/webimage_300/3828500000/3828590000/3828594408.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=2046241393&GoodsSale=Y&jaehuid=200002673", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7716796560, "imgurl": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=1957914737&GoodsSale=Y&jaehuid=200002673", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7972212437, "imgurl": "http://image.enuri.info/webimage_300/7621000000/7621070000/7621079541.jpg", "shopname": "쇼핑몰명", "goodsnm": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,210", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.g9.co.kr/Display/VIP/Index/1957914737?jaehuid=200006435", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7719433575, "imgurl": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4505627456&lptag=P4505627456&itemId=5414295739&vendorItemId=72736989083", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/5431700000/5431780000/5431780716.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/6972900000/6972910000/6972913054.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/9622000000/9622040000/9622045486.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/10462800000/10462880000/10462886671.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/8201800000/8201840000/8201848704.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/8286700000/8286770000/8286776059.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/8897300000/8897330000/8897330949.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": false, "groupMatchYn": true},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/9163500000/9163540000/9163540716.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/8985500000/8985570000/8985572647.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/10228500000/10228590000/10228593298", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/9366900000/9366930000/9366936493.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/8355800000/8355870000/8355870293.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/10631200000/10631210000/10631219526.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 9125260161, "imgurl": "http://image.enuri.info/webimage_300/4688700000/4688790000/4688791914", "shopname": "쇼핑몰명", "goodsnm": "[삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "8,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=4828080850&coupon_srl=2728990", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 9125370004, "imgurl": "http://image.enuri.info/webimage_300/8840900000/8840910000/8840910396.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "8,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=5025867878&coupon_srl=2728990", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 8506035857, "imgurl": "http://image.enuri.info/webimage_300/8473500000/8473500000/8473503520.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=2046241393&GoodsSale=Y&jaehuid=200002673", "matchYn": true, "groupMatchYn": true},
-    {"pl_no": 7716796560, "imgurl": "http://image.enuri.info/webimage_300/7163400000/7163480000/7163484250.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=1957914737&GoodsSale=Y&jaehuid=200002673", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7972212437, "imgurl": "http://image.enuri.info/webimage_300/7631200000/7631230000/7631230907", "shopname": "쇼핑몰명", "goodsnm": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,210", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.g9.co.kr/Display/VIP/Index/1957914737?jaehuid=200006435", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7719433575, "imgurl": "http://image.enuri.info/webimage_300/2229100000/2229130000/2229132621.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4505627456&lptag=P4505627456&itemId=5414295739&vendorItemId=72736989083", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/8939500000/8939580000/8939583209.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/5358600000/5358650000/5358653398.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/5455800000/5455800000/5455807674", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/4572900000/4572930000/4572935120.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/10229500000/10229550000/10229555748.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": true},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/5038100000/5038120000/5038125404.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/2531200000/2531240000/2531245239.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/5037900000/5037950000/5037950877.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://photo3.enuri.info/data/images/service/img_300/11357000/11357074.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/6580800000/6580870000/6580871736.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/4371900000/4371910000/4371913345.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/7651600000/7651640000/7651646859.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://photo3.enuri.info/data/images/service/img_300/11164000/11164870.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/3864600000/3864610000/3864616559.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 9125260161, "imgurl": "http://image.enuri.info/webimage_300/4420700000/4420700000/4420708294.jpg", "shopname": "쇼핑몰명", "goodsnm": "[삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "8,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=4828080850&coupon_srl=2728990", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 9125370004, "imgurl": "http://image.enuri.info/webimage_300/5619200000/5619250000/5619250929.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "price": "8,520", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.tmon.co.kr/entry/?jp=80024&ln=205013&p_no=5025867878&coupon_srl=2728990", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8506035857, "imgurl": "http://image.enuri.info/webimage_300/6610600000/6610640000/6610646969.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=2046241393&GoodsSale=Y&jaehuid=200002673", "matchYn": false, "groupMatchYn": true},
-    {"pl_no": 7716796560, "imgurl": "http://image.enuri.info/webimage_300/3828500000/3828590000/3828594408.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,000", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.gmarket.co.kr/challenge/neo_jaehu/jaehu_goods_gate.asp?goodscode=1957914737&GoodsSale=Y&jaehuid=200002673", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 7972212437, "imgurl": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg", "shopname": "쇼핑몰명", "goodsnm": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,210", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://www.g9.co.kr/Display/VIP/Index/1957914737?jaehuid=200006435", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7719433575, "imgurl": "http://image.enuri.info/webimage_300/7621000000/7621070000/7621079541.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4505627456&lptag=P4505627456&itemId=5414295739&vendorItemId=72736989083", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/5431700000/5431780000/5431780716.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/6972900000/6972910000/6972913054.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": false, "groupMatchYn": true},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/9622000000/9622040000/9622045486.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/10462800000/10462880000/10462886671.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/8201800000/8201840000/8201848704.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 8741964188, "imgurl": "http://image.enuri.info/webimage_300/8286700000/8286770000/8286776059.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "9,900", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "http://pd.auction.co.kr/pd_redirect.asp?itemno=C313249249&pc=589", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731350781, "imgurl": "http://image.enuri.info/webimage_300/4394900000/4394990000/4394999276", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,600", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511105947&lptag=P4511105947&itemId=5426578221&vendorItemId=72726474090", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7354495399, "imgurl": "http://image.enuri.info/webimage_300/8897300000/8897330000/8897330949.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=2258724710&lptag=P2258724710&itemId=3868134922&vendorItemId=71852863740", "matchYn": true, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/9163500000/9163540000/9163540716.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/8985500000/8985570000/8985572647.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731329206, "imgurl": "http://image.enuri.info/webimage_300/10228500000/10228590000/10228593298", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511115041&lptag=P4511115041&itemId=5426602276&vendorItemId=72726497586", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 7731353879, "imgurl": "http://image.enuri.info/webimage_300/9366900000/9366930000/9366936493.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=4511122149&lptag=P4511122149&itemId=5426622335&vendorItemId=72726516762", "matchYn": false, "groupMatchYn": false},
-    {"pl_no": 6532986870, "imgurl": "http://image.enuri.info/webimage_300/8355800000/8355870000/8355870293.jpg", "shopname": "쇼핑몰명", "goodsnm": "나무야나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "price": "17,800", "cond02": "27m", "cond03": "", "cond04": "1팩", "score": 0, "modelno": 0, "brnd": "나무야나무야", "url": "https://link.coupang.com/re/PCSENURIPCSDP?pageKey=1731310866&lptag=P1731310866&itemId=2947076155&vendorItemId=70935643852", "matchYn": false, "groupMatchYn": false}
+var prdcList_data = [
+    {
+        "pl_no": "1123321",
+        "prdc_chk": "", 
+        "prdc_image": "http://image.enuri.info/webimage_300/9533000000/9533000000/9533002157.jpg", 
+        "prdc_mall": "까까조", 
+        "prdc_price": "16,520", 
+        "prdc_pricem": "16,520", 
+        "prdc_name": "[삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", 
+        "prdc_brand": "솔가", 
+        "prdc_mdnum": 0, 
+        "prdc_option": 0, 
+        "prdc_srchdate": "2022-09-14,오전 4:30:00", 
+        "prdc_noti": 1, 
+        "prdc_direction": 2, 
+        "prdc_sold": 3,
+        "prdc_keep": 4,
+        "prdc_delivery": "무료배송",
+        "prdc_lastdate": "2022-01-01"
+    },
+    {"pl_no": "1123321", "prdc_chk": "", "prdc_image": "http://image.enuri.info/webimage_300/8978000000/8978040000/8978041284.jpg", "prdc_mall": "까까조", "prdc_price": "16,520", "prdc_pricem": "16,520", "prdc_name": "[삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "prdc_brand": "솔가", "prdc_mdnum": 0, "prdc_option": 0, "prdc_srchdate": "2022-09-14,오전 4:30:00", "prdc_noti": 1, "prdc_direction": 2, "prdc_sold": 3,"prdc_keep": 4,"prdc_delivery": "무료배송","prdc_lastdate": "2022-01-01"},
+    {"pl_no": "1123321", "prdc_chk": "", "prdc_image": "http://image.enuri.info/webimage_300/7621000000/7621070000/7621079541.jpg", "prdc_mall": "까까조", "prdc_price": "16,520", "prdc_pricem": "16,520", "prdc_name": "[삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩삼성카드]나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m 1팩 - 나무야나무야", "prdc_brand": "솔가", "prdc_mdnum": 0, "prdc_option": 0, "prdc_srchdate": "2022-09-14,오전 4:30:00", "prdc_noti": 1, "prdc_direction": 2, "prdc_sold": 3,"prdc_keep": 4,"prdc_delivery": "무료배송","prdc_lastdate": "2022-01-01"},
+    {"pl_no": "1123321", "prdc_chk": "", "prdc_image": "http://image.enuri.info/webimage_300/7169500000/7169540000/7169544203.jpg", "prdc_mall": "까까조", "prdc_price": "16,520", "prdc_pricem": "16,520", "prdc_name": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "prdc_brand": "솔가", "prdc_mdnum": 0, "prdc_option": 0, "prdc_srchdate": "2022-09-14,오전 4:30:00", "prdc_noti": 1, "prdc_direction": 2, "prdc_sold": 3,"prdc_keep": 4,"prdc_delivery": "무료배송","prdc_lastdate": "2022-01-01",},
+    {"pl_no": "1123321", "prdc_chk": "", "prdc_image": "http://image.enuri.info/webimage_300/5431700000/5431780000/5431780716.jpg", "prdc_mall": "까까조", "prdc_price": "16,520", "prdc_pricem": "16,520", "prdc_name": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "prdc_brand": "솔가", "prdc_mdnum": 0, "prdc_option": 0, "prdc_srchdate": "2022-09-14,오전 4:30:00", "prdc_noti": 1, "prdc_direction": 2, "prdc_sold": 3,"prdc_keep": 4,"prdc_delivery": "무료배송","prdc_lastdate": "2022-01-01",},
+    {"pl_no": "1123321", "prdc_chk": "", "prdc_image": "http://image.enuri.info/webimage_300/6972900000/6972910000/6972913054.jpg", "prdc_mall": "까까조", "prdc_price": "16,520", "prdc_pricem": "16,520", "prdc_name": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "prdc_brand": "솔가", "prdc_mdnum": 0, "prdc_option": 0, "prdc_srchdate": "2022-09-14,오전 4:30:00", "prdc_noti": 1, "prdc_direction": 2, "prdc_sold": 3,"prdc_keep": 4,"prdc_delivery": "무료배송","prdc_lastdate": "2022-01-01",},
+    {"pl_no": "1123321", "prdc_chk": "", "prdc_image": "http://image.enuri.info/webimage_300/9622000000/9622040000/9622045486.jpg", "prdc_mall": "까까조", "prdc_price": "16,520", "prdc_pricem": "16,520", "prdc_name": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "prdc_brand": "솔가", "prdc_mdnum": 0, "prdc_option": 0, "prdc_srchdate": "2022-09-14,오전 4:30:00", "prdc_noti": 1, "prdc_direction": 2, "prdc_sold": 3,"prdc_keep": 4,"prdc_delivery": "무료배송","prdc_lastdate": "2022-01-01",},
+    {"pl_no": "1123321", "prdc_chk": "", "prdc_image": "http://image.enuri.info/webimage_300/10462800000/10462880000/10462886671.jpg", "prdc_mall": "까까조", "prdc_price": "16,520", "prdc_pricem": "16,520", "prdc_name": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "prdc_brand": "솔가", "prdc_mdnum": 0, "prdc_option": 0, "prdc_srchdate": "2022-09-14,오전 4:30:00", "prdc_noti": 1, "prdc_direction": 2, "prdc_sold": 3,"prdc_keep": 4,"prdc_delivery": "무료배송","prdc_lastdate": "2022-01-01",},
+    {"pl_no": "1123321", "prdc_chk": "", "prdc_image": "http://image.enuri.info/webimage_300/8201800000/8201840000/8201848704.jpg", "prdc_mall": "까까조", "prdc_price": "16,520", "prdc_pricem": "16,520", "prdc_name": "[NH카드 7% 할인]나무야나무야 나무야 나무야 도톰한 3겹 깨끗한 무향 롤화장지 27m", "prdc_brand": "솔가", "prdc_mdnum": 0, "prdc_option": 0, "prdc_srchdate": "2022-09-14,오전 4:30:00", "prdc_noti": 1, "prdc_direction": 2, "prdc_sold": 3,"prdc_keep": 4,"prdc_delivery": "무료배송","prdc_lastdate": "2022-01-01",}
 ];
 // 가격리스트(EP) 넘버링
-var eslen = eslist.length;
-for (var i = 0; i < eslen; i++) {
-    var row = eslist[i];
+var prdcListNum = prdcList_data.length;
+for (var i = 0; i < prdcListNum; i++) {
+    var row = prdcList_data[i];
     row.idx = i+1;
 }
 
 
-// 브랜드 컴퍼넌트
-var brandComponent = "";
+// 상품리스트 > 모델 정보 영역
+var productInfo = "";
 
-    brandComponent += "<div class=\"control__box\">";
-    brandComponent += " <div class=\"container\">";
-    brandComponent += "     <div class=\"row row-foot\">";
-    brandComponent += "         <div class=\"col-12\">";
-    brandComponent += "             <div class=\"input-group\">";
-    brandComponent += "                 <input type=\"text\" class=\"form-control ipt-txt--srch\" placeholder=\"검색어를 입력하세요.\" aria-label=\"\" aria-describedby=\"basic-addon2\">";
-    brandComponent += "                 <button class=\"btn btn-submit\" type=\"button\"><i class=\"bi bi-search\"></i></button>";
-    brandComponent += "             </div>";
-    brandComponent += "         </div>";
-    brandComponent += "     </div>";
-    brandComponent += " </div>";
-    brandComponent += "</div>";
-
-// 원부 컴퍼넌트
-var originComponent = "";
-
-    originComponent += "<div class=\"control__box control__box--origin\">";
-    originComponent += "    <div class=\"container\">";
-    originComponent += "        <div class=\"row row-head\">";
-    originComponent += "            <div class=\"col-4\">";
-    originComponent += "                <div class=\"btn-group\">";
-    originComponent += "                    <button type=\"button\" class=\"btn btn-sort\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><i class=\"bi bi-filter-left\" style=\"\"></i> 인기순</button>";
-    originComponent += "                    <div class=\"dropdown-menu\">";
-    originComponent += "                        <a class=\"dropdown-item\" href=\"#\">인기순</a>";
-    originComponent += "                        <a class=\"dropdown-item\" href=\"#\">GMV순</a>";
-    originComponent += "                        <a class=\"dropdown-item\" href=\"#\">신상품순</a>";
-    originComponent += "                        <a class=\"dropdown-item\" href=\"#\">검색수순</a>";
-    originComponent += "                    </div>";
-    originComponent += "                </div>";
-    originComponent += "            </div>";
-    originComponent += "            <div class=\"col-8\">";
-    originComponent += "                <div class=\"btn-group btn-group--right\">";
-    originComponent += "                    <button type=\"button\" class=\"btn btn-add\" onclick=\"$('#originEdit').fadeIn();\">추가</button>";
-    originComponent += "                    <button type=\"button\" class=\"btn btn-modify\" onclick=\"$('#originEdit').fadeIn();\">변경</button>";
-    originComponent += "                    <button type=\"button\" class=\"btn btn-save\" id=\"btnOriginDel\">삭제</button>";
-    originComponent += "                </div>";
-    originComponent += "            </div>";
-    originComponent += "        </div>";
+    productInfo += "<div class=\"control__box control__box--comp\">";
+    productInfo += "    <div class=\"container-fluid\">";
+    productInfo += "        <div class=\"row\">";
+    productInfo += "            <div class=\"col-12\">";
+    productInfo += "                <div class=\"prdc__info\">";
+    productInfo += "                    <div class=\"thumb\" id=\"prdcThumb\"><img src=\"http://image.enuri.info/webimage_300/9533000000/9533000000/9533002157.jpg\" alt=\"\" /></div>";
     
-    originComponent += "        <div class=\"row row-foot\">";
-    originComponent += "            <div class=\"col-12\">";
-    originComponent += "                <div class=\"origin_srch\">";
-    originComponent += "                    <div class=\"btn-group\">";
-    originComponent += "                        <button type=\"button\" class=\"btn btn-srch\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" title=\"전체\">전체</button>";
-    originComponent += "                        <div class=\"dropdown-menu\">";
-    originComponent += "                            <a class=\"dropdown-item\" href=\"#\">전체</a>";
-    originComponent += "                            <a class=\"dropdown-item\" href=\"#\">카테고리내</a>";
-    originComponent += "                            <a class=\"dropdown-item\" href=\"#\">결과내</a>";
-    originComponent += "                        </div>";
-    originComponent += "                    </div>";
-    originComponent += "                    <div class=\"input-group\">";
-    originComponent += "                        <input type=\"text\" class=\"form-control ipt-txt--srch\" placeholder=\"검색어를 입력하세요.\" aria-label=\"\" aria-describedby=\"basic-addon2\">";
-    originComponent += "                        <div class=\"input-group-append\">";
-    originComponent += "                            <button class=\"btn btn-submit\" type=\"button\"><i class=\"bi bi-search\"></i></button>";
-    originComponent += "                        </div>";
-    originComponent += "                    </div>";
-    originComponent += "                </div>";
-    originComponent += "            </div>";
-    originComponent += "        </div>";
-    originComponent += "    </div>";
-    originComponent += "</div>";  
+    productInfo += "                    <div class=\"tx\">";
+    productInfo += "                        <div class=\"tx_util\">";
+    productInfo += "                            <div class=\"tx_unit\">";
+    productInfo += "                                <a href=\"#\" class=\"tx_mnum\">모델번호 : 11577831</a>";
+    productInfo += "                                <div class=\"tx_price\">";
+    productInfo += "                                    <p class=\"tx_min\">최저가 : <em>44,440</em></p>";
+    productInfo += "                                    <p class=\"tx_max\">최고가 : <em>12,620</em></p>";
+    productInfo += "                                </div>";
+    productInfo += "                            </div>";
+    productInfo += "                            <div class=\"model_info\">";
+    productInfo += "                                <ul>";
+    productInfo += "                                  <li><p class=\"tx_dt\">제조사</p><p class=\"tx_dd\">한국P&amp;G</p></li>";
+    productInfo += "                                  <li><p class=\"tx_dt\">브랜드</p><p class=\"tx_dd\">헤어레시피</p></li>";
+    productInfo += "                                  <li><p class=\"tx_dt\">스칼프 케어 샴푸 1L 481개</p></li>";
+    productInfo += "                                </ul>";
+    productInfo += "                            </div>";
+    productInfo += "                            <div class=\"model_option\">";
+    productInfo += "                                <button type=\"button\" id=\"btnOptionAll\" class=\"btn_all\">전체보기</button>";
+    productInfo += "                                <ul>";
+    productInfo += "                                  <li>용량: 900ml</li>";
+    productInfo += "                                  <li>수량: 1개</li>";
+    productInfo += "                                </ul>";
+    productInfo += "                            </div>";
+    productInfo += "                        </div>";
+    productInfo += "                    </div>";
+    productInfo += "                    <div class=\"attr_input\">";
+    productInfo += "                        <button class=\"btn btn-attrin\" type=\"button\" data-target=\"./popup_productAttrAdmin.html\" data-pname=\"prdcAttributeAdmin\" onclick=\"popupOpen($(this).data('target'), $(this).data('pname'), 1180, 980)\">속성 입력</button>";
+    productInfo += "                    </div>";
+    productInfo += "                </div>";
+    productInfo += "            </div>";
+    productInfo += "        </div>";
+    productInfo += "    </div>";
+    productInfo += "</div>";
 
-// 조건 컴퍼넌트
-var termComponent = "";
-
-    termComponent += "<div class=\"control__box\">";
-    termComponent += "  <div class=\"container\">";
-    termComponent += "      <div class=\"row row-head\">";
-    termComponent += "          <div class=\"col-12\">";
-    termComponent += "              <div class=\"btn-group btn-group--right\">";
-    termComponent += "                  <button type=\"button\" class=\"btn btn-add\" onclick=\"$('#conditionEdit').fadeIn();\">추가</button>";
-    termComponent += "                  <button type=\"button\" class=\"btn btn-modify\" onclick=\"$('#conditionEdit').fadeIn();\">변경</button>";
-    termComponent += "              </div>";
-    termComponent += "          </div>";
-    termComponent += "      </div>";
-    termComponent += "  </div>";
-    termComponent += "</div>";
-
-// 신규조건 컴퍼넌트
-var srchNewComponent = "";
-
-    srchNewComponent += "<div class=\"control__box control__box-newsr\">";
-    srchNewComponent += "  <div class=\"container\">";
-    srchNewComponent += "      <div class=\"row row-head\">";
-    srchNewComponent += "          <div class=\"col-12\">";
-    srchNewComponent += "              <div class=\"btn-group btn-group--fluid\">";
-    srchNewComponent += "                  <button type=\"button\" class=\"btn btn-srch-full\">찾기</button>";
-    srchNewComponent += "              </div>";
-    srchNewComponent += "          </div>";
-    srchNewComponent += "      </div>";
-    srchNewComponent += "  </div>";
-    srchNewComponent += "</div>";
-
-// 상품 검색 영역 컴퍼넌트 
-var prdcSrchComponent = "";
-
-    prdcSrchComponent += "<div class=\"searchbar\">";
-    prdcSrchComponent += "    <div class=\"container-fluid\">";
-    prdcSrchComponent += "        <div class=\"row\">";
-    prdcSrchComponent += "            <div class=\"col-12\">";
-    prdcSrchComponent += "                <form>";
-    prdcSrchComponent += "                <div class=\"srchbox\">";
-    prdcSrchComponent += "                    <div class=\"dropdownbox\">";
-    prdcSrchComponent += "                        <button type=\"button\" class=\"btn btn-srch-select dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">전체</button>";
-    prdcSrchComponent += "                        <div class=\"dropdown-menu\">";
-    prdcSrchComponent += "                            <a class=\"dropdown-item\" href=\"#\">전체</a>";
-    prdcSrchComponent += "                            <a class=\"dropdown-item\" href=\"#\">카테고리내</a>";
-    prdcSrchComponent += "                            <a class=\"dropdown-item\" href=\"#\">결과내</a>";
-    prdcSrchComponent += "                        </div>";
-    prdcSrchComponent += "                    </div>";    
-    prdcSrchComponent += "                    <div class=\"input-group\">";
-    prdcSrchComponent += "                        <input type=\"text\" class=\"form-control ipt-txt--srch\" placeholder=\"검색어를 입력하세요.\">";
-    prdcSrchComponent += "                        <div class=\"input-group-append\">";
-    prdcSrchComponent += "                            <button class=\"btn btn-submit\" type=\"submit\"><i class=\"bi bi-search\"></i></button>";
-    prdcSrchComponent += "                        </div>";
-    prdcSrchComponent += "                    </div>"; 
-    prdcSrchComponent += "                </div>";
-    prdcSrchComponent += "                </form>";
-    prdcSrchComponent += "            </div>";
-    prdcSrchComponent += "        </div>";
-    prdcSrchComponent += "    </div>";
-    prdcSrchComponent += "</div>";
-
-// 매칭/미매칭 컴퍼넌트
-var matchingComponent = "";
-
-    matchingComponent += "<div class=\"control__box control__box--comp\">";
-    matchingComponent += "    <div class=\"container-fluid\">";
-    matchingComponent += "        <div class=\"row\">";
-    matchingComponent += "            <div class=\"col-12\">";
-    matchingComponent += "                <div class=\"prdc__info\">";
-    matchingComponent += "                    <div class=\"thumb\" id=\"prdcThumb\"><img src=\"http://image.enuri.info/webimage_300/6285200000/6285280000/6285280423.jpg\" alt=\"\" /></div>";
-    
-    matchingComponent += "                    <div class=\"tx\">";
-    matchingComponent += "                        <div class=\"tx_util\">";
-    matchingComponent += "                            <div class=\"tx_unit\">";
-    matchingComponent += "                                <a href=\"#\" class=\"tx_mnum\">모델번호 : 11577831</a>";
-    matchingComponent += "                                <div class=\"tx_price\">";
-    matchingComponent += "                                    <p class=\"tx_min\">최저가 : <em>44,440</em></p>";
-    matchingComponent += "                                    <p class=\"tx_max\">최고가 : <em>12,620</em></p>";
-    matchingComponent += "                                </div>";
-    matchingComponent += "                            </div>";
-    matchingComponent += "                            <div class=\"model_info\">";
-    matchingComponent += "                                <ul>";
-    matchingComponent += "                                  <li><p class=\"tx_dt\">제조사</p><p class=\"tx_dd\">한국P&amp;G</p></li>";
-    matchingComponent += "                                  <li><p class=\"tx_dt\">브랜드</p><p class=\"tx_dd\">헤어레시피</p></li>";
-    matchingComponent += "                                  <li><p class=\"tx_dt\">스칼프 케어 샴푸 1L 481개</p></li>";
-    matchingComponent += "                                </ul>";
-    matchingComponent += "                            </div>";
-    matchingComponent += "                            <div class=\"model_option\">";
-    matchingComponent += "                                <button type=\"button\" id=\"btnOptionAll\" class=\"btn_all\">전체보기</button>";
-    matchingComponent += "                                <ul>";
-    matchingComponent += "                                  <li>용량: 900ml</li>";
-    matchingComponent += "                                  <li>수량: 1개</li>";
-    matchingComponent += "                                </ul>";
-    matchingComponent += "                            </div>";
-    matchingComponent += "                        </div>";
-    matchingComponent += "                    </div>";
-    matchingComponent += "                    <div class=\"attr_input\">";
-    matchingComponent += "                        <button class=\"btn btn-attrin\" type=\"button\" data-target=\"./popup_productAttrAdmin.html\" data-pname=\"prdcAttributeAdmin\" onclick=\"popupOpen($(this).data('target'), $(this).data('pname'), 1180, 980)\">속성 입력</button>";
-    matchingComponent += "                    </div>";
-    matchingComponent += "                </div>";
-    matchingComponent += "            </div>";
-    matchingComponent += "        </div>";
-    matchingComponent += "    </div>";
-    matchingComponent += "</div>";
-
-// 선택 상품 명 표시 영역
+// 상품리스트 > 선택 상품 명 표시 영역
 var modelNameBox = "";
 
     modelNameBox += "<div class=\"control__box control__box--modelnm\">";
@@ -486,91 +228,110 @@ var viewTypeChange = "";
  * 각 COL 그리드/리스트 생성하여 attach 합니다.
 *********************************/
 var mdList, prdcList; // 그리드 변수 생성
-var epViewContainer; // EP상품 뷰타입 컨테이너
-var imageTypeList; // EP상품 이미지뷰 위젯 생성
+var prdcViewCont; // 상품리스트 > 뷰타입 컨테이너
+var imageTypeList; // 상품리스트 > 이미지뷰 위젯
 
 // 모델리스트 그리드 생성
+// id 는 입력될 데이터 키와 동일하게 변경 필요합니다.
 mdList = new dhx.Grid(null, {
     columns: [
         {id: "idx", width: 40, header: [{text: "flag", align:"center"}], align:"center",},
-        {id: "gcol2", minWidth:60, header: [{ text: "번호", align: "center" }], align: "right" },
-        {id: "gcol3", minWidth:60, header: [{ text: "카테코드", align: "center" }], align: "right" },
-        {id: "gcol4", minWidth:60, header: [{ text: "이미지", align: "center" }], htmlEnable: true, align: "center",
+        {id: "md_count", minWidth:100, header: [{ text: "번호", align: "center" }], align: "center", },
+        {id: "md_catecode", minWidth:60, header: [{ text: "카테코드", align: "center" }], align: "center", editable: false },
+        {id: "md_image", minWidth:60, header: [{ text: "이미지", align: "center" }], htmlEnable: true, align: "center", sortable: false,
             template: function (text, row, col) { 
                 return "<img src=\""+text+"\" alt=\"\" class=\"thumb thumb-40\">"; 
             } 
         },
-        {id: "gcol5", minWidth:60, header: [{ text: "제조사", align: "center" }], align: "right" },
-        {id: "gcol6", minWidth:60, header: [{ text: "브랜드", align: "center" }], align: "right" },
-        {id: "gcol7", minWidth:60, header: [{ text: "모델명", align: "center" }], align: "right" },
-        {id: "gcol8", minWidth:60, header: [{ text: "그룹조건명", align: "center" }], align: "right" },
-        {id: "gcol9", minWidth:60, header: [{ text: "그룹여부", align: "center" }], align: "right" },
-        {id: "gcol10", minWidth:60, header: [{ text: "매칭수", align: "center" }], align: "right" },
-        {id: "gcol11", minWidth:60, header: [{ text: "등록일", align: "center" }], align: "right" },
-        {id: "gcol12", minWidth:60, header: [{ text: "IMG", align: "center" }], align: "right" },
-        {id: "gcol13", minWidth:60, header: [{ text: "단종", align: "center" }], align: "right" },
-        {id: "gcol14", minWidth:60, header: [{ text: "작", align: "center" }], align: "right" },
-        {id: "gcol15", minWidth:60, header: [{ text: "속성", align: "center" }], align: "right" },
-        {id: "gcol16", minWidth:60, header: [{ text: "담", align: "center" }], align: "right" },
-        {id: "gcol17", minWidth:60, header: [{ text: "예정", align: "center" }], align: "right" },
-        {id: "gcol18", minWidth:60, header: [{ text: "용량", align: "center" }], align: "right" },
-        {id: "gcol19", minWidth:60, header: [{ text: "수량", align: "center" }], align: "right" },
-        {id: "gcol20", minWidth:60, header: [{ text: "환산", align: "center" }], align: "right" },
-        {id: "gcol21", minWidth:60, header: [{ text: "단위", align: "center" }], align: "right" },
+        {id: "md_comp", minWidth:60, header: [{ text: "제조사", align: "center" }], align: "center", editable: false },
+        {id: "md_brand", minWidth:60, header: [{ text: "브랜드", align: "center" }], align: "center", editable: false },
+        {id: "md_name", minWidth:240, header: [{ text: "모델명", align: "center" }], align: "left", editable: false },
+        {id: "md_group", minWidth:60, header: [{ text: "그룹조건명", align: "center" }], align: "center", sortable: false, editable: false },
+        {id: "md_group_st", minWidth:60, header: [{ text: "그룹여부", align: "center" }], align: "center", editorType: "combobox", options: ["대표", "그룹"] },
+        {id: "md_matching", minWidth:60, header: [{ text: "매칭수", align: "center" }], align: "center" },
+        {id: "md_resist", minWidth:90, header: [{ text: "등록일", align: "center" }], align: "center", type: "date", format: "%Y-%m-%d" },
+        {id: "md_img", minWidth:90, header: [{ text: "IMG", align: "center" }], align: "center", editorType: "combobox", options: [2010203, 201203] },
+        {id: "md_sold", minWidth:40, header: [{ text: "단종", align: "center" }], align: "center", editorType: "combobox", options: [1, 2, 3, 4] },
+        {id: "md_front", minWidth:40, header: [{ text: "작", align: "center" }], align: "center", editorType: "combobox", options: [1, 0] },
+        {id: "md_property", minWidth:150, header: [{ text: "속성", align: "center" }], align: "center", editable: false },
+        {id: "md_cmnum", minWidth:40, header: [{ text: "담", align: "center" }], align: "center", sortable: false },
+        {id: "md_expected", minWidth:40, header: [{ text: "예정", align: "center" }], align: "center", sortable: false, editorType: "combobox", options: [0, 9, "X"] },
+        {id: "md_volume", minWidth:40, header: [{ text: "용량", align: "center" }], align: "center" },
+        {id: "md_quantity", minWidth:40, header: [{ text: "수량", align: "center" }], align: "center", editable: false },
+        {id: "md_exchange", minWidth:40, header: [{ text: "환산", align: "center" }], align: "center" },
+        {id: "md_unit", minWidth:40, header: [{ text: "단위", align: "center" }], align: "center" },
+        {id: "md_qna", minWidth:40, header: [{ text: "문의", align: "center" }], align: "center", sortable: false, editorType: "combobox", options: [0, 9, "X"] },
+        {id: "md_review", minWidth:40, header: [{ text: "상품평", align: "center" }], align: "center" },
+        {id: "md_ingredient", minWidth:40, header: [{ text: "성분", align: "center" }], align: "center", editable: false },
+        {id: "md_color", minWidth:40, header: [{ text: "색상", align: "center" }], align: "center", editorType: "combobox", options: ["0", "1"] }
     ],
     headerRowHeight: 32,
     rowHeight: 32,
-    autoWidth:true,
+    autoWidth: true,
     data: mdList_data,
     selection: "row",
-    multiselection:false,
+    multiselection: true,
     keyNavigation: true,
-    resizable:true,
-    adjust: false,
+    resizable: true,
     tooltip: false,
+    editable: true
 });
 
 // 상품리스트 그리드 생성
+// id 는 입력될 데이터 키와 동일하게 변경 필요합니다.
 prdcList = new dhx.Grid(null, {
     columns: [
-        { width: 40, id: "idx", header: [{text: "#", align:"center"}], resizable:false, align:"center",},
-        { width: 50, id: "chkBox", header: [{ text: "선택", align: "center" }], sortable: false, resizable: false, htmlEnable: true, align: "center",
+        { id: "idx", width: 40, header: [{text: "#", align:"center"}], resizable:false, align:"center",},
+        { id: "prdc_chk", width: 50, header: [{ text: "선택", align: "center" }], sortable: false, resizable: false, htmlEnable: true, align: "center",
             template: function (text, row, col) { 
                 // 단순 체크 이미지 (기능없음)
                 return "<div class=\"form-chk ep-chk\"><input type=\"checkbox\" class=\"input--checkbox-item\" disabled=\"disabled\"><label></label></div>";
             } 
         },
-        { width: 90, id: "imgurl", header: [{ text: "이미지", align: "center" }], htmlEnable: true, tooltip: true, align: "center",
+        { id: "prdc_image", width: 90, header: [{ text: "이미지", align: "center" }], htmlEnable: true, align: "center",
             template: function (text, row, col) { 
                 return "<img src=\""+text+"\" alt=\"\" class=\"thumb\">"; 
             } 
         },
-        { width: 100, id: "shopname", header: [{ text: "쇼핑몰", align: "center" }], htmlEnable: true,  align: "center",
+        { id: "prdc_mall", width: 100, header: [{ text: "쇼핑몰", align: "center" }], htmlEnable: true,  align: "center", editable: false,
             template: function (text, row, col) { 
                 return "<p class=\"tx_tit\">"+text+"</p>"; 
             } 
         },
-        { width: 90, id: "price", header: [{ text: "가격", align: "center" }], htmlEnable: true, align: "right",
-        template: function (text, row, col) { 
-            return "<a href=\"#\" target=\"_blank\" onclick=\"alert(\'VIP 이동\');return false;\">"+text+"</a>"; 
-        } 
-    },
-        { width: 550, id: "goodsnm", header: [{ text: "상품명", align: "center" }], htmlEnable: true, align: "left",
+        { id: "prdc_price", width: 90, header: [{ text: "가격", align: "center" }], htmlEnable: true, align: "right",
+            template: function (text, row, col) { 
+                return "<a href=\"#\" target=\"_blank\" onclick=\"alert(\'VIP 이동\');return false;\">"+text+"</a>"; 
+            } 
+        },
+        { id: "prdc_pricem", width: 90, header: [{ text: "M가격", align: "center" }], htmlEnable: true, align: "right",
+            template: function (text, row, col) { 
+                return "<a href=\"#\" target=\"_blank\" onclick=\"alert(\'VIP 이동\');return false;\">"+text+"</a>"; 
+            } 
+        },
+        { id: "prdc_name", width: 550, header: [{ text: "상품명", align: "center" }], htmlEnable: true, align: "left", editable: false,
             template: function (text, row, col) { 
                 return "<p class=\"tx_tit tx_tit_clamp-2\">"+text+"</p>"; 
             } 
         },
-        { width: 100, id: "brnd", header: [{ text: "브랜드", align: "center" }], htmlEnable: true, align: "center",
+        { id: "prdc_brand", width: 100, header: [{ text: "브랜드", align: "center" }], htmlEnable: true, align: "center", editable: false,
             template: function (text, row, col) { 
                 return "<p class=\"tx_tit\">"+text+"</p>"; 
             } 
         },
-        { width: 100, id: "score", header: [{ text: "스코어", align: "center" }], align: "center" },
-        { width: 80, id: "cond02", header: [{ text: "조건1", align: "center" }], align: "center" },
-        { width: 80, id: "cond04", header: [{ text: "조건2", align: "center" }], align: "center" },
-        { width: 80, id: "modelno", header: [{ text: "모델번호", align: "center" }], align: "center" },
-        { hidden: true, width: 80, id: "matchYn", header: [{ text: "매칭여부", align: "center" }], align: "center" },
-        { hidden: true, width: 80, id: "groupMatchYn", header: [{ text: "그룹매칭여부", align: "center" }], align: "center" },
+        { id: "prdc_mdnum",  width: 100, header: [{ text: "모델번호", align: "center" }], align: "center", editable: false },
+        { id: "prdc_option",  width: 100, header: [{ text: "옵션", align: "center" }], align: "center", editorType: "combobox", options: [1, 2, 3, 4] },
+        { id: "prdc_srchdate", width: 140, header: [{ text: "검색일", align: "center" }], htmlEnable: true, align: "center", editable: false,
+            template: function (text, row, col) { 
+                var txt = text.split(",")
+                return "<span>"+txt[0] + "<br>" + txt[1] +"</span>"; 
+            }
+        },
+        { id: "prdc_noti", width: 80, header: [{ text: "비고", align: "center" }], align: "center", editorType: "combobox", options: [1, 2, 3, 4] },
+        { id: "prdc_direction", width: 80, header: [{ text: "좌우", align: "center" }], align: "center", editorType: "combobox", options: [1, 2, 3, 4] },
+        { id: "prdc_sold", width: 80, header: [{ text: "단종", align: "center" }], align: "center", editorType: "combobox", options: [1, 2, 3, 4] },
+        { id: "prdc_keep", width: 80, header: [{ text: "보관", align: "center" }], align: "center", editorType: "combobox", options: [1, 2, 3, 4], sortable: false },
+        { id: "prdc_delivery", width: 80, header: [{ text: "배송비", align: "center" }], align: "center", sortable: false },
+        { id: "prdc_lastdate", width: 80, header: [{ text: "최초수집일", align: "center" }], align: "center", type: "date", format: "%Y-%m-%d", editable: false },
     ],
     rowCss: function(row){
         if(row.matchYn) return "matching_row"; // 매칭된 행 클래스 추가
@@ -579,15 +340,16 @@ prdcList = new dhx.Grid(null, {
     },
     headerRowHeight: 32,
     rowHeight: 90,
-    autoWidth:true,
+    autoWidth: true,
     selection: "row",
-    multiselection:true,
+    multiselection: true,
     keyNavigation: true,
-    resizable:true,
-    tooltip: false
+    resizable: true,
+    tooltip: false,
+    editable: true
 });
-// EP상품 뷰타입(그리드/이미지) 탭바 생성
-epViewContainer = new dhx.Tabbar(null, {
+// 상품리스트 뷰타입(그리드/이미지) 탭바 생성
+prdcViewCont = new dhx.Tabbar(null, {
     css: "tab_type", 
     mode: "top",    
     tabAutoWidth: false,
@@ -597,23 +359,23 @@ epViewContainer = new dhx.Tabbar(null, {
         { tab: "이미지뷰", id: "imageTypeList" }
     ]
 });
-// EP상품 이미지뷰 위젯 생성
+// 상품리스트 이미지뷰 위젯 생성
 imageTypeList = new dhx.List("list", {
     css: "type_img", 
     template: imgViewTemplate,
-    data: eslist,
+    data: prdcList_data,
     multiselection: "ctrlClick",
     keyNavigation: true
 });
-// EP상품 이미지뷰 목록 템플릿
+// 상품리스트 이미지뷰 목록 템플릿
 function imgViewTemplate(item) {
     var template = "";
         template += "<div class='thumb_box'>";
-        template += "   <div class='item_thumb'><img src='" + item.imgurl + "' alt='' /></div>";
+        template += "   <div class='item_thumb'><img src='" + item.prdc_image + "' alt='' /></div>";
         template += "   <div class='item_summ'>";
-        template += "       <p class='tx_mall'>"+item.shopname+"</p>";
-        template += "       <p class='tx_price'><em>"+item.price+"</em>원</p>";
-        template += "       <p class='tx_nm' title='"+item.goodsnm+"'>"+item.goodsnm+"</p>";
+        template += "       <p class='tx_mall'>"+item.prdc_mall+"</p>";
+        template += "       <p class='tx_price'><em>"+item.prdc_price+"</em>원</p>";
+        template += "       <p class='tx_nm' title='"+item.prdc_name+"'>"+item.prdc_name+"</p>";
         template += "       <a href='#' target='_blank' class='exlink' onclick=\"alert('VIP 이동'); return false;\">상세보기</a>";
         template += "   </div>";
         template += "   <div class=\"form-chk\">";
@@ -630,16 +392,16 @@ function imgViewTemplate(item) {
  * FORM 위젯 내 > options value 는 수정해서 사용해주세요.
  * FORM 위젯 내 > id 변경 시, 공유해 주세요.
 *********************************/
-// EP 상품 페이징 연동
+// 상품리스트 페이징 연동
 // 그리드 타입일 때
-prdcList.data.parse(eslist)
+prdcList.data.parse(prdcList_data)
 var matchGridPaging = new dhx.Pagination(null, {
     css: "",
     data: prdcList.data,
-    pageSize: 30 // 100단위로 바꿔주세요
+    pageSize: 1000 // 1000단위로 바꿔주세요
 });
 // 이미지 타입일때
-imageTypeList.data.parse(eslist)
+imageTypeList.data.parse(prdcList_data)
 var matchImgPaging = new dhx.Pagination(null, {
     css: "",
     data: imageTypeList.data,
@@ -647,6 +409,9 @@ var matchImgPaging = new dhx.Pagination(null, {
 });
 
 
+/*********************
+ * 레이아웃 상단 공통 영역
+ *********************/
 // 일정+담당자+업무구분 선택 영역
 var userFinder = new dhx.Form(null, {    
     css: "form-radio--cond",
@@ -660,17 +425,6 @@ var userFinder = new dhx.Form(null, {
             placeholder: "2022-10-19",
             label: "",
             labelWidth: 0,
-            labelPosition: "left",
-            weekNumbers: false,
-            timePicker: false,
-            disabled: false,
-            required: false,
-            editable: false,
-            thisMonthOnly: false,
-            helpMessage: "",
-            preMessage: "",
-            successMessage: "",
-            errorMessage: "",
             weekStart: "sunday",
             dateFormat: "%Y-%m-%d",
             css: "control-comm sel-sort"
@@ -682,24 +436,13 @@ var userFinder = new dhx.Form(null, {
             placeholder: "2022-10-19",
             label: "",
             labelWidth: 0,
-            labelPosition: "left",
-            weekNumbers: false,
-            timePicker: false,
-            disabled: false,
-            required: false,
-            editable: false,
-            thisMonthOnly: false,
-            helpMessage: "",
-            preMessage: "",
-            successMessage: "",
-            errorMessage: "",
             weekStart: "sunday",
             dateFormat: "%Y-%m-%d",
             css: "control-comm sel-sort"
         },
         {
-            id: "prdcSelect",
-            name: "prdcSelect",
+            id: "userSelect",
+            name: "userSelect",
             type: "select",
             label: "",
             labelPosition: "left",
@@ -711,12 +454,13 @@ var userFinder = new dhx.Form(null, {
                 { value: "1", content: "김민정(mjkim8713)" },
                 { value: "2", content: "공현우 (ksa1132)" },
                 { value: "3", content: "플랫폼기획팀" }
+                // ...
             ],
             css: "control-comm sel-sort"
         }, 
         {
-            id: "keywordSelect",
-            name: "select",
+            id: "workSelect",
+            name: "workSelect",
             type: "select",
             label: "",
             labelPosition: "left",
@@ -733,7 +477,7 @@ var userFinder = new dhx.Form(null, {
             css: "control-comm sel-sort"
         },
         {
-            id: "keywordSubmit",
+            id: "userSubmit",
             type: "button",
             text:"열기",
             css: "control-comm btn-srch"
@@ -741,9 +485,14 @@ var userFinder = new dhx.Form(null, {
     ]
 })
 
+
+/*********************
+ * 레이아웃 좌측 모델리스트
+ *********************/
+// 모델리스트 > 상단 검색 필터 영역
 var mdOptionFilter = new dhx.Form(null, {
     css: "form-radio--cond",
-    padding: "5px 10px",
+    padding: "7px 10px 3px",
     width: "100%",
     rows: [
         {
@@ -792,17 +541,18 @@ var mdOptionFilter = new dhx.Form(null, {
                     value: "선택",
                     required: true,
                     options: [
-                        { value: "0", content: "출시예정" },
-                        { value: "1", content: "미서비스확인" },
-                        { value: "2", content: "핵심속성점검" },
-                        { value: "3", content: "추가분류" },
-                        { value: "4", content: "그룹등록" },
-                        { value: "5", content: "그룹미등록" },
-                        { value: "6", content: "환산가미등록" },
-                        { value: "7", content: "유사상품" },
-                        { value: "8", content: "유사 ★관리용" },
-                        { value: "9", content: "속성" },
-                        { value: "9", content: "사양선택" }
+                        { value: "0", content: "선택" },
+                        { value: "1", content: "출시예정" },
+                        { value: "2", content: "미서비스확인" },
+                        { value: "3", content: "핵심속성점검" },
+                        { value: "4", content: "추가분류" },
+                        { value: "5", content: "그룹등록" },
+                        { value: "6", content: "그룹미등록" },
+                        { value: "7", content: "환산가미등록" },
+                        { value: "8", content: "유사상품" },
+                        { value: "9", content: "유사 ★관리용" },
+                        { value: "10", content: "속성" },
+                        { value: "11", content: "사양선택" }
                     ],
                     css: "control-comm sel-sort"
                 },
@@ -844,139 +594,292 @@ var mdOptionFilter = new dhx.Form(null, {
                 }
             ]
         },
+    ]
+})
+
+// 모델리스트 > 모델 키워드 검색 영역
+var mdSearch = new dhx.Form(null, {
+    css: "controller_ep",
+    padding: 0,
+    width: "100%",
+    rows: [
         {
-            // 모델 검색 옵션 두번째 행
-            id: "mdFilterRow_2",
-            cols: [
-                {
-                    id: "prdcSelect",
-                    name: "prdcSelect",
-                    type: "select",
-                    label: "",
-                    labelPosition: "left",
-                    labelWidth: 0,
-                    value: "선택",
-                    required: true,
-                    options: [
-                        { value: "0", content: "전체" },
-                        { value: "1", content: "카테고리내" },
-                        { value: "2", content: "담당" },
-                    ],
-                    css: "control-comm sel-sort"
-                }, 
-                {
-                    id: "keywordSelect1",
-                    name: "select",
-                    type: "select",
-                    label: "",
-                    labelPosition: "left",
-                    labelWidth: 0,
-                    value: "선택",
-                    required: true,
-                    options: [
-                        { value: "0", content: "통합" },
-                        { value: "1", content: "모델번호" },
-                        { value: "2", content: "모델번호(G)" },
-                        { value: "3", content: "모델명" },
-                        { value: "3", content: "조건명" },
-                        { value: "3", content: "속성" },
-                        { value: "3", content: "제조사" },
-                        { value: "3", content: "브랜드" }
-                    ],
-                    css: "control-comm sel-sort"
-                },
-                {
-                    id: "keywordSelect2",
-                    name: "select",
-                    type: "select",
-                    label: "",
-                    labelPosition: "left",
-                    labelWidth: 0,
-                    value: "선택",
-                    required: true,
-                    options: [
-                        { value: "0", content: "결과내포함" },
-                    ],
-                    css: "control-comm sel-sort"
-                },
-                {
-                    id: "keywordInput",
-                    name: "input",
-                    type: "input",
-                    label: "",
-                    labelPosition: "left",
-                    icon: "dxi dxi-magnify",
-                    labelWidth: 0,
-                    required: true,
-                    placeholder: "검색어를 입력하세요.",
-                    css: "control-comm ipt-srch"
-                },
-                {
-                    id: "keywordSubmit",
-                    type: "button",
-                    text:"검색",
-                    css: "control-comm btn-srch"
-                }
-            ]
+            id: "mdSelect",
+            name: "mdSelect",
+            type: "select",
+            label: "",
+            labelPosition: "left",
+            labelWidth: 0,
+            value: "상품명",
+            required: true,
+            options: [
+                { value: "0", content: "전체" },
+                { value: "1", content: "카테고리내" },
+                { value: "2", content: "담당" }
+            ],
+            css: "control-comm sel-sort"
+        }, 
+        {
+            id: "mdColumnSelect",
+            name: "mdColumnSelect",
+            type: "select",
+            label: "",
+            labelPosition: "left",
+            labelWidth: 0,
+            value: "전체",
+            required: true,
+            options: [
+                { value: "0", content: "통합" },
+                { value: "1", content: "모델번호" },
+                { value: "2", content: "모델번호(G)" },
+                { value: "3", content: "모델명" },
+                { value: "4", content: "조건명" },
+                { value: "5", content: "속성" },
+                { value: "6", content: "제조사" },
+                { value: "7", content: "브랜드" }
+            ],
+            css: "control-comm sel-sort"
         },
         {
-            // 모델 검색 옵션 세번째 행
-            id: "mdFilterRow_3",
-            cols: [
-                {
-                    id: "btnOriginMatching",
-                    type: "button",
-                    text:"기매칭",
-                    css: "control-comm btn-srch"
-                },
-                {
-                    id: "btnAdd",
-                    type: "button",
-                    text:"추가",
-                    css: "control-comm btn-srch"
-                },
-                {
-                    id: "btnMod",
-                    type: "button",
-                    text:"변경",
-                    css: "control-comm btn-srch"
-                },
-                {
-                    id: "btnDel",
-                    type: "button",
-                    text:"삭제",
-                    css: "control-comm btn-srch"
-                }
-            ]
+            id: "mdIncludeSelect",
+            name: "mdIncludeSelect",
+            type: "select",
+            label: "",
+            labelPosition: "left",
+            labelWidth: 0,
+            value: "선택",
+            required: true,
+            options: [
+                { value: "0", content: "결과내포함" },
+                { value: "1", content: "결과내제외" },
+            ],
+            css: "control-comm sel-sort"
+        },
+        {
+            id: "mdKeywordInput",
+            name: "mdKeywordInput",
+            type: "input",
+            label: "",
+            labelPosition: "left",
+            icon: "dxi dxi-magnify",
+            labelWidth: 0,
+            required: true,
+            placeholder: "검색어를 입력하세요.",
+            css: "control-comm ipt-srch"
+        },
+        {
+            id: "mdKeywordSubmit",
+            type: "button",
+            text:"검색",
+            css: "control-comm btn-srch"
         }
     ]
 })
-// EP상품 통합 검색 키워드 추가 TABBAR
-var keywordAdd = new dhx.Tabbar(null, {
+// 모델리스트 > 모델 검색 키워드 노출 (TABBAR)
+// 키워드 추가 관련 function 하단에 있습니다.
+var mdSearchKeyword = new dhx.Tabbar(null, {
     css: "dhx_widget--bordered",
     mode: "top",
     tabAutoWidth: false,
     closable: true,
     noContent: true,
     /* views: [
-        { tab: "-제외키워드", id:"keyword-1" },
-        { tab: "-제외키워드", id:"keyword-2" },
-        { tab: "+포함키워드", id:"keyword-3" },
-        { tab: "-키워드", id:"keyword-4" },
-        { tab: "+포함키워드", id:"keyword-5" },
-        { tab: "-키워드", id:"keyword-6" },
-        { tab: "-키워드", id:"keyword-7" },
-        { tab: "-키워드", id:"keyword-8" },
-        { tab: "-키워드", id:"keyword-9" },
-        { tab: "-키워드", id:"keyword-10" },
-        { tab: "-키워드", id:"keyword-11" },
+        { tab: "입력한 검색키워드", id:"keyword-0" },
+        { tab: "입력한 검색키워드", id:"keyword-1" },
+        { tab: "입력한 검색키워드", id:"keyword-2" }
+        // ...
     ], */
-    css: "keyword_list"
+    css: "mdSearchKeyword_list"
 });
 
+// 모델리스트 > 모델 기매칭/추가/변경/삭제 버튼 영역
+var mdControl = new dhx.Form(null, {
+    css: "controller_ep",
+    padding: 0,
+    rows: [
+        {
+            // 모델 검색 옵션 세번째 행
+            id: "mdFilterRow_3",
+            cols: [
+                { id: "btnOriginMatching", type: "button", text:"기매칭", css: "control-comm btn-srch" },
+                { id: "btnAdd", type: "button", text:"추가", css: "control-comm btn-srch" },
+                { id: "btnMod", type: "button", text:"변경", css: "control-comm btn-srch" },
+                { id: "btnDel", type: "button", text:"삭제", css: "control-comm btn-srch" },
+                { id: "btnUpload", type: "button", text:"사이트반영", css: "control-comm btn-srch" }
+            ]
+        }
+    ]
+})
 
-// 검색제외조건 찾기 FORM
-var form_orgEctKwd_top = new dhx.Form(null, {
+/*********************************
+ * 각 그리드 추가/수정/삭제 윈도우 생성
+*********************************/
+var editWindow = new dhx.Window({
+    width: 650,
+    title: "모델 추가",
+    modal: true
+});
+
+var editFormConfig = {
+    padding: 0,
+    css: "editModalBox",
+    rows: [
+        {
+            id: "id",
+            type: "input",
+            name: "id",
+            hidden: true,
+
+            rows: [
+                {
+                    id: "modelRow_1",
+                    cols: [
+                        { type: "text", label: "카테고리" },
+                        { type: "input", id:"catecode", name: "catecode", css : "ipt_full" },
+                        { type: "button", text: "카테고리명 확인", id: "btnCateConfirm" },
+                        { type: "button", text: "카테고리 정보", id: "btnCateInfo", css: "btn_info" }
+                    ]
+                },
+                {
+                    id: "modelRow_2",
+                    cols: [
+                        { type: "text", label: "제조사" },
+                        { type: "input", id:"company", name: "company" },
+                        { type: "button", text: "검색", id: "btnCateConfirm", css: "btn_srch" },
+                        { type: "select", name: "", value: "0", css: "sel_pad", options: [
+                                { value: "0", content: "제조사 선택" },
+                                { value: "1", content: "아모레퍼시픽1" },
+                                { value: "2", content: "아모레퍼시픽2222" } 
+                            ]
+                        },
+                        { type: "button", text: "제조사/브랜드", id: "btnBrandInfo", css: "btn_info" }
+                    ]
+                },
+                {
+                    id: "modelRow_3",
+                    cols: [
+                        { type: "text", label: "브랜드" },
+                        { type: "input", id:"brand", name: "brand" },
+                        { type: "button", text: "검색", id: "btnBrandSearch", css: "btn_srch" },
+                        { type: "select", name: "", value: "0", css: "sel_pad", options: [
+                            { value: "0", content: "브랜드 선택" },
+                            { value: "1", content: "아모레퍼시픽1" },
+                            { value: "2", content: "아모레퍼시픽2223213sdfasdf2" } 
+                        ]
+                        }
+                    ]
+                },
+                {
+                    id: "modelRow_4",
+                    cols: [
+                        { type: "text", label: "모델명" },
+                        { type: "input", id: "mdname", name: "mdname", css : "ipt_full" }
+                    ]
+                },
+                {
+                    id: "modelRow_5",
+                    cols: [
+                        { type: "text", label: "카피문구" },
+                        { type: "input", id: "copytxt", name: "copytxt", css : "ipt_full" }
+                    ]
+                },
+                {
+                    id: "modelRow_6",
+                    cols: [
+                        { type: "text", label: "검색키워드" },
+                        { type: "input", id: "srchkey", name: "srchkey", css : "ipt_full" }
+                    ]
+                }
+            ]
+        },
+        
+        {
+            align: "end",
+            cols: [
+                {
+                    id: "apply-button",
+                    type: "button",
+                    text: "추가/저장"
+                }
+            ]
+        }
+    ]
+}
+
+// 윈도우 내 폼 위젯 생성
+var editForm = new dhx.Form(null, editFormConfig);
+
+// 윈도우 내 추가/저장 버튼 클릭
+editForm.getItem("apply-button").events.on("click", function () {
+    var newData = editForm.getValue();
+    var validate = editForm.validate(); // 입력 상태 체크
+    if(validate){
+        var dataIdx = (mdList_data.length+1); // 조건번호 카운팅
+        
+        // 추가되어야 할 컬럼값 넣어주세요. 
+        // data key는 임의로 넣은 것이니, 편의에 맞게 배열 키랑 동일하게 변경해주세요.
+        const dataVal = {
+            idx: dataIdx,
+            prdc_image : newData.catecode, // 카테코드
+            prdc_price : newData.company, // 제조사
+            prdc_pricem : newData.brand, // 브랜드
+            prdc_name : newData.mdname, // 모델명
+            copytxt : newData.copytxt, // 카피문구
+            srchkey : newData.srchkey, // 검색키워드
+        }
+        mdList_data.push(dataVal); // 배열에 푸시
+        mdList.data.add(dataVal); // 그리드에 표시
+        
+        closeEditor(); // 윈도우 닫기
+    }
+});
+// 윈도우 내 폼 적용
+editWindow.attach(editForm);
+
+// 모델 추가 버튼 클릭
+mdControl.getItem("btnAdd").events.on("click", function(){
+    openEditor(mdList.data.row, "모델 추가");
+})
+// 모델 수정 버튼 클릭
+mdControl.getItem("btnMod").events.on("click", function(){
+    var cell = mdList.selection.getCell(); // 선택한 행
+
+    if(cell != undefined) openEditor(mdList.data.row, "모델 수정")
+    else alert("수정할 열을 선택해 주세요.") 
+})
+// 모델 삭제 버튼 클릭
+mdControl.getItem("btnDel").events.on("click", function(){
+    var cell = mdList.selection.getCell(); // 선택한 행
+
+    if (cell.row) {
+        if(window.confirm("삭제하시겠습니까?")) {
+            mdList.data.remove(cell.row.id);
+        }
+    }
+})
+
+// 윈도우 열기
+function openEditor(id, tit) {
+    var winTitle = tit;
+    
+    editWindow.show();
+    editWindow.header.data.update("title", { value: winTitle }); // 윈도우 타이틀 수정
+    var item = mdList.data.getItem(id);
+    if (item) {
+        editForm.setValue(item);
+    }
+}
+// 윈도우 닫기
+function closeEditor() {
+    editForm.clear();
+    editWindow.hide();
+}
+
+/*********************
+ * 레이아웃 좌측 모델리스트 > 검색 조건
+ *********************/
+// 검색 조건 FORM
+var searchOption = new dhx.Form(null, {
     css: "form-radio--cond",
     padding: "5px 10px",
     width: "100%",
@@ -994,16 +897,9 @@ var form_orgEctKwd_top = new dhx.Form(null, {
                     labelPosition: "left",
                     options: {
                         cols: [
-                            {
-                                type: "radioButton",
-                                text: "포함",
-                                value: "",
-                            },
-                            {
-                                type: "radioButton",
-                                text: "제외",
-                                value: "",
-                            }
+                            { type: "radioButton", text: "OR", value: "0", checked:true },
+                            { type: "radioButton", text: "AND", value: "1" },
+                            { type: "radioButton", text: "NOT", value: "2" }
                         ]
                     },
                     css: "control-comm ipt-radio"
@@ -1019,7 +915,7 @@ var form_orgEctKwd_top = new dhx.Form(null, {
                 },
                 {
                     type: "button",
-                    text: "찾기",
+                    text: "추가",
                     id: "btn-findcond",
                     css: "control-comm btn-find"
                 }
@@ -1028,9 +924,216 @@ var form_orgEctKwd_top = new dhx.Form(null, {
     ]    
 });
 
+// 검색 조건 FORM, 찾기 폼(searchOption)에서 추가 시, searchOption_list.rows{} 추가
+var searchOption_list = new dhx.Form(null, {
+    css: "form-radio--cond",
+    padding: "5px 10px",
+    width: "100%",
+    rows:[
+        {
+            id: "optionList-1",
+            cols:[
+                {
+                    type: "radioGroup",
+                    name: "addRadio-1",
+                    disabled: false,
+                    required: false,
+                    label: "",
+                    labelWidth: 0,
+                    labelPosition: "left",
+                    options: {
+                        cols: [
+                            { type: "radioButton", text: "OR", value: "0", checked:true },
+                            { type: "radioButton", text: "AND", value: "1" },
+                            { type: "radioButton", text: "NOT", value: "2" }
+                        ]
+                    },
+                    css: "control-comm ipt-radio"
+                },
+                {
+                    type: "input",
+                    name: "addIpt-1",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    required: true,
+                    placeholder: "",
+                    css:"control-comm ipt-srch"
+                },
+                {
+                    type: "button",
+                    text: "삭제",
+                    id: "btn-del-1",
+                    css: "control-comm btn-find"
+                }
+            ]
+        },
+        {
+            id: "optionList-2",
+            cols:[
+                {
+                    type: "radioGroup",
+                    name: "addRadio-2",
+                    disabled: false,
+                    required: false,
+                    label: "",
+                    labelWidth: 0,
+                    labelPosition: "left",
+                    options: {
+                        cols: [
+                            { type: "radioButton", text: "OR", value: "0", checked:true },
+                            { type: "radioButton", text: "AND", value: "1" },
+                            { type: "radioButton", text: "NOT", value: "2" }
+                        ]
+                    },
+                    css: "control-comm ipt-radio"
+                },
+                {
+                    type: "input",
+                    name: "addIpt-2",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    required: true,
+                    placeholder: "",
+                    css:"control-comm ipt-srch"
+                },
+                {
+                    type: "button",
+                    text: "삭제",
+                    id: "btn-del-2",
+                    css: "control-comm btn-find"
+                }
+            ]
+        },
+        {
+            id: "optionList-3",
+            cols:[
+                {
+                    type: "radioGroup",
+                    name: "addRadio-3",
+                    disabled: false,
+                    required: false,
+                    label: "",
+                    labelWidth: 0,
+                    labelPosition: "left",
+                    options: {
+                        cols: [
+                            { type: "radioButton", text: "OR", value: "0", checked:true },
+                            { type: "radioButton", text: "AND", value: "1" },
+                            { type: "radioButton", text: "NOT", value: "2" }
+                        ]
+                    },
+                    css: "control-comm ipt-radio"
+                },
+                {
+                    type: "input",
+                    name: "addIpt-3",
+                    labelPosition: "left",
+                    labelWidth: 0,
+                    required: true,
+                    placeholder: "",
+                    css:"control-comm ipt-srch"
+                },
+                {
+                    type: "button",
+                    text: "삭제",
+                    id: "btn-del-3",
+                    css: "control-comm btn-find"
+                }
+            ]
+        },
+    ]    
+});
 
-// EP 통합검색 FORM : 검색 영역
-var matchSrchControll = new dhx.Form(null, {
+
+/*********************
+ * 레이아웃 우측 상품리스트
+ *********************/
+
+// 상품리스트 > 매칭, 미매칭, 품절포함, -2/-5포함 버튼 영역
+var prdcGridSorting = new dhx.Form(null, {
+    css: "control-comm ep-chkbox mdpage",
+    width:"100%",
+    height:"42px",
+    align: "end",
+    rows: [
+        {
+            id: "epSorting",
+            cols:[
+                {
+                    type: "checkbox",
+                    text: "매칭"
+                },
+                {
+                    //클릭시 팝업
+                    type: "button",
+                    id: "matchingSelLayer",
+                    css:"btn-gmopen"
+                },
+                {
+                    type: "checkbox",
+                    text: "미매칭"
+                },
+                {
+                    type: "checkbox",
+                    text: "품절포함",
+                },
+                {
+                    type: "checkbox",
+                    text: "-2/-5 포함",
+                },
+                {
+                    type: "checkbox",
+                    id: "minCheck",
+                    name: "minCheck",
+                    value: false,
+                    disabled: true,
+                    css: "ipt_chk"
+                },
+                {
+                    type: "input",
+                    id: "minPriceIpt",
+                    name: "minPriceIpt",
+                    width: "140px",
+                    placeholder: "최소금액",
+                    css:"min_price"
+                }
+            ]
+        }
+    ]
+})
+// 최소 금액 인풋 체크/언체크
+prdcGridSorting.getItem("minPriceIpt").events.on("input", function(inputValue){
+    var minChk = prdcGridSorting.getItem("minCheck")
+    console.log(inputValue)
+    if(inputValue){
+        minChk.setValue(true); 
+    }else{
+        minChk.setValue(false); 
+    }
+})
+
+/* 상품리스트 > 매칭 > 매칭 팝업 */
+var popMatching = new dhx.Popup({
+    css: "pop_groupMatching"
+});
+var popMatchingHtml = "";
+    popMatchingHtml += "<div class=\"lay_gm\">";
+    popMatchingHtml += "   <p class=\"tx_tit\">매칭 항목 설정</p>";
+    popMatchingHtml += "   <ul>";
+    popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_1\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_1\">일반매칭</label> <em class=\"tx_cnt\">(12,000)</em></li>";
+    popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_2\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_2\">그룹(자동)매칭</label> <em class=\"tx_cnt\">(99,999)</em></li>";
+    popMatchingHtml += "   <ul>";
+    popMatchingHtml += "</div>";
+
+    popMatching.attachHTML(popMatchingHtml);
+
+    // 매칭 + 클릭
+    prdcGridSorting.getItem("matchingSelLayer").events.on("click", function(e){
+        popMatching.show(e.srcElement);
+    })
+
+// 상품리스트 > 상품 키워드 검색 영역
+var prdcSearch = new dhx.Form(null, {
     css: "controller_ep",
     padding: 0,
     width: "100%",
@@ -1045,28 +1148,14 @@ var matchSrchControll = new dhx.Form(null, {
             value: "상품명",
             required: true,
             options: [
-                {
-                    value: "0",
-                    content: "상품명"
-                },
-                {
-                    value: "1",
-                    content: "카탈로그번호"
-                },
-                {
-                    value: "2",
-                    content: "상품코드"
-                },
-                {
-                    value: "3",
-                    content: "PLNO"
-                }
+                { value: "0", content: "전체" },
+                { value: "1", content: "카테고리내" }
             ],
             css: "control-comm sel-sort"
         }, 
         {
-            id: "keywordSelect",
-            name: "select",
+            id: "prdcOptionSelect",
+            name: "prdcOptionSelect",
             type: "select",
             label: "",
             labelPosition: "left",
@@ -1074,28 +1163,31 @@ var matchSrchControll = new dhx.Form(null, {
             value: "전체",
             required: true,
             options: [
-                {
-                    value: "0",
-                    content: "전체"
-                },
-                {
-                    value: "1",
-                    content: "카테고리내"
-                },,
-                {
-                    value: "2",
-                    content: "키워드 포함"
-                },
-                {
-                    value: "3",
-                    content: "키워드 제외"
-                }
+                { value: "0", content: "상품명" },
+                { value: "1", content: "모델번호" },
+                { value: "2", content: "PLNO" },
+                { value: "3", content: "상품코드" }
             ],
             css: "control-comm sel-sort"
         },
         {
-            id: "keywordInput",
-            name: "input",
+            id: "prdcIncludeSelect",
+            name: "prdcIncludeSelect",
+            type: "select",
+            label: "",
+            labelPosition: "left",
+            labelWidth: 0,
+            value: "선택",
+            required: true,
+            options: [
+                { value: "0", content: "결과내포함" },
+                { value: "1", content: "결과내제외" },
+            ],
+            css: "control-comm sel-sort"
+        },
+        {
+            id: "prdcKeywordInput",
+            name: "prdcKeywordInput",
             type: "input",
             label: "",
             labelPosition: "left",
@@ -1106,7 +1198,7 @@ var matchSrchControll = new dhx.Form(null, {
             css: "control-comm ipt-srch"
         },
         {
-            id: "keywordSubmit",
+            id: "prdcKeywordSubmit",
             type: "button",
             text:"검색",
             css: "control-comm btn-srch"
@@ -1114,129 +1206,9 @@ var matchSrchControll = new dhx.Form(null, {
     ]
 })
 
-// EP 버튼 좌측 FORM : 매칭, 매칭해제
-var epGridControll = new dhx.Form(null, {
-    css: "controller_sort",
-    padding: 0,
-    width: "100%",
-    height:"42px",
-    cols: [
-        {
-            type: "button",
-            text: "전체선택",
-            id: "allCheck",
-            align:"left",
-            size: "small",
-            css: "control-comm btn-cond btn-all"
-        },
-        {
-            type: "button",
-            text: "매칭",
-            id: "btnMatching1",
-            align:"left",
-            size: "small",
-            css: "control-comm btn-cond btn-matching"
-        },
-        {
-            type: "button",
-            text: "매칭해제",
-            id: "btnMatching2",
-            align:"left",
-            size: "small",
-            css: "control-comm btn-cond"
-        }
-    ]
-})
-
-// EP 버튼 우측 FORM : 가매칭, 그룹매칭, 매칭
-var epGridSorting = new dhx.Form(null, {
-    css: "control-comm ep-chkbox mdpage",
-    width:"100%",
-    height:"42px",
-    align: "end",
-    rows: [
-        {
-            id: "epSorting",
-            cols:[
-                {
-                    type: "checkbox",
-                    disabled: false,
-                    required: false,
-                    hidden: false,
-                    text: "매칭"
-                },
-                {
-                    //클릭시 팝업
-                    type: "button",
-                    id: "layPop1",
-                    css:"btn-gmopen"
-                },
-                {
-                    type: "checkbox",
-                    disabled: false,
-                    required: false,
-                    hidden: false,
-                    text: "미매칭"
-                },
-                {
-                    type: "checkbox",
-                    disabled: false,
-                    required: false,
-                    hidden: false,
-                    text: "품절포함",
-                },
-                {
-                    type: "checkbox",
-                    disabled: false,
-                    required: false,
-                    hidden: false,
-                    text: "-2/-5 포함",
-                },
-                {
-                    type: "checkbox",
-                    disabled: false,
-                    required: false,
-                    hidden: false
-                },
-                {
-                    id: "keywordInput",
-                    name: "input",
-                    type: "input",
-                    label: "",
-                    labelPosition: "left",
-                    icon: "dxi dxi-magnify",
-                    labelWidth: 0,
-                    required: false,
-                    placeholder: "최소금액",
-                    css: "control-comm"
-                }
-            ]
-        }
-    ]
-})
-
-/* 매칭 팝업 */
-var popMatching1 = new dhx.Popup({
-    css: "pop_groupMatching"
-});
-var popMatchingHtml = "";
-
-popMatchingHtml += "<div class=\"lay_gm\">";
-popMatchingHtml += "   <p class=\"tx_tit\">매칭 항목 설정</p>";
-popMatchingHtml += "   <ul>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_1\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_1\">일반매칭</label> <em class=\"tx_cnt\">(12,000)</em></li>";
-popMatchingHtml += "	    <li class=\"form-chk\"><input type=\"checkbox\" id=\"matching1_2\" class=\"input--checkbox-item\" checked=\"checked\"><label for=\"matching1_2\">그룹(자동)매칭</label> <em class=\"tx_cnt\">(99,999)</em></li>";
-popMatchingHtml += "   <ul>";
-popMatchingHtml += "</div>";
-popMatching1.attachHTML(popMatchingHtml);
-epGridSorting.getItem("layPop1").events.on("click", function(e){
-    popMatching1.show(e.srcElement);
-})
-
-
-
-// EP상품 통합 검색 키워드 추가 TABBAR
-var keywordAdd = new dhx.Tabbar(null, {
+// 상품리스트 > 상품 검색 키워드 노출 (TABBAR)
+// 키워드 추가 관련 function 하단에 있습니다.
+var prdcSearchKeyword = new dhx.Tabbar(null, {
     css: "dhx_widget--bordered",
     mode: "top",
     tabAutoWidth: false,
@@ -1246,146 +1218,60 @@ var keywordAdd = new dhx.Tabbar(null, {
         { tab: "-제외키워드", id:"keyword-1" },
         { tab: "-제외키워드", id:"keyword-2" },
         { tab: "+포함키워드", id:"keyword-3" },
-        { tab: "-키워드", id:"keyword-4" },
-        { tab: "+포함키워드", id:"keyword-5" },
-        { tab: "-키워드", id:"keyword-6" },
-        { tab: "-키워드", id:"keyword-7" },
-        { tab: "-키워드", id:"keyword-8" },
-        { tab: "-키워드", id:"keyword-9" },
-        { tab: "-키워드", id:"keyword-10" },
-        { tab: "-키워드", id:"keyword-11" },
     ], */
-    css: "keyword_list"
+    css: "prdcSearchKeyword_list"
 });
 
-
-/* EP그리드 우클릭 (개발 common.js 참고) */
-var popup = new dhx.Popup({
-    css: "pop_headecell-sort"
-});
-var popHtml = "";
-
-popHtml += "<div>";
-popHtml += "	<input type=\'checkbox\' id=\'imgurl\' name=\'escustom\' onclick='customField(\"imgurl\");' checked='checked'>이미지	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'shopname\' name=\'escustom\' onclick='customField(\"shopname\");' checked='checked'>쇼핑몰	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'price\' name=\'escustom\' onclick='customField(\"price\");' checked='checked'>가격	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'goodsnm\' name=\'escustom\' onclick='customField(\"goodsnm\");' checked='checked'>상품명	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'brnd\' onclick=\'customField(\"brnd\");\' name='escustom' checked='checked'>브랜드	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'cond02\' onclick=\'customField(\"cond02\");\' name='escustom' checked='checked'>원부조건	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'cond03\' onclick=\'customField(\"cond03\");\' name='escustom' checked='checked'>조건1	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'cond04\' onclick=\'customField(\"cond04\");\' name='escustom' checked='checked'>조건2	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'score\' onclick=\'customField(\"score\");\' name='escustom' checked='checked'>스코어	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'modelno\' onclick=\'customField(\"modelno\");\' name='escustom' checked='checked'>모델번호	<br>";
-popHtml += "	<input type=\'checkbox\' id=\'matchYn\' onclick=\'customField(\"matchYn\");\' name=\'escustom\' checked=\'checked\'>매칭여부";
-//popHtml += "	<input type=\'checkbox\' id=\'groupMatchYn\' onclick=\'customField(\"groupMatchYn\");\' name=\'escustom\' checked=\'checked\'>그룹매칭여부";
-popHtml += "</div>";
-popup.attachHTML(popHtml);
-const pconfig = {
-    centering: true,
-    mode: "bottom",
-    indent: 0
-};
-prdcList.events.on("headerCellRightClick", function(col, e){
-    e.preventDefault();
-    popup.show(e.srcElement, pconfig);
-})
-function customField(item) {
-	if(!$("#"+item).is(":checked")){
-		prdcList.hideColumn(item);
-	}else{
-		prdcList.showColumn(item);
-	}
-}
-/* // */
-
-// 통합검색 FORM : 검색 영역
-var wrapSrchControll = new dhx.Form(null, {
-    css: "controller_all",
+// 상품리스트 > 상품 그리드 전체선택, 매칭, 매칭해제 버튼 영역
+var prdcGridBtn = new dhx.Form(null, {
+    css: "controller_sort",
     padding: 0,
     width: "100%",
+    height:"42px",
     cols: [
         {
-            id: "selectStep1",
-            name: "selectStep1",
-            type: "select",
-            label: "",
-            labelPosition: "left",
-            labelWidth: 0,
-            value: "통합",
-            required: true,
-            options: [
-                {
-                    value: "0",
-                    content: "통합"
-                },
-                {
-                    value: "1",
-                    content: "카탈로그번호"
-                },
-                {
-                    value: "2",
-                    content: "원부명"
-                },
-                {
-                    value: "3",
-                    content: "제조사"
-                },
-                {
-                    value: "4",
-                    content: "브랜드"
-                }
-            ],
-            css: "control-comm sel-sort"
-        },
-        {
-            id: "selectStep2",
-            name: "selectStep2",
-            type: "select",
-            label: "",
-            labelPosition: "left",
-            labelWidth: 0,
-            value: "전체",
-            required: true,
-            options: [
-                {
-                    value: "0",
-                    content: "전체"
-                },
-                {
-                    value: "1",
-                    content: "카테고리내"
-                },
-                {
-                    value: "2",
-                    content: "키워드포함"
-                },
-                {
-                    value: "3",
-                    content: "키워드제외"
-                },
-            ],
-            css: "control-comm sel-sort"
-        },
-        {
-            id: "allKeywordInput",
-            name: "input",
-            type: "input",
-            label: "",
-            labelPosition: "left",
-            icon: "dxi dxi-magnify",
-            labelWidth: 0,
-            required: true,
-            placeholder: "검색어를 입력하세요.",
-            css: "control-comm ipt-srch"
-        },
-        {
-            id: "allKeywordSubmit",
             type: "button",
-            text:"검색",
-            css: "control-comm btn-srch"
+            text: "전체선택",
+            id: "btnAllchk",
+            align:"left",
+            size: "small",
+            css: "control-comm btn-cond btn-all"
+        },
+        {
+            type: "button",
+            text: "매칭",
+            id: "btnMatch",
+            align:"left",
+            size: "small",
+            css: "control-comm btn-cond btn-matching"
+        },
+        {
+            type: "button",
+            text: "매칭해제",
+            id: "btnMatchDis",
+            align:"left",
+            size: "small",
+            css: "control-comm btn-cond"
+        },
+        {
+            type: "button",
+            text: "-2/-5 포함",
+            id: "btnCodeInc",
+            align:"left",
+            size: "small",
+            css: "control-comm btn-cond"
+        },
+        {
+            type: "button",
+            text: "분할",
+            id: "btnDivision",
+            align:"left",
+            size: "small",
+            css: "control-comm btn-cond"
         }
     ]
 })
+
 
 /*********************************
  * 전체 레이아웃 생성
@@ -1413,7 +1299,6 @@ var config = {
                             // 모델목록 (좌측)
                             type: "line",
                             id: "mdList",
-                            //width:"222px",
                             headerHeight:32,
                             header: "모델 (n건)",
                             collapsable: true,
@@ -1422,19 +1307,76 @@ var config = {
                             customScroll: true,
                             rows : [
                                 {
-                                    // 모델목록 HEADER
-                                    id: "mdOptionFilter",
-                                    height: "116px"
+                                    id:"modelListBox",
+                                    cols: [
+                                        {
+                                            rows: [
+                                                {
+                                                    // 모델 조회 (필터)
+                                                    id: "mdOptionFilter",
+                                                    height: "40px"
+                                                },
+                                                {
+                                                    // 모델 키워드 검색
+                                                    width:"100%",
+                                                    height:"42px",
+                                                    cols: [
+                                                        {
+                                                            // 모델 검색 영역
+                                                            id:"mdSearch",
+                                                            width:"525px",
+                                                        },
+                                                        {
+                                                            // 모델 키워드 영역
+                                                            id:"mdSearchKeyword",
+                                                            width:"calc(100% - 525px)",
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    id: "mdControl",
+                                                    width: "100%",
+                                                    height: "42px",
+                                                },
+                                                {
+                                                    // 모델목록 GRID
+                                                    id: "mdGrid",
+                                                    width:"100%",
+                                                    height:"calc(100% - 124px)"
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 },
                                 {
-                                    // 모델목록 GRID
-                                    id: "mdGrid",
-                                    height:"calc(100% - 48px)"
+                                    // 검색 조건 영역
+                                    headerHeight:32,
+                                    header: "검색 조건",
+                                    collapsable: true,
+                                    collapsed: true,
+                                    height:"220px",
+                                    cols:[
+                                        {
+                                            // 검색 조건 COL
+                                            width:"100%",
+                                            rows: [
+                                                {
+                                                    // 검색 조건 추가
+                                                    id: "searchOption",
+                                                    height:"40px"
+                                                },
+                                                {
+                                                    // 검색 조건 목록 : FORM 위젯
+                                                    id: "searchOption_list"
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            // EP상품 COL
+                            // 상품목록 (우측)
                             type: "line",
                             id: "prdcList",
                             headerHeight:32,
@@ -1445,45 +1387,46 @@ var config = {
                             customScroll: true,
                             rows:[
                                 {
-                                    // EP상품 ROW : 매칭 미매칭 품절 -2/-5 체크박스
-                                    id: "epGridSorting",
+                                    // 상품 필터 ROW : 매칭 미매칭 품절 -2/-5 체크박스
+                                    id: "prdcGridSorting",
                                     width:"100%",
                                     height:"42px",
                                 },
                                 {
-                                    // EP상품 ROW : 검색&키워드
+                                    // 상품 ROW : 검색&키워드
                                     width:"100%",
                                     height:"42px",
                                     cols: [
                                         {
-                                            // EP 통합검색 : 검색 영역
-                                            id:"epSearch",
-                                            width:"440px",
+                                            // 상품 > 검색 영역
+                                            id:"prdcSearch",
+                                            width:"510px",
                                         },
                                         {
-                                            // EP 통합검색 : 키워드 영역
-                                            id:"epSearchKeyword",
-                                            width:"calc(100% - 440px)",
+                                            // 상품 > 키워드 영역
+                                            id:"prdcSearchKeyword",
+                                            width:"calc(100% - 510px)",
                                         }
                                     ]
                                 },
                                 {
-                                    // EP상품 ROW : 정보
+                                    // 상품 > 정보
                                     id:"epProductInfo",
-                                    html: matchingComponent,
+                                    html: productInfo,
                                     height:"82px"
                                 },
                                 {
-                                    // EP상품 ROW : 버튼 컨트롤
+                                    // 상품 > 버튼 컨트롤
+                                    align: "between",
                                     height:"42px",
                                     cols: [
                                         {
-                                            // 버튼 좌측 : 전체선택,매칭,매칭해제
-                                            id: "epGridControll",
-                                            width:"205px",
+                                            // 상품 > 전체선택,매칭,매칭해제,-2/-5, 분할
+                                            id: "prdcGridBtn",
+                                            width:"354px",
                                         },
                                         {
-                                            // 우측 뷰타입 버튼 넣기 위한 빈 공간 
+                                            // 상품 > 뷰타입 버튼
                                             width:"72px",
                                             html: viewTypeChange
                                         }
@@ -1493,7 +1436,6 @@ var config = {
                                     // EP상품 ROW : 정보
                                     id:"epPrdcList",
                                     resizable:true, 
-
                                     cols:[
                                         {
                                             // EP상품 COL : 그리드&리스트 뷰
@@ -1505,7 +1447,7 @@ var config = {
                                             rows:[
                                                 {
                                                     // EP 상품 그리드&리스트 목록 컨테이너
-                                                    id:"epTabContainer",
+                                                    id:"prdcViewCont",
                                                     height:"calc(100% - 78px)"
                                                 },
                                                 {
@@ -1532,63 +1474,58 @@ var config = {
     ]
 };
 
+
+// 레이아웃 구성
 export var contentLayout = new dhx.Layout("contents", config);
 
+    // 상단 > 일정 및 담당자 선택
     contentLayout.getCell("userFinder").attach(userFinder)
 
-    contentLayout.getCell("mdOptionFilter").attach(mdOptionFilter)
+    // 모델리스트 
+    contentLayout.getCell("mdOptionFilter").attach(mdOptionFilter) // > 검색 필터 영역
+    contentLayout.getCell("mdSearch").attach(mdSearch) // > 검색 영역
+    contentLayout.getCell("mdSearchKeyword").attach(mdSearchKeyword); // > 검색 영역 우측 키워드 표시
+    contentLayout.getCell("mdControl").attach(mdControl) // > 버튼 영역
+    
     // GRID 세팅
-    contentLayout.getCell("mdGrid").attach(mdList); // 제조사 GRID    
+    contentLayout.getCell("mdGrid").attach(mdList); // 제조사 GRID
+
+    contentLayout.getCell("searchOption").attach(searchOption); // 검색 조건 추가 FORM
+    contentLayout.getCell("searchOption_list").attach(searchOption_list); // 검색 조건 목록 FORM
     
     contentLayout.getCell("matchPaging").attach(matchGridPaging); // EP상품 페이징 (그리드)
 
-    contentLayout.getCell("epSearch").attach(matchSrchControll); // EP 통합검색 : 검색 영역
-    contentLayout.getCell("epSearchKeyword").attach(keywordAdd); // EP 통합검색 : 키워드 영역
+    contentLayout.getCell("prdcSearch").attach(prdcSearch); // EP 통합검색 : 검색 영역
+    contentLayout.getCell("prdcSearchKeyword").attach(prdcSearchKeyword); // EP 통합검색 : 키워드 영역
 
-    contentLayout.getCell("epGridControll").attach(epGridControll); // EP 버튼 좌측 : 전체선택, 매칭, 0(제외)
-    contentLayout.getCell("epGridSorting").attach(epGridSorting); // EP 버튼 우측 : 전체선택, 미매칭보기, 매칭보기
+    contentLayout.getCell("prdcGridBtn").attach(prdcGridBtn); // EP 버튼 좌측 : 전체선택, 매칭, 0(제외)
+    contentLayout.getCell("prdcGridSorting").attach(prdcGridSorting); // EP 버튼 우측 : 전체선택, 미매칭보기, 매칭보기
 
-    contentLayout.getCell("epTabContainer").attach(epViewContainer); // EP 상품 그리드&리스트 목록 컨테이너
+    contentLayout.getCell("prdcViewCont").attach(prdcViewCont); // EP 상품 그리드&리스트 목록 컨테이너
 
     // EP상품 뷰타입 attach 합니다.
-    epViewContainer.getCell("gridTypeList").attach(prdcList); // EP상품 뷰타입 컨테이너 > 그리드뷰 노출
-    epViewContainer.getCell("imageTypeList").attach(imageTypeList); // EP상품 뷰타입 컨테이너 > 이미지뷰 노출
+    prdcViewCont.getCell("gridTypeList").attach(prdcList); // EP상품 뷰타입 컨테이너 > 그리드뷰 노출
+    prdcViewCont.getCell("imageTypeList").attach(imageTypeList); // EP상품 뷰타입 컨테이너 > 이미지뷰 노출
 
     
-
 /********************************* 
- * 참고 : EP상품 그리드/리스트(이미지뷰) 선택한 상품명 표시입니다.
+ * 모델리스트 > 모델 검색 키워드 추가 기능입니다.
 *********************************/
-
-    // 매칭 그리드 선택한 마지막 값 넣어주기
-    prdcList.selection.events.on("afterSelect", function(row, col){
-        $("#modelNameIn").val(row.goodsnm);
-    });
-    // 매칭 리스트(이미지뷰) 선택한 마지막 값 넣어주기
-    imageTypeList.selection.events.on("afterSelect", function(row){
-        var col = imageTypeList.selection.getItem(); // 선택한 상품명
-
-        $("#modelNameIn").val(col[col.length-1].goodsnm);
-    });
-
-/********************************* 
- * 참고 : EP상품 검색 키워드 추가 기능입니다.
-*********************************/
-    // EP상품 폼 위젯 이벤트 : 참고(https://docs.dhtmlx.com/suite/form/api/input/input_change_event/)
+    // 모델 폼 위젯 이벤트 : 참고(https://docs.dhtmlx.com/suite/form/api/input/input_change_event/)
     // api 참고하여 적절하게 사용해주세요
-    var keywordSt = 0; // 셀렉트 초기값
-    matchSrchControll.getItem("select").events.on("change", function(val){
-        keywordSt = val; // 셀렉트 선택한 값 
+    var mdKeywordSt = 0; // 모델 검색(0:결과내포함, 1:결과내제외) select name : mdIncludeSelect
+    mdSearch.getItem("mdIncludeSelect").events.on("change", function(val){
+        mdKeywordSt = val; // 셀렉트 선택한 값
     })
     $(function(){
-        $("#keywordInput").keyup(function(e){
+        $("#mdKeywordInput").keyup(function(e){
             if(e.key === 'Enter' || e.keyCode === 13){
-                keywordSubmit();
+                mdKeywordSubmit();
             }
         })
 
         // 추가된 키워드 클릭(활성/비활성 토글)
-        $(".keyword_list").on("click", ".dhx_tabbar-tab", function(e){
+        $(".mdSearchKeyword_list").on("click", ".dhx_tabbar-tab", function(e){
             if(!$(this).hasClass("is-disabled")){ // 비활성
                 $(this).addClass("is-disabled");
             }else{ // 활성
@@ -1596,30 +1533,103 @@ export var contentLayout = new dhx.Layout("contents", config);
             }
         })
     })
-    matchSrchControll.getItem("keywordSubmit").events.on("click", function(e) {
-        keywordSubmit();
+    mdSearch.getItem("mdKeywordSubmit").events.on("click", function(e) {
+        mdKeywordSubmit();
     })
-    function keywordSubmit(){ // 검색 키워드 서브밋
-        var srchVal = matchSrchControll.getItem("input").getValue();
+    function mdKeywordSubmit(){ // 검색 키워드 서브밋
+        var srchVal = mdSearch.getItem("mdKeywordInput").getValue();
         if(srchVal != ""){
-            if(keywordSt == 2){
-                addKeyword("+"+srchVal); // 키워드 포함
-            }else if(keywordSt == 3){
-                addKeyword("-"+srchVal); // 키워드 제외
-            }else{ 
-                addKeyword(srchVal); // 전체선택
+            if(mdKeywordSt == 0){
+                modelAddKeyword("+"+srchVal); // 결과내포함
+            }else if(mdKeywordSt == 1){
+                modelAddKeyword("-"+srchVal); // 결과내제외
             }
         }else{
-            matchSrchControll.getItem("input").focus(); // 포커싱
+            mdSearch.getItem("mdKeywordInput").focus(); // 포커싱
         }
-        matchSrchControll.getItem("input").clear(); // 검색 후 초기화
+        mdSearch.getItem("mdKeywordInput").clear(); // 검색 후 초기화
     }
     // EP상품 키워드 추가
-    function addKeyword(keyword) { 
-        keywordAdd.addTab({ tab: keyword }, -1); // 뒤로 추가(-1), 앞으로 추가(0)
+    function modelAddKeyword(keyword) { 
+        mdSearchKeyword.addTab({ tab: keyword }, -1); // 뒤로 추가(-1), 앞으로 추가(0)
 
-        matchSrchControll.getItem("input").focus(); // 포커싱
+        mdSearch.getItem("mdKeywordInput").focus(); // 포커싱
     };
+
+/********************************* 
+ * 모델리스트 > 선택한 상품명 상품리스트 검색 input에 표시됩니다.
+*********************************/
+    // 모델리스트 그리드 선택한 마지막 값 넣어주기
+    mdList.selection.events.on("afterSelect", function(row, col){
+        prdcSearch.getItem("prdcKeywordInput").setValue(row.md_name)
+    });
+
+/********************************* 
+ * 상품리스트 > 그리드/리스트(이미지뷰) 선택한 상품명 표시입니다.
+*********************************/
+    // 매칭 그리드 선택한 마지막 값 넣어주기
+    prdcList.selection.events.on("afterSelect", function(row, col){
+        $("#modelNameIn").val(row.prdc_name);
+    });
+    // 매칭 리스트(이미지뷰) 선택한 마지막 값 넣어주기
+    imageTypeList.selection.events.on("afterSelect", function(row){
+        var col = imageTypeList.selection.getItem(); // 선택한 상품명
+
+        $("#modelNameIn").val(col[col.length-1].prdc_name);
+    });
+
+/********************************* 
+ * 상품리스트 > 검색 키워드 추가 기능입니다.
+*********************************/
+    var prdcKeywordSt = 0; // 셀렉트 초기값
+    prdcSearch.getItem("prdcIncludeSelect").events.on("change", function(val){
+        prdcKeywordSt = val; // 셀렉트 선택한 값 
+    })
+    $(function(){
+        $("#prdcKeywordInput").keyup(function(e){
+            if(e.key === 'Enter' || e.keyCode === 13){
+                prdcKeywordSubmit();
+            }
+        })
+
+        // 추가된 키워드 클릭(활성/비활성 토글)
+        $(".prdcSearchKeyword_list").on("click", ".dhx_tabbar-tab", function(e){
+            if(!$(this).hasClass("is-disabled")){ // 비활성
+                $(this).addClass("is-disabled");
+            }else{ // 활성
+                $(this).removeClass("is-disabled");
+            }
+        })
+    })
+    prdcSearch.getItem("prdcKeywordSubmit").events.on("click", function(e) {
+        prdcKeywordSubmit();
+    })
+    function prdcKeywordSubmit(){ // 검색 키워드 서브밋
+        var srchVal = prdcSearch.getItem("prdcKeywordInput").getValue();
+        if(srchVal != ""){
+            if(prdcKeywordSt == 0){
+                prdcAddKeyword("+"+srchVal); // 결과내포함
+            }else if(prdcKeywordSt == 1){
+                prdcAddKeyword("-"+srchVal); // 결과내제외
+            }
+        }else{
+            prdcSearch.getItem("prdcKeywordInput").focus(); // 포커싱
+        }
+        prdcSearch.getItem("prdcKeywordInput").clear(); // 검색 후 초기화
+    }
+    // EP상품 키워드 추가
+    function prdcAddKeyword(keyword) { 
+        prdcSearchKeyword.addTab({ tab: keyword }, -1); // 뒤로 추가(-1), 앞으로 추가(0)
+
+        prdcSearch.getItem("prdcKeywordInput").focus(); // 포커싱
+    };
+
+/********************************* 
+ * 참고 : 기매칭 클릭, 모델/상품리스트 펼쳐짐 (width set은 불가합니다.)
+*********************************/
+mdControl.getItem("btnOriginMatching").events.on("click", function(e){
+    contentLayout.cell('prdcList').expand()
+})
 
 /*********************************
  * 페이지 로딩 후 실행됩니다.
@@ -1637,16 +1647,8 @@ $(function(){
         },2000)
         return false;
     })
-
-    // 조건 매칭 레이어 드래그
-    $('.lay-wrap .lay-comm').draggable({
-        cancel :'.lay-body, .lay-foot',
-        containment : "parent",
-        scroll : false
-    });
-
     // EP상품 매칭 레이어 오픈
-    $("#btnMatching1, #btnMatching2").on("click", function(){
+    $("#btnMatch").on("click", function(){
         var layer = $("#newPropertyAdd");
         layer.fadeIn(200);
     });
@@ -1673,7 +1675,7 @@ $(function(){
     // EP상품 옵션 전체보기
     var btnOptionAll = $("#btnOptionAll");
     
-    btnOptionAll.on("click", function(){
+    $(document).on("click", "#btnOptionAll", function(){
         var _this = $(this);
         var posTop = _this.offset().top+20; // 레이어 위치 TOP 
         var posLeft = _this.offset().left; // 레이어 위치 LEFT
@@ -1707,17 +1709,17 @@ $(function(){
             event.cancelBubble = true;
             event.returnValue = false;
 
-            $("#btnMatching1").trigger("click");
+            $("#btnMatch").trigger("click");
             return false;
         }
     })
 
     // EP 그리드/이미지 뷰타입 변경 
-    $(".btn_type").on("click",function(){
+    $(document).on("click",".btn_type", function(){
         var _type = $(this).data("viewtype");
         
         $(this).addClass("is-on").siblings().removeClass("is-on");
-        epViewContainer.setActive(_type);
+        prdcViewCont.setActive(_type);
 
         if(_type === "gridTypeList"){
             contentLayout.getCell("matchPaging").attach(matchGridPaging); // EP상품 페이징 그리드타입
@@ -1725,5 +1727,113 @@ $(function(){
             contentLayout.getCell("matchPaging").attach(matchImgPaging); // EP상품 페이징 이미지타입
         }        
     })
+
+    /*********************
+ * 레이아웃 그리드 셀 노출/미노출 
+ *********************/
+// 모델리스트 > 테이블 헤더 우클릭 -> 필드 노출/미노출
+var mdGridField = new dhx.Popup({
+    css: "pop_headecell-sort"
+});
+var mdGridFieldListPop = "";
+
+    mdGridFieldListPop += "<div id=\"mdFieldList\">";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_count\" name=\"mdFieldCustom\" checked='checked'>번호</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_catecode\" name=\"mdFieldCustom\" checked='checked'>카테코드</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_image\" name=\"mdFieldCustom\" checked='checked'>이미지</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_comp\" name=\"mdFieldCustom\" checked='checked'>제조사</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_brand\" name='mdFieldCustom' checked='checked'>브랜드</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_name\" name='mdFieldCustom' checked='checked'>모델명</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_group\" name='mdFieldCustom' checked='checked'>그룹조건명</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_group_st\" name='mdFieldCustom' checked='checked'>그룹여부</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_matching\" name='mdFieldCustom' checked='checked'>매칭수</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_resist\" name='mdFieldCustom' checked='checked'>등록일</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_img\" name=\"mdFieldCustom\" checked=\"checked\">IMG</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_sold\" name=\"mdFieldCustom\" checked=\"checked\">단종</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_front\" name=\"mdFieldCustom\" checked=\"checked\">작</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_property\" name=\"mdFieldCustom\" checked=\"checked\">속성</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_cmnum\" name=\"mdFieldCustom\" checked=\"checked\">담</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_expected\" name=\"mdFieldCustom\" checked=\"checked\">예정</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_volume\" name=\"mdFieldCustom\" checked=\"checked\">용량</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_quantity\" name=\"mdFieldCustom\" checked=\"checked\">수량</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_exchange\" name=\"mdFieldCustom\" checked=\"checked\">환산</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_unit\" name=\"mdFieldCustom\" checked=\"checked\">단위<label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_qna\" name=\"mdFieldCustom\" checked=\"checked\">문의</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_review\" name=\"mdFieldCustom\" checked=\"checked\">상품평</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_ingredient\" name=\"mdFieldCustom\" checked=\"checked\">성분</label>";
+    mdGridFieldListPop += "	    <label><input type=\"checkbox\" id=\"md_color\" name=\"mdFieldCustom\" checked=\"checked\">색상<label>";
+    mdGridFieldListPop += "</div>";
+
+    mdGridField.attachHTML(mdGridFieldListPop);
+    const mdConfig = {
+        centering: true,
+        mode: "bottom",
+        indent: 0
+    };
+    mdList.events.on("headerCellRightClick", function(col, e){
+        e.preventDefault();
+        mdGridField.show(e.srcElement, mdConfig);
+    })
+
+    // 숨길 필드 클릭
+    $(document).on("click", "input[name='mdFieldCustom']", function(){
+        var field = $(this).attr("id");
+        mdFieldCustomFunc(field)
+    })
+    function mdFieldCustomFunc(item) {
+        if(!$("#"+item).is(":checked")){
+            mdList.hideColumn(item)
+        }else{
+            mdList.showColumn(item)
+        }
+    }
+    
+
+// 상품리스트 > 테이블 헤더 우클릭 -> 필드 노출/미노출
+var prdcGridField = new dhx.Popup({
+    css: "pop_headecell-sort"
+});
+var prdcGridFieldPop = "";
+
+    prdcGridFieldPop += "<div id=\"prdcFieldList\">";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_image\" name=\"prdcFieldCustom\" checked='checked'>이미지</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_mall\" name=\"prdcFieldCustom\" checked='checked'>쇼핑몰</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_price\" name=\"prdcFieldCustom\" checked='checked'>가격</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_pricem\" name=\"prdcFieldCustom\" checked='checked'>M가격</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_name\" name='prdcFieldCustom' checked='checked'>상품명</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_brand\" name='prdcFieldCustom' checked='checked'>브랜드</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_mdnum\" name='prdcFieldCustom' checked='checked'>모델번호</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_option\" name='prdcFieldCustom' checked='checked'>옵션</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_srchdate\" name='prdcFieldCustom' checked='checked'>검색일</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_noti\" name='prdcFieldCustom' checked='checked'>비고</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_direction\" name='prdcFieldCustom' checked='checked'>좌우</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_sold\" name=\"prdcFieldCustom\" checked=\"checked\">단종</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_keep\" name=\"prdcFieldCustom\" checked=\"checked\">보관</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_delivery\" name=\"prdcFieldCustom\" checked=\"checked\">배송비</label>";
+    prdcGridFieldPop += "	<label><input type=\"checkbox\" id=\"prdc_lastdate\" name=\"prdcFieldCustom\" checked=\"checked\">최초수집일</label>";
+    prdcGridFieldPop += "</div>";
+    prdcGridField.attachHTML(prdcGridFieldPop);
+    const pconfig = {
+        centering: true,
+        mode: "bottom",
+        indent: 0
+    };
+    prdcList.events.on("headerCellRightClick", function(col, e){
+        e.preventDefault();
+        prdcGridField.show(e.srcElement, pconfig);
+    })
+
+    // 숨길 필드 클릭
+    $(document).on("click", "input[name='prdcFieldCustom']", function(){
+        var field = $(this).attr("id");
+        prdcFieldCustomFunc(field)
+    })
+    function prdcFieldCustomFunc(item) {
+        if(!$("#"+item).is(":checked")){
+            prdcList.hideColumn(item)
+        }else{
+            prdcList.showColumn(item)
+        }
+    }
 })
 
