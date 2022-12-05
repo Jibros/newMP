@@ -20,31 +20,53 @@ html,body{height: 100%;font-size:13px;font-family:/* "Noto Sans KR", */"맑은 �
 .layout {min-width:1400px;height:100%}
 
 #header {position:relative;width:100%;height:40px;padding:0 10px;background-color:var(--color-enuriblue)}
-#header h1 {position:absolute;top:0;left:10px;margin-bottom:0;font-weight:500;font-size:16px;color:#fff;line-height:44px;}
+#header .nav_brand {position:absolute;top:0;left:10px;margin-bottom:0;}
+#header .nav_brand h1 {display:inline-block;height:100%;font-weight:500;font-size:16px;color:#fff;line-height:42px;}
+#header .nav_brand .btn_nav {display:inline-block;position:relative;width:30px;height:30px;vertical-align:middle;background:transparent;border:0;outline:0;font-size:0;cursor:pointer;opacity:.7;transition:opacity .2s ease-in-out;}
+#header .nav_brand .btn_nav:before {content:"";display:block;position:absolute;top:-2px;left:0;width:100%;height:100%;background:url(../imgs/header_sprite.png) -30px 0 no-repeat;}
+#header .nav_brand .btn_nav:hover {opacity:1;}
 
-/* 대량정제 메인 헤더 */
-#header .admin_control {display:flex;justify-content:flex-end;width:100%;padding:0 0 0 110px;font-size:0;line-height:50px;text-align:right}
-#header .admin_control .exlink_list {flex:0 1 auto;margin:0;font-size:0;line-height:40px}
-#header .admin_control .exlink_list > li {display:inline-block;position:relative;}
-#header .admin_control .exlink_list > li+li {margin-left:10px;padding-left:11px;}
-#header .admin_control .exlink_list > li+li:before {content:"";position:absolute;top:50%;left:0;width:1px;height:10px;margin-top:-5px;background-color:#fff}
-#header .admin_control .exlink_list > li > a,
-#header .admin_control .exlink_list > li > button {display:block;font-size:11px;color:#fff;opacity:.8}
-#header .admin_control .exlink_list > li > a:hover,
-#header .admin_control .exlink_list > li > button:hover {opacity:1;cursor:pointer;}
-#header .admin_control .exlink_list > li > button {background:transparent;outline:0;border:0;}
-#header .admin_control .exlink_list > li.has-sub .exlink_sub {display:none;position:absolute;top:80%;left:0;z-index:1000;}
-#header .admin_control .exlink_list > li.has-sub .exlink_sub ul {min-width:140px;max-height:300px;overflow-y:auto;box-shadow:0 2px 4px rgb(0 0 0 / 5%);padding:6px 0;border:1px solid #ddd;border-radius:2px;text-align:left;background-color:#fff;}
-#header .admin_control .exlink_list > li.has-sub .exlink_sub li {display:block;padding:4px 0;}
-#header .admin_control .exlink_list > li.has-sub .exlink_sub li a {display:block;padding:0 10px;font-size:11px;color:#555;line-height:13px;text-decoration:none;}
-#header .admin_control .exlink_list > li.has-sub .exlink_sub li:hover {background-color:#ECF5FF}
-#header .admin_control .user_log {margin:0;margin-left:30px;font-size:11px;color:#fff;line-height:40px}
-#header .admin_control .user_log > span {font-weight:300;opacity:.8}
+/* 대량정제 헤더 > 북마크 */
+#header .bookmark {display:flex;justify-content:flex-end;width:100%;padding:0 0 0 110px;font-size:0;line-height:50px;text-align:right}
+#header .bookmark .bookmark_list {flex:0 1 auto;margin:0;font-size:0;line-height:40px}
+#header .bookmark .bookmark_list > li {display:inline-block;position:relative;}
+#header .bookmark .bookmark_list > li+li {margin-left:10px;padding-left:11px;}
+#header .bookmark .bookmark_list > li+li:before {content:"";position:absolute;top:50%;left:0;width:1px;height:10px;margin-top:-5px;background-color:#fff}
+#header .bookmark .bookmark_list > li > a {display:block;font-size:11px;color:#fff;opacity:.8}
+#header .bookmark .bookmark_list > li > a:hover {opacity:1;cursor:pointer;}
+#header .user_log {margin:0;margin-left:30px;font-size:11px;color:#fff;line-height:40px}
+#header .user_log > span {font-weight:300;opacity:.8}
+
 
 /* 연관상품 헤더 */
 #header.related_header h1 {line-height:40px;}
 #header.related_header h1 .tx_cate {font-size:14px;}
 #header.related_header .tx_time {display:inline-block;font-size:11px;color:#ECF5FF;}
+
+/* 헤더 > 전체메뉴 레이어 */
+.lay_nav {}
+.lay_nav .dhx_layout {}
+.lay_nav .dhx_layout .dhx_window-content-without-header {padding:10px 20px;background-color:#012030}
+.lay_nav .nav_inner {}
+.lay_nav .nav_tree {}
+.lay_nav .nav_tree button {background:transparent;border:0;outline:0;cursor:pointer;}
+.lay_nav .nav_tree .btn_fold {display:block;margin-bottom:4px;font-size:16px;font-weight:bold;color:#fff;line-height:30px;}
+.lay_nav .nav_tree .btn_fold:before {content:"-";display:inline-block;width:10px;margin-right:2px;vertical-align:1px;text-align:center;}
+.lay_nav .nav_tree .btn_fold.unfold:before {content:"+";}
+.lay_nav .nav_tree .nav_depth {margin:0 0 10px;padding:0;list-style:none;}
+.lay_nav .nav_tree .nav_depth li.nav_item {height:30px;margin-left:5px;line-height:30px;}
+.lay_nav .nav_tree .nav_depth li.nav_item .ico {display:inline-block;position:relative;width:30px;height:30px;line-height:30px;vertical-align:middle;}
+.lay_nav .nav_tree .nav_depth li.nav_item .ico:before {content:"";display:block;position:absolute;top:-2px;left:0;width:100%;height:100%;background:url(../imgs/header_sprite.png) 0 0 no-repeat;opacity:.5;transition:opacity .2s ease-in-out;}
+.lay_nav .nav_tree .nav_depth li.nav_item .ico:hover:before {opacity:1;}
+.lay_nav .nav_tree .nav_depth li.nav_item .ico.on:before {background-position:0 -30px;opacity:1;}
+.lay_nav .nav_tree .nav_depth li.nav_item .nav_link {display:inline-block;font-size:14px;color:#fff;}
+
+.lay_nav .dhx_layout ::-webkit-scrollbar {appearance:none;-webkit-appearance:none}
+.lay_nav .dhx_layout ::-webkit-scrollbar:vertical {width:10px}
+.lay_nav .dhx_layout ::-webkit-scrollbar:horizontal {height:8px}
+.lay_nav .dhx_layout ::-webkit-scrollbar-thumb {background-color:#d9d9d9;border-radius:2px;border-top:2px solid #012030;border-bottom:2px solid #012030;border-left:4px solid #012030;border-right:2px solid #012030;transition:opacity .3s ease-in-out}
+.lay_nav .dhx_layout ::-webkit-scrollbar-track {background-color:#012030} 
+.lay_nav .dhx_layout :hover::-webkit-scrollbar-thumb {background-color:#fff}
 
 /* 사이드바 토글버튼 */
 .dhx_sidebar-button {position:absolute;top:18px;left:10px;z-index:100;width:20px;height:20px;padding:0;}
