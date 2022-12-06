@@ -56,12 +56,15 @@ var loader = function(speed){
 // 문서 title 변경
 var titChangeLoad = function(){
     var titleTag = $("title"),
-        bodyTitle = $("body").data("title");
+        bodyTitle = $("body").data("title"),
+        h1Title = $("#header h1");
 
         if(bodyTitle != undefined){
             titleTag.text("NEW MP - " + $("body").data("title"));
+            h1Title.text("NEW MP - " + $("body").data("title"));
         }else{
             titleTag.text("NEW MP - 대량정제");
+            h1Title.text("NEW MP");
         }
 }
 
