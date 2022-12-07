@@ -392,6 +392,15 @@ function imgViewTemplate(item) {
  * FORM 위젯 내 > options value 는 수정해서 사용해주세요.
  * FORM 위젯 내 > id 변경 시, 공유해 주세요.
 *********************************/
+// 모델리스트 페이징 연동
+// 그리드 타입일 때
+mdList.data.parse(mdList_data)
+var mdGridPaging = new dhx.Pagination(null, {
+    css: "",
+    data: mdList.data,
+    pageSize: 1000 // 1000단위로 바꿔주세요
+});
+
 // 상품리스트 페이징 연동
 // 그리드 타입일 때
 prdcList.data.parse(prdcList_data)
@@ -599,7 +608,7 @@ var mdOptionFilter = new dhx.Form(null, {
 
 // 모델리스트 > 모델 키워드 검색 영역
 var mdSearch = new dhx.Form(null, {
-    css: "controller_ep",
+    css: "controller_ep keyword_srch",
     padding: 0,
     width: "100%",
     rows: [
@@ -672,6 +681,13 @@ var mdSearch = new dhx.Form(null, {
             type: "button",
             text:"검색",
             css: "control-comm btn-srch"
+        },
+        {
+            id: "chkSynonym",
+            name: "chkSynonym",
+            type: "checkbox",
+            text: "동의어 포함",
+            css: "control-comm ipt-checkbox"
         }
     ]
 })
@@ -735,8 +751,12 @@ var editFormConfig = {
                     id: "modelRow_1",
                     cols: [
                         { type: "text", label: "카테고리" },
-                        { type: "input", id:"catecode", name: "catecode", css : "ipt_full" },
-                        { type: "button", text: "카테고리명 확인", id: "btnCateConfirm" },
+                        // 221207 : 검색 input css 제거
+                        // { type: "input", id:"catecode", name: "catecode", css : "ipt_full" },
+                        { type: "input", id:"catecode", name: "catecode" },
+                        // 221207 : 카테고리명 버튼 css 추가
+                        // { type: "button", text: "카테고리명 확인", id: "btnCateConfirm" },
+                        { type: "button", text: "카테고리명 확인", id: "btnCateConfirm", css: "btn_srch" },
                         { type: "button", text: "카테고리 정보", id: "btnCateInfo", css: "btn_info" }
                     ]
                 },
@@ -745,7 +765,9 @@ var editFormConfig = {
                     cols: [
                         { type: "text", label: "제조사" },
                         { type: "input", id:"company", name: "company" },
-                        { type: "button", text: "검색", id: "btnCateConfirm", css: "btn_srch" },
+                        // 221207 : 검색 버튼 id 변경
+                        // { type: "button", text: "검색", id: "btnCateConfirm", css: "btn_srch" },
+                        { type: "button", text: "검색", id: "btnSearch", css: "btn_srch" },
                         { type: "select", name: "", value: "0", css: "sel_pad", options: [
                                 { value: "0", content: "제조사 선택" },
                                 { value: "1", content: "아모레퍼시픽1" },
@@ -1134,7 +1156,7 @@ var popMatchingHtml = "";
 
 // 상품리스트 > 상품 키워드 검색 영역
 var prdcSearch = new dhx.Form(null, {
-    css: "controller_ep",
+    css: "controller_ep keyword_srch",
     padding: 0,
     width: "100%",
     cols: [
@@ -1202,6 +1224,13 @@ var prdcSearch = new dhx.Form(null, {
             type: "button",
             text:"검색",
             css: "control-comm btn-srch"
+        },
+        {
+            id: "chkSynonym",
+            name: "chkSynonym",
+            type: "checkbox",
+            text: "동의어 포함",
+            css: "control-comm ipt-checkbox"
         }
     ]
 })
@@ -1324,25 +1353,38 @@ var config = {
                                                         {
                                                             // 모델 검색 영역
                                                             id:"mdSearch",
-                                                            width:"525px",
-                                                        },
-                                                        {
-                                                            // 모델 키워드 영역
-                                                            id:"mdSearchKeyword",
-                                                            width:"calc(100% - 525px)",
+                                                            width:"100%",
                                                         }
                                                     ]
                                                 },
                                                 {
-                                                    id: "mdControl",
-                                                    width: "100%",
                                                     height: "42px",
+                                                    cols: [
+                                                        {
+                                                            id: "mdControl",
+                                                            width: "285px"
+                                                        },
+                                                        {
+                                                            // 모델 키워드 영역
+                                                            id:"mdSearchKeyword",
+                                                            width:"calc(100% - 285px)",
+                                                        }
+                                                    ]
                                                 },
                                                 {
-                                                    // 모델목록 GRID
-                                                    id: "mdGrid",
-                                                    width:"100%",
-                                                    height:"calc(100% - 124px)"
+                                                    rows:[
+                                                        {
+                                                            // 모델목록 GRID
+                                                            id: "mdGrid",
+                                                            width:"100%",
+                                                            height:"calc(100% - 42px)"
+                                                        },
+                                                        {
+                                                            // 모델목록 페이징 영역
+                                                            id:"mdPaging",
+                                                            height:"42px"
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         }
@@ -1400,12 +1442,12 @@ var config = {
                                         {
                                             // 상품 > 검색 영역
                                             id:"prdcSearch",
-                                            width:"510px",
+                                            width:"622px",
                                         },
                                         {
                                             // 상품 > 키워드 영역
                                             id:"prdcSearchKeyword",
-                                            width:"calc(100% - 510px)",
+                                            width:"calc(100% - 622px)",
                                         }
                                     ]
                                 },
@@ -1488,7 +1530,8 @@ export var contentLayout = new dhx.Layout("contents", config);
     contentLayout.getCell("mdControl").attach(mdControl) // > 버튼 영역
     
     // GRID 세팅
-    contentLayout.getCell("mdGrid").attach(mdList); // 제조사 GRID
+    contentLayout.getCell("mdGrid").attach(mdList); // 모델리스트 GRID
+    contentLayout.getCell("mdPaging").attach(mdGridPaging); // EP상품 페이징 (그리드)
 
     contentLayout.getCell("searchOption").attach(searchOption); // 검색 조건 추가 FORM
     contentLayout.getCell("searchOption_list").attach(searchOption_list); // 검색 조건 목록 FORM

@@ -9,10 +9,11 @@ export var headerComponent = "";
     headerComponent += "  </div>"
     headerComponent += "  <div class=\"bookmark\">";
     headerComponent += "      <ul class=\"bookmark_list\">";
-    headerComponent += "        <li><a href=\"#\" target=\"_blank\" title=\"북마크1\">북마크1</a></li>";
-    headerComponent += "        <li><a href=\"#\" target=\"_blank\" title=\"북마크2\">북마크2</a></li>";
-    headerComponent += "        <li><a href=\"#\" target=\"_blank\" title=\"북마크3\">북마크3</a></li>";
-    headerComponent += "        <li><a href=\"#\" target=\"_blank\" title=\"북마크4\">북마크4</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크1\">북마크1</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크2\">북마크2</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크3\">북마크3</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크4\">북마크4</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크5\">북마크5</a></li>";
     headerComponent += "      </ul>";
     headerComponent += "      <p class=\"user_log\">로그인정보 <span>2021.11.12 10:27:10</span></p>";
     headerComponent += "  </div>";
@@ -30,7 +31,7 @@ export var navigationHtml = "";
     navigationHtml += "             <ul class=\"nav_depth\">";
     navigationHtml += "                 <li class=\"nav_item\">";
                                             // 북마크 활성화 : ico on
-    navigationHtml += "                     <button type=\"button\" class=\"ico on\"></button><a href=\"#원부 기준\" class=\"nav_link\">원부 기준</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/newmp\" class=\"nav_link\">원부 기준</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
     navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#모델 기준\" class=\"nav_link\">모델 기준</a>";
@@ -43,10 +44,10 @@ export var navigationHtml = "";
 
     navigationHtml += "             <ul class=\"nav_depth\">";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#전성분 관리\" class=\"nav_link\">전성분 관리</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/ingredientAdmin\" class=\"nav_link\">전성분 관리</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#연관상품 연결 (소모품)\" class=\"nav_link\">연관상품 연결 (소모품)</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/supply_main\" class=\"nav_link\">연관상품 연결 (소모품)</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
     navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#제품정보 복사, 일괄 모델 정제\" class=\"nav_link\">제품정보 복사, 일괄 모델 정제</a>";
@@ -62,22 +63,22 @@ export var navigationHtml = "";
 
     navigationHtml += "             <ul class=\"nav_depth\">";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#속성, 속성원 관리\" class=\"nav_link\">속성, 속성원 관리</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/attr_main\" class=\"nav_link\">속성, 속성원 관리</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#상세검색 (스마트파인더)\" class=\"nav_link\">상세검색 (스마트파인더)</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/spec_main\" class=\"nav_link\">상세검색 (스마트파인더)</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#그룹조건\" class=\"nav_link\">그룹조건</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/condition_main\" class=\"nav_link\">그룹조건</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
     navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#단위환산가\" class=\"nav_link\">단위환산가</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#제조사, 브랜드\" class=\"nav_link\">제조사, 브랜드</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/pop_mkrbrnd\" class=\"nav_link\">제조사, 브랜드</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#상세문의 (문의코드)\" class=\"nav_link\">상세문의 (문의코드)</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/mp/detailInquiry/detailInquiry.jsp\" target=\"_blank\" class=\"nav_link\">상세문의 (문의코드)</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "             </ul>";
     navigationHtml += "         </div>";
@@ -93,10 +94,10 @@ export var navigationHtml = "";
     navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#일괄 변경\" class=\"nav_link\">일괄 변경</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#분류 검색어, 동의어\" class=\"nav_link\">분류 검색어, 동의어</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/mp/keyword_new/mp_keyword_new.jsp\" target=\"_blank\" class=\"nav_link\">분류 검색어, 동의어</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#담당 카테고리 설정\" class=\"nav_link\">담당 카테고리 설정</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/mp/manager/manager.Jsp\" target=\"_blank\" class=\"nav_link\">담당 카테고리 설정</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "             </ul>";
     navigationHtml += "         </div>";
@@ -118,11 +119,11 @@ export var navigationHtml = "";
     navigationHtml += "         </div>";
 
     navigationHtml += "         <div class=\"nav_tree\">";
-    navigationHtml += "             <button type=\"button\" class=\"btn_fold\">그룹매칭</button>";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold unfold\">그룹매칭</button>";
 
     navigationHtml += "             <ul class=\"nav_depth\">";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#가생성 모델\" class=\"nav_link\">가생성 모델</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/model_tmp\" class=\"nav_link\">가생성 모델</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
     navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#가매칭 상품\" class=\"nav_link\">가매칭 상품</a>";
@@ -131,23 +132,23 @@ export var navigationHtml = "";
     navigationHtml += "         </div>";
 
     navigationHtml += "         <div class=\"nav_tree\">";
-    navigationHtml += "             <button type=\"button\" class=\"btn_fold\">주요 지표 페이지</button>";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold unfold\">주요 지표 페이지</button>";
 
     navigationHtml += "             <ul class=\"nav_depth\">";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#담당 카테고리 설정\" class=\"nav_link\">담당 카테고리 설정</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#담당 카테고리 설정\" target=\"_blank\" class=\"nav_link\">담당 카테고리 설정</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#CM 주요 관리 지표\" class=\"nav_link\">CM 주요 관리 지표</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/team_contents/cm_wrk_report.jsp\" target=\"_blank\" class=\"nav_link\">CM 주요 관리 지표</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#경쟁사 모니터링 페이지\" class=\"nav_link\">경쟁사 모니터링 페이지</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/ndmonitor/getRivalGoodsInfo.jsp\" target=\"_blank\" class=\"nav_link\">경쟁사 모니터링 페이지</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#핵심 속성 입력/점검 페이지\" class=\"nav_link\">핵심 속성 입력/점검 페이지</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/cm/coreAttribute/coreAttribute.jsp\" target=\"_blank\" class=\"nav_link\">핵심 속성 입력/점검 페이지</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "                 <li class=\"nav_item\">";
-    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#제조사 [불명] 현황 페이지\" class=\"nav_link\">제조사 [불명] 현황 페이지</a>";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/unknownModel/unknownModelMonitor/unknownModelMonitor.jsp\" target=\"_blank\" class=\"nav_link\">제조사 [불명] 현황 페이지</a>";
     navigationHtml += "                 </li>";
     navigationHtml += "             </ul>";
     navigationHtml += "         </div>";
@@ -158,7 +159,7 @@ export var navigationHtml = "";
 var navigationWindow = new dhx.Window({
     //title: "a",
     closable: false,
-    width: 400,
+    width: 300,
     height: 500,
     css: "lay_nav"
 });
@@ -180,26 +181,55 @@ $("html").on('click', function(e){
     }
 });
 
+// 전체메뉴 > 북마크 function
 function navBookmark(){
     var starIco = ".nav_item .ico", // 북마크 별
         btnFold = ".btn_fold";
 
+    // default : 그룹매칭, 주요 지표 페이지 folding
+    setTimeout(function(){
+        $(".btn_fold.unfold").siblings(".nav_depth").slideUp();
+    },100)
+    
     // 북마크 토글
-    $(document).on("click", starIco, function(){
-        $(this).toggleClass("on")
-        
-        // 즐겨찾기 로직 넣어주세요
+    $(document).on("click", starIco, function(e){
+        e.stopPropagation()
+
+        var _this = $(this)
+
+        $(_this).toggleClass("on")
+
+        if(_this.hasClass("on")){
+            alert("북마크로 등록하였습니다.")
+
+            // 즐겨찾기 로직 넣어주세요
+
+            
+        }
     })
 
     // 메뉴 폴딩
-    $(document).on("click", btnFold, function(){
+    $(document).on("click", btnFold, function(e){
+        e.stopPropagation()
+
+        console.log(e)
         var _this = $(this);
         var childList = _this.siblings(".nav_depth")
 
-        _this.toggleClass("unfold")
-        childList.slideToggle();
+        _this.toggleClass("unfold");
+        childList.toggle();
     })
 }
+
+// 헤더 우측 북마크 관리
+$(document).on("click", ".bookmark_list .ico", function(){
+    $(this).removeClass("on");
+    if(confirm("북마크를 해제하시겠습니까?")){
+        // yes
+        alert("북마크가 해제되었습니다.")
+        $(this).closest("li").remove();
+    }
+})
 
 
 // 페이지 정보 컴퍼넌트

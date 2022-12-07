@@ -160,6 +160,64 @@ var numbering = function(data){
  * 각 COL 헤더, 풋터 FORM 생성하여 attach 합니다.
 *********************************/
 var resultCnt = numberFormat(1321212335); // 임의 건수
+
+// 연관상품 TOP 카테고리
+var relatedCate = new dhx.Form(null, {
+    css: "controller_related",
+    padding: 0,
+    width: "100%",
+    cols: [
+        {
+            id: "categorySelect",
+            name: "categorySelect",
+            type: "select",
+            placeholder: "카테고리 선택",
+            label: "",
+            labelPosition: "left",
+            labelWidth: 0,
+            value: "0",
+            required: true,
+            options: [
+                {
+                    value: "0",
+                    content: "카테고리 선택"
+                },
+                {
+                    value: "1",
+                    content: "TV"
+                },
+                {
+                    value: "2",
+                    content: "홈시어터"
+                },
+                {
+                    value: "3",
+                    content: "프로젝터"
+                },
+                {
+                    value: "4",
+                    content: "렌즈"
+                },
+                {
+                    value: "5",
+                    content: "스마트폰"
+                },
+                {
+                    value: "6",
+                    content: "태블릿"
+                }
+            ],
+            css: "control-comm sel-sort"
+        },
+        {
+            id: "categorySubmit",
+            type: "button",
+            text:"열기",
+            css: "control-comm btn-srch"
+        }
+    ]
+})
+
 // 액세서리 상단
 var accHeader = new dhx.Form(null, {
     css: "controller_related",
@@ -183,7 +241,7 @@ var accHeader = new dhx.Form(null, {
                 {
                     value: "1",
                     content: "카테고리내"
-                },,
+                },
                 {
                     value: "2",
                     content: "키워드 포함"
@@ -302,7 +360,7 @@ var originHeader = new dhx.Form(null, {
                 {
                     value: "1",
                     content: "카테고리내"
-                },,
+                },
                 {
                     value: "2",
                     content: "키워드 포함"
@@ -630,6 +688,13 @@ var config = {
     maxWidth:"100%",
     rows: [
         {
+            // 연관상품 카테고리 열기
+            type: "space",
+            width:"100%",
+            height: "46px",
+            id: "relatedCate"
+        },
+        {
             // 컨텐츠 레이아웃 
             type: "space",
             width:"100%",
@@ -812,6 +877,8 @@ var originKeyword = new dhx.Tabbar(null, {
  * 생성된 레이아웃에 ID별로 attach합니다.
 *********************************/
 export var contentLayout = new dhx.Layout("contents", config);
+
+    contentLayout.getCell("relatedCate").attach(relatedCate); // 카테고리 선택 FORM
 
     contentLayout.getCell("accGrid").attach(accGrid); // 액세서리 GRID
     contentLayout.getCell("registAccGrid").attach(registAccGrid); // 등록액세서리 GRID

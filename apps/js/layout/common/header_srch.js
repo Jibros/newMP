@@ -1,34 +1,213 @@
 // 헤더 컴퍼넌트 
 export var headerComponent = "";
 
+    // 헤더 & 북마크 목록
     headerComponent += "<header id=\"header\">";
-    headerComponent += "  <h1>NEW MP</h1>";
-    headerComponent += "  <div class=\"admin_control\">";
-    headerComponent += "      <ul class=\"exlink_list\">";
-    headerComponent += "        <li><a href=\"#\" target=\"_blank\" title=\"CM 주요 관리 지표\">CM 주요 관리 지표</a></li>";
-    headerComponent += "        <li><a href=\"#\" target=\"_blank\" title=\"경쟁사 모니터링\">경쟁사 모니터링</a></li>";
-    headerComponent += "        <li><a href=\"#\" target=\"_blank\" title=\"핵심 속성 입력/점검\">핵심 속성 입력/점검</a></li>";
-    headerComponent += "        <li><a href=\"#\" target=\"_blank\" title=\"제조사[불명] 현황\">제조사[불명] 현황</a></li>";
-    headerComponent += "        <li class=\"has-sub\"><button title=\"연관상품(소모품)\">연관상품(소모품)</button>";
-    headerComponent += "            <div class=\"exlink_sub\">";
-    headerComponent += "                <ul>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">TV</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">홈시어터</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">프로젝터/스크린</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">홈시어터/HiFi</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">영상가전 액세서리</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">주방가전</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">생활가전</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">계절가전</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">건강가전</a></li>";
-    headerComponent += "                    <li><a href=\"./related_products.html\" target=\"_blank\">미용/욕실가전</a></li>";
-    headerComponent += "                </ul>";
-    headerComponent += "            </div>";
-    headerComponent += "        </li>";
+    headerComponent += "  <div class=\"nav_brand\">";
+    headerComponent += "      <button type=\"button\" class=\"btn_nav\">전체보기</button>";
+    headerComponent += "      <h1>NEW MP</h1>";
+    headerComponent += "  </div>"
+    headerComponent += "  <div class=\"bookmark\">";
+    headerComponent += "      <ul class=\"bookmark_list\">";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크1\">북마크1</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크2\">북마크2</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크3\">북마크3</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크4\">북마크4</a></li>";
+    headerComponent += "        <li><button type=\"button\" class=\"ico on\"></button><a href=\"#\" target=\"_blank\" title=\"북마크5\">북마크5</a></li>";
     headerComponent += "      </ul>";
     headerComponent += "      <p class=\"user_log\">로그인정보 <span>2021.11.12 10:27:10</span></p>";
     headerComponent += "  </div>";
     headerComponent += "</header>";
+
+// 메뉴바 영역
+export var navigationHtml = "";
+
+    navigationHtml += "<div class=\"lay_nav\">";
+    navigationHtml += "     <div class=\"nav_inner\">";
+                                // 1뎁스
+    navigationHtml += "         <div class=\"nav_tree\">";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold\">모델, 상품관리</button>";
+
+                                    // 2뎁스
+    navigationHtml += "             <ul class=\"nav_depth\">";
+    navigationHtml += "                 <li class=\"nav_item\">";
+                                            // 북마크 활성화 : ico on
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/newmp\" class=\"nav_link\">원부 기준</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#모델 기준\" class=\"nav_link\">모델 기준</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "             </ul>";
+    navigationHtml += "         </div>";
+    
+    navigationHtml += "         <div class=\"nav_tree\">";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold\">모델 정제</button>";
+
+    navigationHtml += "             <ul class=\"nav_depth\">";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/ingredientAdmin\" class=\"nav_link\">전성분 관리</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/supply_main\" class=\"nav_link\">연관상품 연결 (소모품)</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#제품정보 복사, 일괄 모델 정제\" class=\"nav_link\">제품정보 복사, 일괄 모델 정제</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#이미지 등록\" class=\"nav_link\">이미지 등록</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "             </ul>";
+    navigationHtml += "         </div>";
+
+    navigationHtml += "         <div class=\"nav_tree\">";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold\">속성 관리</button>";
+
+    navigationHtml += "             <ul class=\"nav_depth\">";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/attr_main\" class=\"nav_link\">속성, 속성원 관리</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/spec_main\" class=\"nav_link\">상세검색 (스마트파인더)</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/condition_main\" class=\"nav_link\">그룹조건</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#단위환산가\" class=\"nav_link\">단위환산가</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/pop_mkrbrnd\" class=\"nav_link\">제조사, 브랜드</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/mp/detailInquiry/detailInquiry.jsp\" target=\"_blank\" class=\"nav_link\">상세문의 (문의코드)</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "             </ul>";
+    navigationHtml += "         </div>";
+
+    navigationHtml += "         <div class=\"nav_tree\">";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold\">카테고리 관리</button>";
+
+    navigationHtml += "             <ul class=\"nav_depth\">";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#코드 관리\" class=\"nav_link\">코드 관리</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#일괄 변경\" class=\"nav_link\">일괄 변경</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/mp/keyword_new/mp_keyword_new.jsp\" target=\"_blank\" class=\"nav_link\">분류 검색어, 동의어</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/mp/manager/manager.Jsp\" target=\"_blank\" class=\"nav_link\">담당 카테고리 설정</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "             </ul>";
+    navigationHtml += "         </div>";
+
+    navigationHtml += "         <div class=\"nav_tree\">";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold\">화면 커스텀</button>";
+
+    navigationHtml += "             <ul class=\"nav_depth\">";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#이미지 크기 조정\" class=\"nav_link\">이미지 크기 조정</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#간격, 컬럼 노출 조정\" class=\"nav_link\">간격, 컬럼 노출 조정</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#검색 설정\" class=\"nav_link\">검색 설정</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "             </ul>";
+    navigationHtml += "         </div>";
+
+    navigationHtml += "         <div class=\"nav_tree\">";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold unfold\">그룹매칭</button>";
+
+    navigationHtml += "             <ul class=\"nav_depth\">";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://dm.enuri.com/model_tmp\" class=\"nav_link\">가생성 모델</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#가매칭 상품\" class=\"nav_link\">가매칭 상품</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "             </ul>";
+    navigationHtml += "         </div>";
+
+    navigationHtml += "         <div class=\"nav_tree\">";
+    navigationHtml += "             <button type=\"button\" class=\"btn_fold unfold\">주요 지표 페이지</button>";
+
+    navigationHtml += "             <ul class=\"nav_depth\">";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"#담당 카테고리 설정\" target=\"_blank\" class=\"nav_link\">담당 카테고리 설정</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/team_contents/cm_wrk_report.jsp\" target=\"_blank\" class=\"nav_link\">CM 주요 관리 지표</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/ndmonitor/getRivalGoodsInfo.jsp\" target=\"_blank\" class=\"nav_link\">경쟁사 모니터링 페이지</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/cm/coreAttribute/coreAttribute.jsp\" target=\"_blank\" class=\"nav_link\">핵심 속성 입력/점검 페이지</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "                 <li class=\"nav_item\">";
+    navigationHtml += "                     <button type=\"button\" class=\"ico\"></button><a href=\"http://jca.enuri.com:8080/unknownModel/unknownModelMonitor/unknownModelMonitor.jsp\" target=\"_blank\" class=\"nav_link\">제조사 [불명] 현황 페이지</a>";
+    navigationHtml += "                 </li>";
+    navigationHtml += "             </ul>";
+    navigationHtml += "         </div>";
+    navigationHtml += "     </div>";
+    navigationHtml += "</div>";
+
+// 전체메뉴 > 레이어 위젯
+var navigationWindow = new dhx.Window({
+    //title: "a",
+    closable: false,
+    width: 300,
+    height: 500,
+    css: "lay_nav"
+});
+// 전체메뉴 > 레이어 위젯 열기
+$(document).on("click", ".btn_nav", function(){
+    navigationWindow.attachHTML(navigationHtml);
+    navigationWindow.show();
+    navigationWindow.setPosition(10, $("#header").outerHeight());
+
+    // 북마크 func
+    navBookmark()
+})
+// 외부클릭 => 전체메뉴 > 레이어 닫기
+$("html").on('click', function(e){ 
+    var $t = $(e.target);
+    var $carea = $t.closest('.lay_nav'); // 클릭 영역
+    if( !$carea.length ){
+        navigationWindow.hide();
+    }
+});
+
+function navBookmark(){
+    var starIco = ".nav_item .ico", // 북마크 별
+        btnFold = ".btn_fold";
+
+    // default : 그룹매칭, 주요 지표 페이지 folding
+    setTimeout(function(){
+        $(".btn_fold.unfold").siblings(".nav_depth").slideUp();
+    },100)
+    
+
+    // 북마크 토글
+    $(document).on("click", starIco, function(){
+        $(this).toggleClass("on")
+        
+        // 즐겨찾기 로직 넣어주세요
+    })
+
+    // 메뉴 폴딩
+    $(document).on("click", btnFold, function(){
+        var _this = $(this);
+        var childList = _this.siblings(".nav_depth")
+
+        _this.toggleClass("unfold");
+        childList.slideToggle();
+    })
+}
 
 // 페이지 정보 컴퍼넌트
 export var pageUtilComponent = "";
