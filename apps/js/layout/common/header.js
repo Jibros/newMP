@@ -192,9 +192,7 @@ function navBookmark(){
     },100)
     
     // 북마크 토글
-    $(document).on("click", starIco, function(e){
-        e.stopPropagation()
-
+    $(document).on("click", starIco, function(){
         var _this = $(this)
 
         $(_this).toggleClass("on")
