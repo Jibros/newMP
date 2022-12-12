@@ -170,7 +170,7 @@ $(document).on("click", ".btn_nav", function(){
     navigationWindow.setPosition(10, $("#header").outerHeight());
 
     // 북마크 func
-    navBookmark()
+    navInit()
 })
 // 외부클릭 => 전체메뉴 > 레이어 닫기
 $("html").on('click', function(e){ 
@@ -182,42 +182,40 @@ $("html").on('click', function(e){
 });
 
 // 전체메뉴 > 북마크 function
-function navBookmark(){
-    var starIco = ".nav_item .ico", // 북마크 별
-        btnFold = ".btn_fold";
-
+function navInit(){
     // default : 그룹매칭, 주요 지표 페이지 folding
     setTimeout(function(){
         $(".btn_fold.unfold").siblings(".nav_depth").slideUp();
     },100)
-    
-    // 북마크 토글
-    $(document).on("click", starIco, function(){
-        var _this = $(this)
-
-        $(_this).toggleClass("on")
-
-        if(_this.hasClass("on")){
-            alert("북마크로 등록하였습니다.")
-
-            // 즐겨찾기 로직 넣어주세요
-
-            
-        }
-    })
-
-    // 메뉴 폴딩
-    $(document).on("click", btnFold, function(e){
-        e.stopPropagation()
-
-        console.log(e)
-        var _this = $(this);
-        var childList = _this.siblings(".nav_depth")
-
-        _this.toggleClass("unfold");
-        childList.toggle();
-    })
 }
+
+// 북마크 토글
+$(document).on("click", ".nav_item .ico", function(e){
+    e.stopPropagation()
+    var _this = $(this)
+
+    $(_this).toggleClass("on")
+
+    if(_this.hasClass("on")){
+        alert("북마크로 등록하였습니다.")
+
+        // 즐겨찾기 로직 넣어주세요
+
+        
+    }
+})
+
+// 메뉴 폴딩
+$(document).on("click", ".btn_fold", function(e){
+    e.stopPropagation()
+
+    console.log(e)
+    var _this = $(this);
+    var childList = _this.siblings(".nav_depth")
+
+    _this.toggleClass("unfold");
+    childList.toggle();
+})
 
 // 헤더 우측 북마크 관리
 $(document).on("click", ".bookmark_list .ico", function(){

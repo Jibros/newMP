@@ -1442,12 +1442,12 @@ var config = {
                                         {
                                             // 상품 > 검색 영역
                                             id:"prdcSearch",
-                                            width:"622px",
+                                            width:"625px",
                                         },
                                         {
                                             // 상품 > 키워드 영역
                                             id:"prdcSearchKeyword",
-                                            width:"calc(100% - 622px)",
+                                            width:"calc(100% - 625px)",
                                         }
                                     ]
                                 },
